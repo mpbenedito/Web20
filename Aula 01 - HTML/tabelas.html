@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Meu Site - Tabelas</title>
+	</head>
+	<body>
+		<a href="index.html">Home</a>
+		/
+		<a href="contato.html">Contato</a>
+		/
+		<a href="aula1.html">Aula 1</a>
+		/
+		<a href="">Tabelas</a>
+		/
+		<a href="formularios.html">Formulários</a>
+
+		<h2>Tabelas</h2>
+
+		<h3>Tabela simples</h3>
+		<p> Atributo border=1</p>
+		<table border="1">
+			<tr>
+				<td>L1 C1</td>
+				<td>L1 C2</td>
+				<td>L1 C2</td>
+			</tr>
+			<tr>
+				<td>L2 C1</td>
+				<td>L2 C2</td>
+				<td>L2 C2</td>
+			</tr>
+			<tr>
+				<td>L3 C1</td>
+				<td>L3 C2</td>
+				<td>L3 C2</td>
+			</tr>
+		</table>
+
+		<hr>
+		<h3>Tabela com cabeçalho</h3>
+		<p> Atributo border=2</p>
+		<p> Primeira linha com a tag th</p>
+		<table border="2">
+			<tr>
+				<th>Código</th>
+				<th>Produto</th>
+				<th>Preço</th>
+			</tr>
+			<tr>
+				<td>001</td>
+				<td>Notebook</td>
+				<td>R$ 2.500,00</td>
+			</tr>
+			<tr>
+				<td>002</td>
+				<td>Roteador</td>
+				<td>R$ 199,00</td>
+			</tr>
+		</table>
+
+		<hr>
+		<h3>Tabela com outras informações</h3>
+		<p> Atributo border=2</p>
+		<p> Primeira linha com a tag th</p>
+		<p> Atributo width para determinar largura máxima
+		<table border="2" width="400">
+			<tr>
+				<th>Sequência</th>
+				<th>Tipo</th>
+				<th>Objeto</th>
+			</tr>
+			<tr>
+				<td>001</td>
+				<td>Imagem</td>
+				<td><img width="100" src="imagens/ferrari.jpg"></td>
+			</tr>
+			<tr>
+				<td>002</td>
+				<td>Link</td>
+				<td><a href="http://www.uol.com.br">Link para o uol</a></td>
+			</tr>
+		</table>
+
+				<hr>
+		<h3>Tabela com Mescla de linhas e colunas</h3>
+		<p> Atributo colspan e rowspan</p>
+		<table border="2">
+			<tr>
+				<th>Código</th>
+				<th>Produto</th>
+				<th>Preço</th>
+			</tr>
+			<tr>
+				<td>001</td>
+				<td>Notebook</td>
+				<td>R$ 2.500,00</td>
+			</tr>
+			<tr>
+				<td>002</td>
+				<td>Roteador</td>
+				<td>R$ 200,00</td>
+			</tr>
+			<tr>
+				<td rowspan="2">Desconto (Mescla 2 linhas)</td>
+				<td>Cupom1</td>
+				<td>R$ -10,00</td>
+			</tr>
+			<tr>
+				<td>Cupom2</td>
+				<td>R$ -15,00</td>
+			</tr>
+			<tr>
+				<td colspan="2">Total (mescla 2 colunas</td>
+				<td>R$ 2.675,00</td>
+			</tr>
+
+		</table>
+
+	</body>
+</html>

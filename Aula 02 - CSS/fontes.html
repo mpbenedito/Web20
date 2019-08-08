@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Fontes e Cores</title>
+
+        <style type="text/css">
+        /* trabalhando com atributos comuns dos textos: cor, fundo, tamanho, família de fontes */
+            .formatacao1 {
+                color: #FE2E2E;
+                font-size: 30px;
+                background: #F2F2F2;
+                font-family:'Times New Roman', Times, serif;
+            }
+
+            .formatacao2 {
+                color: #F4FA58;
+                font-size: 30px;
+                background: #F781BE;
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            .formatacao3 {
+                color: #F4FA58;
+                font-size: 30px;
+                background: #2E64FE;
+                font-family:"Comic Sans MS", cursive, sans-serif;
+            }
+
+        /* trabalhando com tamanhos de fontes padrão: diferença entre pixels, % e "em" */
+        /*o padrão dos fontes padrão entendido no html5 é 16px */
+        .tam1 {
+            font-size: 16px
+        }
+        .tam2 {
+            font-size: 32px
+        }
+        .tam3 {
+            font-size: 200%
+        }
+        .tamdiv {
+            font-size: 40px;
+        }
+
+        .div2 {
+            font-size: 2em;
+        }
+
+        .divmeio {
+            font-size: 0.5em;
+        }
+
+        /*tipos de estilos de texto: negrito, itálico, sub, sobre e entre linhados*/
+        .padrao {
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .negrito {
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 900;
+        }
+
+        .italico {
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+        }
+
+        .livre1 {
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            text-decoration: underline;
+        }
+
+        .livre2 {
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            text-decoration: overline;
+        }
+
+        .livre3 {
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            text-decoration: line-through;
+        }
+
+        /* combinar estilos, tamanhos, fontes e cores e famílias define os textos de cada divisão de uma página */
+        </style>
+
+    </head>
+
+    <body>
+        <!-- menu de navegação-->
+        <div>
+            <h1>Aula02 - CSS </h1>
+            <a href="index.html">Home</a>/
+            <a href="inline_style.html">Estilos Inline</a>/
+            <a href="classes_ids.html">Classes e IDs</a>/
+            <a href="div-span.html">Div e Span</a>/
+            <a href="bordas.html">Bordas</a>/
+            <a href="">Fontes, Cores e Atributos</a>/
+        </div>
+        <hr>
+
+        <div>
+            <h1>Trabalhando com atributos comuns dos textos: cores e fontes</h1>
+            <p class="formatacao1">Conteúdo 1</p>
+            <p class="formatacao2">Conteúdo 2</p>
+            <p class="formatacao3">Conteúdo 3</p>
+        </div>
+        <hr>
+        <div>
+            <h1>Trabalhando com tamanhos de fontes aplicados aos elementos inline</h1>
+            <p class="tam1">Tamanho padrão é 16px</p>
+            <p class="tam2">Este texto está definido com 32px. </p>
+            <p class="tam3">Este texto está com tamanho de 200% do tamanho padrão, portanto, 32px</p>
+        </div>
+        <hr>
+        <div class="tamdiv">
+            <h3>Trabalhando com tamanhos de fontes aplicados aos objetos conteiners</h3>
+            <p>O conteiner "div" está definido para apresentação de textos com fonte 40px. Então 40px será o tamanho padrão do conteiner div</p>
+            <p class="div2">Esta linha apresenta o texto com 2em, ou seja 2x o tamanho do fonte do objeto conteinar (div=40px), portanto este texto está escrito com um fonte de 80px.</p>
+            <p class="divmeio">Esta linha apresenta o texto com 0.5em, ou seja metade do tamanho do fonte do objeto conteinar (div=40px), portanto este texto está escrito com um fonte de 20px.</p>
+        </div>
+        <hr>
+        <div>
+            <h1>Estilos de texto</h1>
+            <p class="padrao">Texto padrão</p>
+            <p class="negrito">Texto padrão - negrito </p>
+            <p class="italico">Texto padrão - itálico </p>
+            <p class="livre1">Texto padrão - formato livre (text-decoration) sublinhado</p>
+            <p class="livre2">Texto padrão - formato livre (text-decoration) sobrelinhado</p>
+            <p class="livre3">Texto padrão - formato livre (text-decoration) tachado</p>
+        </div>
+    </body>
+</html>
