@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Elementos Inline, Block e Inline-Block</title>
+
+        <style>
+            .borda {
+                border: 1px solid red;
+                background-color: whitesmoke;
+            }
+
+            .borda-inline {
+                border: 1px solid red;
+                background-color: whitesmoke;
+                display: inline;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <h1>Elementos Inline, Block e Híbridos</h1>
+
+            <a href="modelo-caixa.html">BoxModel</a> |
+            <a href="flutuante.html">Elementos Flutuantes</a> |
+            <a href="pratica.html">Elem Flut - Prática</a> |
+            <a href="inline-block.html">Elementos Inline, Block e Inline-Block</a>
+            <hr>
+
+            <h4>Componentes "block" ocupam todo o espaço da tela.</h4>
+            <h4>Isso significa que ocupando o espaço todo da tela, o próximo componente adicionado será colocado abaixo</h4>
+            <h4>Observar as margens de borda definidas no elemento abaixo. São exemplos de blocks as tags p, h</h4>
+            <h1 class="borda">Bloco1</h1>
+            <h1 class="borda">Bloco2</h1>
+            <hr>
+
+            <h4>Utilizando o atributo display de um elemento eu altero o seu comportamento. Os próximos h1 tornaram-se h1 com comportamento inline</h4>
+            <h1 class="borda-inline">Bloco1</h1>
+            <h1 class="borda-inline">Bloco2</h1>
+
+        </div>
+    </body>
+</html>
