@@ -15,6 +15,12 @@
                 background-color: whitesmoke;
                 display: inline;
             }
+            .borda-block {
+                border: 1px solid red;
+                background-color: whitesmoke;
+                display: block;
+            }
+
         </style>
     </head>
 
@@ -25,7 +31,8 @@
             <a href="modelo-caixa.html">BoxModel</a> |
             <a href="flutuante.html">Elementos Flutuantes</a> |
             <a href="pratica.html">Elem Flut - Prática</a> |
-            <a href="inline-block.html">Elementos Inline, Block e Inline-Block</a>
+            <a href="inline-block.html">Elementos Inline, Block e Inline-Block</a> |
+            <a href="posicionamento.html">Posicionamentos</a>
             <hr>
 
             <h4>Componentes "block" ocupam todo o espaço da tela.</h4>
@@ -38,6 +45,28 @@
             <h4>Utilizando o atributo display de um elemento eu altero o seu comportamento. Os próximos h1 tornaram-se h1 com comportamento inline</h4>
             <h1 class="borda-inline">Bloco1</h1>
             <h1 class="borda-inline">Bloco2</h1>
+            <hr>
+
+            <h4>Componentes "block" ocupam apenas o espaço necessário para sua apresentação. Então é um elemento ao lado do outro</h4>
+            <span class="borda">Inline 1</span>
+            <span class="borda">Inline 2</span>
+            <hr>
+
+            <h4>Configurei o elemento span, que é inline, para ter um atributo block, por meio da propriedade display. Agora seu comportamento é ocupar a tela toda</h4>
+            <span class="borda-block">Inline 1</span>
+            <span class="borda-block">Inline 2</span>
+            <hr>
+
+            <h4>Colocando 2 elementos inline, um grande e um pequeno, traz um comportamento de preenchimento de tela, sem salto de linha.</h4>
+            <span class="borda">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem maiores facilis, similique, ducimus esse rem magni mollitia doloribus perferendis alias explicabo, quis voluptas dolore. Facere alias veritatis eligendi sed quis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem maiores facilis, similique, ducimus esse rem magni mollitia doloribus perferendis alias explicabo, quis voluptas dolore. Facere alias veritatis eligendi sed quis.</span>
+            <span class="borda">Lorem ipsum</span>
+            <hr>
+
+            <h4>No comportamento misto (inline-block), o mesmo conteúdo anterior apresentaria uma mudança de "parágrafo" apenas quando a linha é totalmente ocupada.</h4>
+            <span class="borda">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem maiores facilis, similique, ducimus esse rem magni mollitia doloribus perferendis alias explicabo, quis voluptas dolore. Facere alias veritatis eligendi sed quis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem maiores facilis, similique, ducimus esse rem magni mollitia doloribus perferendis alias explicabo, quis voluptas dolore. Facere alias veritatis eligendi sed quis.</span>
+            <span class="borda-block">Lorem ipsum</span>
+            <h4>Reparar que o primeiro texto acaba, porém o segundo, por não ter espaço para ser colocado, sofre uma alteração de parágrafo antes de ser exibido</h4>
+            <hr>
 
         </div>
     </body>
