@@ -1,0 +1,53 @@
+/* FORMATAÇÃO DE SELETORES */
+/* formatações para o corpo das páginas */
+body {
+    background: #d2d2c1 url('imagens/fundo.png');
+    font: 16px Arial, Helvetica, sans-serif;
+}
+
+/* formatações para os links de menu */
+a {
+    color: #4b566a;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 18px;
+}
+
+h1 {
+    color: #828271;
+    font-size: 1.2em;
+}
+
+
+/* bloco principal */
+#principal {
+    width: 900px;
+}
+
+/* barra de menus */
+#menu {
+    color: #c5c5b2;
+    padding: 18px;
+
+    font-weight: bold;
+    color: #07909C;
+    background-color: burlywood;
+    font-size: 20px
+}
+
+/* bloco de conteúdo */
+#conteudo {
+    background-color: #E8E8D9;
+    padding: 10px;
+}
+
+/* rodape */
+#rodape {
+    text-align: center;
+}
+
+
+/* CLASSSES DA PAGINA */
+.img-campanha {
+    border: 10px solid #C3C3AE;
+}
