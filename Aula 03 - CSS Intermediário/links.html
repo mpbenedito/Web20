@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Formatação de Links</title>
+
+		<style>
+
+			a {
+				color: orange;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 20px;
+				font-weight: bold;
+				padding: 10px;
+				text-decoration: none;
+			}
+
+			/* a:link é utilizado para formatação de links NÃO VISITADOS */
+			a:link {
+				color: #B9C941;
+			}
+
+			/* a:visited é utilizado para formatação de links VISITADOS */
+			a:visited {
+				color: #C0C0C0;
+			}
+
+			/* a:hover é utilizado para definir o que acontece quando se passa o mouse sobre o link */
+			a:hover {
+				color: #6D790F;
+			}
+
+			a:active {
+				color: #e4f371;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div>
+			<h1>Formatação de links</h1>
+
+			<a href="modelo-caixa.html">BoxModel</a> |
+			<a href="flutuante.html">Elementos Flutuantes</a> |
+			<a href="pratica.html">Elem Flut - Prática</a> |
+			<a href="inline-block.html">Elementos Inline, Block e Inline-Block</a> |
+			<a href="posicionamento.html">Posicionamentos</a> |
+			<a href="sobreposicao.html">Sobrepondo Elementos</a> |
+			<a href="links.html">Links Formatados</a>
+			<hr>
+		</div>
+
+		<div>
+			<h4>Toda esta página foi construída com estilos aplicados ao select a</h4>
+			<a href="https://www.google.com.br">Google</a> |
+	 		<a href="https://www.tecmundo.com.br">Tec Mundo</a> |
+			<a href="https://www.megacurioso.com.br">Mega Curioso</a>
+
+
+			<h4>Links não visitados aparecerão em laranja (se não aparecem é porque todos foram visitados)</h4>
+			<h4>Links visitados aparecerão em cinza</h4>
+			<h4>Quando se passa o mouse sobre eles, ficam verdes</h4>
+			<h4>Quando o mouse está ativo, clica-se e segura, o link fica verde claro</h4>
+
+
+			<hr> 
+		</div>
+
+		</body>
+</html>

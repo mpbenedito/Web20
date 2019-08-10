@@ -1,120 +1,122 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Posicionamentos (static, relative, absolute e fixed)</title>
+	<head>
+		<meta charset="utf-8">
+		<title>Posicionamentos (static, relative, absolute e fixed)</title>
 
-        <style>
-        /* Este arquivo tratará os estilos de elementos flutuantes internamente para facilitar a escrita dos códigos */
-        /* Melhor seria colocar em CSS externo, então é apenas para didática e agilidade */
+		<style>
+		/* Este arquivo tratará os estilos de elementos flutuantes internamente para facilitar a escrita dos códigos */
+		/* Melhor seria colocar em CSS externo, então é apenas para didática e agilidade */
 
-        body {
-            background: lightblue;
-        }
+		body {
+			background: lightblue;
+		}
 
-        .container {
-            border: 1px solid red;
-            background: white;
-            width: 800px;
-            margin: 10px auto;
-            padding: 10px;
-        }
+		.container {
+			border: 1px solid red;
+			background: white;
+			width: 800px;
+			margin: 10px auto;
+			padding: 10px;
+		}
 
-        .container-relative {
-            border: 1px solid red;
-            background: white;
-            width: 800px;
-            margin: 10px auto;
-            padding: 10px;
-            position: relative;
-        }
+		.container-relative {
+			border: 1px solid red;
+			background: white;
+			width: 800px;
+			margin: 10px auto;
+			padding: 10px;
+			position: relative;
+		}
 
-        .clear {
-            clear: both;
-        }
+		.clear {
+			clear: both;
+		}
 
-        .parag1 {
-            border: 1px solid red;
-            width: 300px;
-        }
+		.parag1 {
+			border: 1px solid red;
+			width: 300px;
+		}
 
-        .parag2 {
-            border: 1px solid red;
-            background: #F2F2F2;
-            width: 300px;
-            position: relative;
-            top: 20px;
-            left: 80px
-        }
+		.parag2 {
+			border: 1px solid red;
+			background: #F2F2F2;
+			width: 300px;
+			position: relative;
+			top: 20px;
+			left: 80px
+		}
 
-        .parag3 {
-            border: 1px solid red;
-            background: #F2F2F2;
-            width: 300px;
-            position: absolute;
-            top: 0px;
-            right: 5px
-        }
+		.parag3 {
+			border: 1px solid red;
+			background: #F2F2F2;
+			width: 300px;
+			position: absolute;
+			top: 0px;
+			right: 5px
+		}
 
-        .parag4 {
-            border: 1px solid red;
-            background: #F2F2F2;
-            width: 300px;
-            position: fixed;
-            top: 10px;
-            right: 10px;
-        }
+		.parag4 {
+			border: 1px solid red;
+			background: #F2F2F2;
+			width: 300px;
+			position: fixed;
+			top: 10px;
+			right: 10px;
+		}
 
-        .cabec1 {
-            width: 500px
-        }
+		.cabec1 {
+			width: 500px
+		}
 
 
-        </style>
+		</style>
 
-    </head>
+	</head>
 
-    <body>
-        <div>
-            <h1>Posicionamentos (static, relative, absolute e fixed)</h1>
+	<body>
+		<div>
+			<h1>Posicionamentos (static, relative, absolute e fixed)</h1>
 
-            <a href="modelo-caixa.html">BoxModel</a> |
-            <a href="flutuante.html">Elementos Flutuantes</a> |
-            <a href="pratica.html">Elem Flut - Prática</a> |
-            <a href="inline-block.html">Elementos Inline, Block e Inline-Block</a> |
-            <a href="posicionamento.html">Posicionamentos</a>
-        </div>
-        <hr>
+			<a href="modelo-caixa.html">BoxModel</a> |
+			<a href="flutuante.html">Elementos Flutuantes</a> |
+			<a href="pratica.html">Elem Flut - Prática</a> |
+			<a href="inline-block.html">Elementos Inline, Block e Inline-Block</a> |
+			<a href="posicionamento.html">Posicionamentos</a> |
+			<a href="sobreposicao.html">Sobrepondo Elementos</a> |
+			<a href="links.html">Links Formatados</a>
+		</div>
+		<hr>
 
-        <div class="container">
-            <h3>Partindo de elementos de texto criados de forma padronizada</h3>
-            <p class="parag1">P1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo veritatis error, dolore voluptate rem dicta voluptatibus</p>
-            <p class="parag1">P2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo veritatis error, dolore voluptate rem dicta voluptatibus</p>
-            <p class="parag1">P3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo veritatis error, dolore voluptate rem dicta voluptatibus</p>
-        </div>
-        <hr>
+		<div class="container">
+			<h3>Partindo de elementos de texto criados de forma padronizada</h3>
+			<p class="parag1">P1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo veritatis error, dolore voluptate rem dicta voluptatibus</p>
+			<p class="parag1">P2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo veritatis error, dolore voluptate rem dicta voluptatibus</p>
+			<p class="parag1">P3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo veritatis error, dolore voluptate rem dicta voluptatibus</p>
+		</div>
+		<hr>
 
-        <div class="container">
-            <h3>Posicionamento relativo (relative): o atributo desloca o objeto de sua posição inicial. O fluxo geral não se altera (observar o parágrafo 3)</h3>
-            <h4>O parágrafo 2 é relativo a se posicionar um pouco deslocado de onde deveria se posicionar original, mas não altera o fluxo do texto padrão.</h4>
-            <p class="parag1">P1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo veritatis error, dolore voluptate rem dicta voluptatibus</p>
-            <p class="parag2">P2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo veritatis error, dolore voluptate rem dicta voluptatibus</p>
-            <p class="parag1">P3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo veritatis error, dolore voluptate rem dicta voluptatibus</p>
-        </div>
-        <hr>
+		<div class="container">
+			<h3>Posicionamento relativo (relative): o atributo desloca o objeto de sua posição inicial. O fluxo geral não se altera (observar o parágrafo 3)</h3>
+			<h4>O parágrafo 2 é relativo a se posicionar um pouco deslocado de onde deveria se posicionar original, mas não altera o fluxo do texto padrão.</h4>
+			<p class="parag1">P1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo veritatis error, dolore voluptate rem dicta voluptatibus</p>
+			<p class="parag2">P2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo veritatis error, dolore voluptate rem dicta voluptatibus</p>
+			<p class="parag1">P3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo veritatis error, dolore voluptate rem dicta voluptatibus</p>
+		</div>
+		<hr>
 
-        <div class="container-relative">
-            <h3 class="cabec1">Posicionamento absoluto (absolute): O parágrafo 2 é do tipo absoluto e está definido para ficar sempre no canto direito do container que o suporta.</h3>
-            <h4 class="cabec1">Objetos com posicionamento absoluto só conseguem se posicionar em containers que não sejam estáticos. Neste caso o div atual é do tipo Relative.</h4>
-            <h4 class="cabec1">O parágrafo 2 por ser "absoluto" no canto, "sai" do fluxo de texto e ocupa a posição para o qual foi definido</h4>
-            <p class="parag1">P1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo veritatis error, dolore voluptate rem dicta voluptatibus</p>
-            <p class="parag3">P2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo veritatis error, dolore voluptate rem dicta voluptatibus</p>
-            <p class="parag1">P3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo veritatis error, dolore voluptate rem dicta voluptatibus</p>
+		<div class="container-relative">
+			<h3 class="cabec1">Posicionamento absoluto (absolute): O parágrafo 2 é do tipo absoluto e está definido para ficar sempre no canto direito do container que o suporta.</h3>
+			<h4 class="cabec1">Objetos com posicionamento absoluto só conseguem se posicionar em containers que não sejam estáticos. Neste caso o div atual é do tipo Relative.</h4>
+			<h4 class="cabec1">O parágrafo 2 por ser "absoluto" no canto, "sai" do fluxo de texto e ocupa a posição para o qual foi definido</h4>
+			<p class="parag1">P1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo veritatis error, dolore voluptate rem dicta voluptatibus</p>
+			<p class="parag3">P2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo veritatis error, dolore voluptate rem dicta voluptatibus</p>
+			<p class="parag1">P3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo veritatis error, dolore voluptate rem dicta voluptatibus</p>
 
-        </div>
-    
-        <p class="parag4">Este parágrafo foi escrito num posicionamento fixo (fixed). O posicionamento fixo faz com que o elemento sempre apareça num local específico da tela, independente da rolagem de tela. </p>
-        <hr>
-    
-    </body>
+		</div>
+	
+		<p class="parag4">Este parágrafo foi escrito num posicionamento fixo (fixed). O posicionamento fixo faz com que o elemento sempre apareça num local específico da tela, independente da rolagem de tela. </p>
+		<hr>
+	
+	</body>
 </html>

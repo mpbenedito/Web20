@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Sobreposição Elementos</title>
+
+		<style>
+			.clear {
+				clear:both;
+			}
+			.conteudo1 {
+				border:1px solid red;
+				background: lightgoldenrodyellow;
+				width: 100px;
+				height: 100px;
+				position: absolute;
+			}
+			.conteudo2 {
+				border:1px solid red;
+				background: lightgreen;
+				width: 100px;
+				height: 100px;
+				position: relative;
+				top: 20px;
+				left: 20px;
+			}
+
+			.conteudo1zindex {
+				border:1px solid red;
+				background: lightgoldenrodyellow;
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				z-index: 9;
+			}
+			.conteudo2zindex {
+				border:1px solid red;
+				background: lightgreen;
+				width: 100px;
+				height: 100px;
+				position: relative;
+				top: 20px;
+				left: 20px;
+				z-index: 0
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div>
+			<h1>Sobreposição de Elementos</h1>
+
+			<a href="modelo-caixa.html">BoxModel</a> |
+			<a href="flutuante.html">Elementos Flutuantes</a> |
+			<a href="pratica.html">Elem Flut - Prática</a> |
+			<a href="inline-block.html">Elementos Inline, Block e Inline-Block</a> |
+			<a href="posicionamento.html">Posicionamentos</a> |
+			<a href="sobreposicao.html">Sobrepondo Elementos</a> |
+			<a href="links.html">Links Formatados</a>
+			<hr>
+		</div>
+		<div>
+			<h4>Existem 2 conteúdos. Conteúdo 1 é absoluto. O 2 é relativo, portanto sai do fluxo normal do texto. O conteúdo 2 fica por cima, pois foi apresentado após o conteúdo 1</h4>
+			<div>
+				<div class="conteudo1">
+					Conteúdo 1
+				</div>
+				<div class="conteudo2">
+					Conteúdo 2
+				</div>
+				<br><br>
+			</div>
+		</div>
+
+		<div>
+			<hr>
+			<h4>Os mesmos 2 conteúdos agora estão com z-index definido. Desta forma, o conteúdo com maior z-index sobrepoe os de z-index mais baixos</h4>
+			<h4>Se 2 elementos tiverem o mesmo z-index, é obedecida a ordem em que eles foram carregados em tela.</h4>
+			<div>
+				<div class="conteudo1zindex">
+					Conteúdo 1
+				</div>
+				<div class="conteudo2zindex">
+					Conteúdo 2
+				</div>
+			</div>
+		</div>
+	
+
+	</body>
+</html>

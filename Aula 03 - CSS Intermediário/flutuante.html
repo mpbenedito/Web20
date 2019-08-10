@@ -1,124 +1,126 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Elementos Flutuantes</title>
+	<head>
+		<meta charset="utf-8">
+		<title>Elementos Flutuantes</title>
 
-        <style>
-        /* Este arquivo tratará os estilos de elementos flutuantes internamente para facilitar a escrita dos códigos */
-        /* Melhor seria colocar em CSS externo, então é apenas para didática e agilidade */
-            .conteudo   {
-                background: whitesmoke;
-                border: 1px solid red;
-                width: 100px;
-                height: 100px;
-                margin: 10px;
-            }
+		<style>
+		/* Este arquivo tratará os estilos de elementos flutuantes internamente para facilitar a escrita dos códigos */
+		/* Melhor seria colocar em CSS externo, então é apenas para didática e agilidade */
+			.conteudo   {
+				background: whitesmoke;
+				border: 1px solid red;
+				width: 100px;
+				height: 100px;
+				margin: 10px;
+			}
 
-            .conteudo1   {
-                background: sandybrown;
-                border: 1px solid red;
-                width: 80px;
-                height: 80px;
-                margin: 10px;
-                float: left;
-            }
+			.conteudo1   {
+				background: sandybrown;
+				border: 1px solid red;
+				width: 80px;
+				height: 80px;
+				margin: 10px;
+				float: left;
+			}
 
-            .conteudo2   {
-                background: goldenrod;
-                border: 1px solid red;
-                width: 400px;
-                height: 100px;
-                margin: 10px;
-                float: left;
-            }
+			.conteudo2   {
+				background: goldenrod;
+				border: 1px solid red;
+				width: 400px;
+				height: 100px;
+				margin: 10px;
+				float: left;
+			}
 
-            .clear {
-                clear:both;
-            }
+			.clear {
+				clear:both;
+			}
 
-        </style>
+		</style>
 
-    </head>
+	</head>
 
-    <body>
-        <div>
-            <h1>Elementos Flutuantes</h1>
-            <h3>brincar com o tamanho da janela do navegador para ver o funcionamento</h3>
+	<body>
+		<div>
+			<h1>Elementos Flutuantes</h1>
+			<h3>brincar com o tamanho da janela do navegador para ver o funcionamento</h3>
 
-            <div>
-                <a href="modelo-caixa.html">BoxModel</a> |
-                <a href="flutuante.html">Elementos Flutuantes</a> |
-                <a href="pratica.html">Elem Flut - Prática</a> |
-                <a href="inline-block.html">Elementos Inline, Block e Inline-Block</a> |
-                <a href="posicionamento.html">Posicionamentos</a>
-            </div>
-            <hr>
+			<div>
+				<a href="modelo-caixa.html">BoxModel</a> |
+				<a href="flutuante.html">Elementos Flutuantes</a> |
+				<a href="pratica.html">Elem Flut - Prática</a> |
+				<a href="inline-block.html">Elementos Inline, Block e Inline-Block</a> |
+				<a href="posicionamento.html">Posicionamentos</a> |
+				<a href="sobreposicao.html">Sobrepondo Elementos</a> |
+				<a href="links.html">Links Formatados</a>
+			</div>
+			<hr>
 
-            <div>
-                <h3>Sem float os elementos são colocados um abaixo do outro. </h3>
-                <div class="conteudo">
-                    Conteúdo 1 sem float
-                </div>
-                <div class="conteudo">
-                    Conteúdo 2 sem float
-                </div>
-                <div class="conteudo">
-                    Conteúdo 3 sem float
-                </div>
-            </div>
-            <hr>
+			<div>
+				<h3>Sem float os elementos são colocados um abaixo do outro. </h3>
+				<div class="conteudo">
+					Conteúdo 1 sem float
+				</div>
+				<div class="conteudo">
+					Conteúdo 2 sem float
+				</div>
+				<div class="conteudo">
+					Conteúdo 3 sem float
+				</div>
+			</div>
+			<hr>
 
-            <div>
-                <h3>Com float os elementos são arranjados em um alinhamento horizontal </h3>
-                <div class="conteudo1">
-                    Conteúdo 1 com float
-                </div>
-                <div class="conteudo1">
-                    Conteúdo 2 com float
-                </div>
-                <div class="conteudo1">
-                    Conteúdo 3 com float
-                </div>
+			<div>
+				<h3>Com float os elementos são arranjados em um alinhamento horizontal </h3>
+				<div class="conteudo1">
+					Conteúdo 1 com float
+				</div>
+				<div class="conteudo1">
+					Conteúdo 2 com float
+				</div>
+				<div class="conteudo1">
+					Conteúdo 3 com float
+				</div>
 
-                <div class="clear"></div>
-            </div>
-            <hr>
+				<div class="clear"></div>
+			</div>
+			<hr>
 
-            <div>
-                <h3>Agregar elementos flutuantes e não flutuantes faz o html procurar e encaixar os elementos automaticamente </h3>
-                <div class="conteudo2">
-                    Conteúdo 1 com float
-                </div>
-                <div class="conteudo1">
-                    Conteúdo 2 com float
-                </div>
-                <div class="conteudo1">
-                    Conteúdo 3 com float
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras maximus tempus tristique. Curabitur lacinia quis tellus et viverra. Etiam porttitor magna in est tristique mattis. Morbi vitae sapien varius, lobortis quam consectetur, vulputate dui. Integer ut quam sit amet sapien euismod venenatis. Integer suscipit molestie nisi placerat cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus vitae sem non posuere. In elementum pharetra bibendum. Quisque justo enim, aliquet et gravida quis, convallis et dui. Suspendisse eget tortor suscipit, consequat odio id, luctus nisi. Quisque non sem auctor felis cursus elementum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam eros arcu, eleifend a tempor aliquam, venenatis sit amet velit. Donec nec posuere tortor. In pretium aliquet odio, eu consectetur metus pellentesque varius.</p>
+			<div>
+				<h3>Agregar elementos flutuantes e não flutuantes faz o html procurar e encaixar os elementos automaticamente </h3>
+				<div class="conteudo2">
+					Conteúdo 1 com float
+				</div>
+				<div class="conteudo1">
+					Conteúdo 2 com float
+				</div>
+				<div class="conteudo1">
+					Conteúdo 3 com float
+				</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras maximus tempus tristique. Curabitur lacinia quis tellus et viverra. Etiam porttitor magna in est tristique mattis. Morbi vitae sapien varius, lobortis quam consectetur, vulputate dui. Integer ut quam sit amet sapien euismod venenatis. Integer suscipit molestie nisi placerat cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus vitae sem non posuere. In elementum pharetra bibendum. Quisque justo enim, aliquet et gravida quis, convallis et dui. Suspendisse eget tortor suscipit, consequat odio id, luctus nisi. Quisque non sem auctor felis cursus elementum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam eros arcu, eleifend a tempor aliquam, venenatis sit amet velit. Donec nec posuere tortor. In pretium aliquet odio, eu consectetur metus pellentesque varius.</p>
 
-                <div class="clear"></div>
-            </div>
+				<div class="clear"></div>
+			</div>
 
-            <hr>
-            <div>
-                <h3>Para que o texto se arranje não ao redor, mas na sequência de fluxo de apresentação dos objetos é necessário aplicar o "clear"</h3>
-                <h4>A idéia dos elementos flutuantes é que a medida que são adicionados preenchendo a área útil da tela tentando preenchê-la. O clear zera estes posicionamentos e o processo recomeça </h4>
-                <div class="conteudo2">
-                    Conteúdo 1 com float
-                </div>
-                <div class="conteudo1">
-                    Conteúdo 2 com float
-                </div>
-                <div class="conteudo1">
-                    Conteúdo 3 com float
-                </div>
-                <p class="clear">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras maximus tempus tristique. Curabitur lacinia quis tellus et viverra. Etiam porttitor magna in est tristique mattis. Morbi vitae sapien varius, lobortis quam consectetur, vulputate dui. Integer ut quam sit amet sapien euismod venenatis. Integer suscipit molestie nisi placerat cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus vitae sem non posuere. In elementum pharetra bibendum. Quisque justo enim, aliquet et gravida quis, convallis et dui. Suspendisse eget tortor suscipit, consequat odio id, luctus nisi. Quisque non sem auctor felis cursus elementum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam eros arcu, eleifend a tempor aliquam, venenatis sit amet velit. Donec nec posuere tortor. In pretium aliquet odio, eu consectetur metus pellentesque varius.</p>
-            </div>
-    
-    
+			<hr>
+			<div>
+				<h3>Para que o texto se arranje não ao redor, mas na sequência de fluxo de apresentação dos objetos é necessário aplicar o "clear"</h3>
+				<h4>A idéia dos elementos flutuantes é que a medida que são adicionados preenchendo a área útil da tela tentando preenchê-la. O clear zera estes posicionamentos e o processo recomeça </h4>
+				<div class="conteudo2">
+					Conteúdo 1 com float
+				</div>
+				<div class="conteudo1">
+					Conteúdo 2 com float
+				</div>
+				<div class="conteudo1">
+					Conteúdo 3 com float
+				</div>
+				<p class="clear">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras maximus tempus tristique. Curabitur lacinia quis tellus et viverra. Etiam porttitor magna in est tristique mattis. Morbi vitae sapien varius, lobortis quam consectetur, vulputate dui. Integer ut quam sit amet sapien euismod venenatis. Integer suscipit molestie nisi placerat cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus vitae sem non posuere. In elementum pharetra bibendum. Quisque justo enim, aliquet et gravida quis, convallis et dui. Suspendisse eget tortor suscipit, consequat odio id, luctus nisi. Quisque non sem auctor felis cursus elementum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam eros arcu, eleifend a tempor aliquam, venenatis sit amet velit. Donec nec posuere tortor. In pretium aliquet odio, eu consectetur metus pellentesque varius.</p>
+			</div>
+	
+	
 
-        </div>
-    </body>
+		</div>
+	</body>
 </html>
