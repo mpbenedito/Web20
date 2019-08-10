@@ -1,0 +1,30 @@
+/*Limpar formatações padrão */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*Definição do body*/
+body {
+	font-size: 1em;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	background: #C6C6C6;
+	}
+
+/* 
+/*** LAIANTES
+*/
+#area-cabecalho {
+	background-color: #F7B600;
+	padding: 15PX;
+	text-align: center;
+}
+
+#area-logo, #area-menu	{
+	padding: 10px;
+}
+
+/* 
+/***Formatações Gerais
+*/
+
