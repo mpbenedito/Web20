@@ -1,0 +1,27 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*
+***  CONCEITO DE HERANÇA
+*/
+body {
+    color: red;
+    border: 3px solid blue;
+}
+
+.pagina1 {
+    border: 3px solid red;
+    background: whitesmoke;
+}
+
+.pagina2 {
+    border: 5px solid yellow;
+    background: lightgreen;
+}
+
+
+.pagina2 p {
+    color: blue;
+    background: lightgreen;
+}

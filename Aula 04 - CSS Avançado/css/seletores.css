@@ -1,0 +1,58 @@
+
+/* seletor geral e padrão*/
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+
+/* seletor de classe: quando definido um seletor.classe esta classe só funciona em seletores que a definiram*/
+p.verde {
+    color: green;
+}
+
+a {
+    color: orange;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    text-decoration: none;
+}
+
+
+/*
+**** SELETOR FILHO
+*/
+li>a {
+    color: red;
+    text-decoration: none;
+}
+
+/*
+**** SELETOR DESCENDENTE
+*/
+.seletor-descendente a{
+    color: chartreuse;
+}
+
+/*
+**** SELETOR IRMÃO ADJACENTE
+*/
+.seletor-irmao-adjacente {
+    color: red; 
+}
+h3+p {
+    color: brown;
+}
+
+/*
+**** SELETOR IRMÃO GERAL  
+*/
+.seletor-irmao-geral {
+    color: black;
+}
+
+h3~p {  
+    color: blue;
+
+}

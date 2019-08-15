@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <title>CSS - Seletores</title>
+        <link rel="stylesheet" text="text/css" href="css/seletores.css">
+	</head>
+
+	<body>
+		<div>
+			<h2>CSS Avançado</h2>
+			<a href="seletores.html">Seletores</a> |
+			<a href="heranca.html">Herança</a> |
+			<a href="menu-home.html">Menu Vertical</a> 
+            <hr>
+            <h3>Seletor padrão "* {...}" formata todo o documento e é aplicado para todos os seus elementos.</h3>
+            <p> Todo este documento está padronizado para utilizar um fonte específico</p>
+            <hr>
+
+            <h3>Seletores de classe: quando eu crio uma classe que só funcionará em determinados elementos</h3>
+            <p class="verde">texto em verde usando parágrafo</p>
+            <span class="verde">tentativa de texto em verde usando span</span>
+            <h3>A classe "verde" foi configurada para ser utilizada em parágrafos - p.verde {}</h3>
+            <hr>
+
+
+            <h3>Seletores de filho: quando eu crio uma classe que só funcionará apenas em elementos específicos dentro de outro</h3>
+            <h3>Exemplo. Posso formatar as referências de uma forma específica se estiverem dentro de uma lista. Link1 e Link2 estão numa lista. Link3 não.</h3>
+            <h3>li>a: todas os elementos "a href" dentro de elementos "li" terão formatação específica</h3>
+            <ul>
+                <li><a href="">Link1</a></li>
+                <li><a href="">Link2</a></li>
+            </ul>
+            <a href="">Link3</a>
+            <hr>
+
+            <div class="seletor-descendente">
+                <h3>Seletores descendentes são utilizados para formatar elementos que estejam aninhados em outros, independentes de serem filhos diretos.</h3> 
+                <p>Este paràgrafo tem um <a href="">LINK</a> dentro de uma classe. Apenas o link possui uma formatação específica, mesmo não sendo filho da div.</p>
+            </div>
+            <hr>
+
+            <div class="seletor-irmao-adjacente">
+                <h3>Seletor Irmão Adjacente (este título é um h3)</h3> 
+                <p>Este paràgrafo é considerado irmão do título anterior pois ambos são filhos da div em que estão alinhados. E são adjacentes pois são consecutivos, portanto, ele recebe a formatação específica.</p>
+                <p>Em um contexto geral, o "irmão adjacente" é o elemento consecutivo ao anterior.</p>
+                <p>Este parágrafo também é considerado irmão do anterior e do título h3, porém não adjacente a esse e não receberá a formatação, seguindo o padrão já definido.</p>
+            </div>
+            <hr>
+
+            <div class="seletor-irmao-geral">
+                <h3>Seletor Irmão Geral (este título é um h3)</h3> 
+                <p>Esta formatação aplica-se aos elementos definidos que sejam irmãos em hierarquia, desde que sejam adjacentes entre si, mesmo não sendo consecutivos.</p>
+                <p>Parágrafo 1</p>
+                <p>Parágrafo 2</p>
+                <a href="">Link 1 <a>
+                <p>Parágrafo 3 </p>
+            </div>
+
+        </div>
+
+		</body>
+</html>
