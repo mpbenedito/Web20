@@ -1,6 +1,8 @@
 * {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
+
+
 ul {
 	list-style-type: none;   /* retira a bolinha da frente da lista  */
 	margin: 0;
@@ -71,4 +73,35 @@ ul {
 #contato #menu-horizontal .contato a {
 	color: #085662;
 	background: #44CADE;
+}
+
+
+/*
+***** CONFIGURAÇÕES PARA NAVEGAÇÃO EM ABAS
+*/
+#navegacao-abas li {
+	float: left;
+	background: url(../imagens/aba-direita.png) no-repeat top right;
+}
+
+#navegacao-abas a {
+	display: block;
+	padding: 0 2em;
+	line-height: 3em;
+	text-decoration: none;
+	background: url(../imagens/aba-esquerda.png) no-repeat top left;
+	color: #FFFFFF;
+}
+
+#navegacao-abas a:hover {
+	color: #894A1F;
+}
+
+ul>#atual {
+	background: url(../imagens/aba-direita-atual.png) no-repeat top right;
+}
+
+#atual>a {
+	color: #894A1F;
+	background: url(../imagens/aba-esquerda-atual.png) no-repeat top left;
 }
