@@ -187,7 +187,7 @@ input.submit {
 **** FORMATANDO IMAGENS
 */
 img.imagem-principal {
-	width: 98%
+	width: 98%;
 	border: 3px solid #DFDFDF;
 }
 
@@ -224,7 +224,7 @@ h3 {
 
 #lista-noticias li a img {
 	float: left;
-	margin 5px;
+	margin: 5px;
 }
 
 #lista-noticias li a {
