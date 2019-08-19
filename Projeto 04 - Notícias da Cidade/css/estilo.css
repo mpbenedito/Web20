@@ -1,0 +1,265 @@
+/*
+***** ESTRUTURA DO SITE
+*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	background: #FFFFFF url(../imagens/fundo.png) repeat-x;
+}
+
+#container {
+	width: 750px;
+	margin: 0 auto;
+}
+
+#topo {
+	height: 150px;
+	background: url(../imagens/detalhe-topo.png) no-repeat right top;
+	padding-top: 25px;
+}
+
+.logo {
+	width: 152px;
+	height: 66px;
+	background: url(../imagens/logo.png) no-repeat center;
+	text-indent: -3000px;  /*fazer desta forma para retirar o título da parte visível da tela, de forma a esconder o texto, porém manter o descritivo para que o auxílio a cegos leia o conteúdo do site*/
+}
+
+/*
+*** BARRA DE NAVEGAÇÃO SUPERIOR
+*/
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#topo ul {
+	background: #B10333;
+	margin-top: 30px;
+	float: left;
+}
+
+#topo ul li {
+	float: left;
+}
+
+#topo ul a {
+	font-size: 0.9em;
+	display: block;
+	padding: 0.5em 1.5em;
+	line-height: 2.1em;
+	text-decoration: none;
+	color: #FFFFFF;
+	background: url(../imagens/divisor.png) no-repeat left center;
+}
+
+#topo ul .primeiro a {
+	background: none;
+}
+
+#topo ul a:hover {
+	color: #69001D; 
+}
+
+body.home #navegacao a#home,
+body.brasil #navegacao a#brasil,
+body.internacional #navegacao a#internacional,
+body.economia #navegacao a#economia,
+body.saude #navegacao a#saude,
+body.ciencia #navegacao a#ciencia,
+body.fotos #navegacao a#fotos {
+	color: #FFFFFF; 
+	background: #DE003E;
+	cursor: text; 
+}
+
+/*
+**** CONFIGURAÇÃO DO LEIAUTE DE 3 COLUNAS 
+** página HOME
+*/
+#conteudo {
+	background: #F5F5F5;
+	margin-top: 60px;
+}
+
+#lateral {
+	width: 180px;
+	float: left;
+	margin: 0 0 20px -750px;
+}
+
+#primario {
+	width: 270px;
+	float: left;
+	margin: 0 0 20px 195px;
+}
+
+#duas-colunas #primario {
+	width: 555px;
+}
+
+#uma-coluna #primario {
+	width: 750px;
+	margin: 0 0 20px 0px;
+}
+
+
+#secundario {
+	width: 270px;
+	float: left;
+	margin: 0 0 20px 15px;
+}
+
+
+/* 
+**** ESTILIZAÇÃO DA LATERAL
+*/
+
+#lateral ul a {
+	font-size: 0.9em;
+	padding: 3px;
+	display: block;
+	line-height: 30px;
+	color: #000000;
+	text-decoration: none;
+	border-bottom: 1px solid #F3F3F3;
+}
+
+#lateral ul a:hover {
+	background: #F9F9F9 url(../imagens/marcador.png) no-repeat left center;
+	padding-left: 20px;
+	color: #A1A1A1;
+}
+
+
+/*
+**** ESTILIZAÇÃO DAS CAIXAS COM TEXTO
+*/
+.caixa {
+	background: #F3F3F3 url(../imagens/fundo-caixa.png);
+	margin: 10px 0px;
+	padding: 5px 0 5px 0;
+}
+
+h2 {
+	font-size: 1em;
+	background: #294C71;
+	color: #FFFFFF;
+	padding: 5px;
+}
+
+.caixa-conteudo {
+	background: #FFFFFF;
+	padding: 5px;
+	margin-top: 5px;
+}
+
+/*
+**** FORMULÁRIOS
+*/
+label {
+	cursor: pointer;
+	display: block;
+}
+
+input {
+	padding: 5px;
+	width: 125px;
+	font-size: 0.9em;
+	background-color: #FFFFFF;
+}
+
+input.submit {
+	width: 80px;
+	color: #FFFFFF;
+	background-color: #B10333;
+	border: 2px solid #870529;
+	padding: 5px;
+}
+
+
+/*
+**** FORMATANDO IMAGENS
+*/
+img.imagem-principal {
+	width: 98%
+	border: 3px solid #DFDFDF;
+}
+
+
+/*
+**** FORMATANDO TITULOS
+*/
+h3 {
+	text-transform: uppercase;
+	display: inline;
+	font-size: 0.8em;
+	padding: 3px;
+}
+
+.destaque h3 {
+	background: #B10333;
+	color: #FFFFFF;
+}
+
+.entrevista h3 {
+	background: #DE003E;
+	color: #000000;
+}
+
+
+/*
+**** FORMATAÇÃO DA LISTA DE NOTÍCIAS
+*/
+#lista-noticias li {
+	padding: 2px;
+	border-bottom: 1px solid #CCCCCC;
+	height: 62px;
+}
+
+#lista-noticias li a img {
+	float: left;
+	margin 5px;
+}
+
+#lista-noticias li a {
+	text-decoration: none;
+}
+
+#lista-noticias li a h3 {
+	font-size: 0.8em;
+	padding-left: 10px;
+	color: #3E7AB9;
+}
+
+#lista-noticias li a p {
+	font-size: 0.7em;
+	color: #000000;
+}
+
+
+#lista-noticias li:hover {
+	background: #EEEEEE;
+	cursor: pointer;
+}
+
+
+/*
+***** RODAPE
+*/
+#container-rodape {
+	background: #294C71;
+	padding: 20px;
+}
+
+#rodape {
+	width: 750px;
+	margin: 0 auto;
+	color: #FFFFFF;
+	text-align: center;
+}
