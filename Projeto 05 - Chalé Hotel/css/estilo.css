@@ -1,0 +1,212 @@
+/* 
+**** Estrutura do site
+*/
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	background: #FFFFFF url(../imagens/bg.png);
+	margin: 15px;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#container {
+	background: #EDE9CC url(../imagens/bg-container.png) top center repeat-y;
+	margin: 0 auto;
+	min-width: 740px;
+	max-width: 1180px;
+}
+
+/*
+**** FORMATAÇÕES DO TOPO
+*/
+#topo {
+	position: relative;
+	background: #DBCD87;
+	height: 15.4em;
+	min-height: 250px;
+}
+
+#area-logo {
+	position: absolute;
+	background: url(../imagens/topo-imagem-principal.png) no-repeat;
+	width: 100%;
+	height: 250px;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.logo a {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	z-index: 3;
+	background: url(../imagens/logo.png) no-repeat;
+	width: 151px;
+	height: 66px;
+	text-indent: -9000px;
+}
+
+/*
+**** Área do menu de locais e reservas
+*/
+#area-menu {
+	position: absolute;
+	background: url(../imagens/topo-imagem-lateral.png) no-repeat;
+	width: 450px;
+	height: 250px;
+	top: 0;
+	right: 0;
+	z-index: 2;
+}
+
+#conteudo-menu {
+	margin-left: 90px;
+	margin-right: 15px;
+	padding-top: 15px;
+}
+
+#menu-locais {
+	border-top: 1px solid #B5AB56;
+	border-bottom: 1px solid #B5AB56;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 0.8em;
+	color: #8B8448;
+}
+
+#menu-locais .locais {
+	float: left;
+	line-height: 2.1em;
+}
+
+a.reserva {
+	text-transform: uppercase;
+	background: #a29750;
+	color: #FFF5B0;
+	padding: 5px 10px;
+	float: right;
+}
+
+/*
+*** Menu Vertical de Opções no topo da página
+*/
+#menu {
+	margin-top: 15px;
+}
+
+ul#navegacao {
+	float: left;
+}
+
+ul#navegacao a {
+	text-transform: uppercase;
+	font-size: 0.8em;
+	padding: 5px;
+	color: #6e672c;
+	line-height: 30px;
+}
+
+ul#navegacao a:hover {
+	background: #FDf6BE;
+} 
+
+#depoimento {
+	width: 226px;
+	height: 164px;
+	float: right;
+}
+
+/*
+**** Área de conteúdo do site
+*/
+#area-principal {
+	background: url(../imagens/bg-area-principal.png) top left repeat-x;
+	float: left;
+	width: 50%;
+	padding: 15px 0;
+}
+
+#area-lateral {
+	background: url(../imagens/bg-area-lateral.png) top left repeat-x;
+	float: right;
+	width: 50%;
+	padding: 20px 0px;
+}
+
+.conteudo {
+	margin: 0 auto;
+	width: 90%;
+}
+
+
+/*
+**** Menu Lateral de Opções
+*/
+#beneficios li {
+	/*padding: 8px;*/
+	border-bottom: 1px solid #F3EFCB;
+	height: 7em;
+}
+
+#beneficios li a img {
+	float: left;
+	margin: 5px 8px;
+}
+
+#beneficios li a h3 {
+	background: url(../imagens/ornamento.png) no-repeat right center;
+	font-size: 1.1em;
+	color: #615B2D;	
+	padding: 5px 0;
+}
+
+#beneficios li a p {
+	color: #000000;
+	padding-left: 5px;
+	font-size: 0.9em;
+}
+
+#beneficios li:hover {
+	background: #F6F3D6; 
+	cursor: pointer;
+} 
+
+
+/*
+**** Rodapé
+*/
+#rodape {
+	clear: both;
+	padding: 16px;
+	background: #FFFFFF url(../imagens/bg-rodape.png) repeat-x top;
+	color: #7D7640;
+}
+
+/*
+**** FORMATAÇÕES DE TEXTOS
+*/
+h2 {
+	color: #7D7640;
+	font-size: 1.1em;
+	padding: 5px 0;
+}
+
+p {
+	font-size: 1em;
+	margin-bottom: 10px;
+}
