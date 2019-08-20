@@ -1,0 +1,121 @@
+/*
+***** FORMATAÇÕES GERAIS
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    font: 16px "Lato", sans-serif;
+    color: #777777;
+    height: 100%;
+    background-color: #ccc694;
+}
+
+a {
+    text-decoration: none;
+}
+
+h3 {
+    text-transform: uppercase;
+    color: #111111;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+/*
+**** DEFINIÇÕES DO TOPO 
+esta parte não está no projeot original, coloquei para necessidades de estudo
+*/
+#topo {
+    width: 100%;
+	position: fixed;
+	height: 1.8em;
+    top: 0;
+    z-index: 999;
+}
+
+#topo span {
+    color: #000000;
+    font-size: 1.1em;
+    padding: 20px 10px 0px 10px;
+}
+
+#topo a {
+    font-size: 0.9em;
+    color: #000000;
+    padding: 4px 8px;
+}
+
+#topo a:hover {
+    background: #FFFFFF;
+    color: #033642;
+}
+
+
+/*
+**** FORMATAÇÕES DE TEXTO
+*/
+.texto {
+    color: #777777;
+    background-color: #FFFFFF;
+    text-align: justify;
+    padding: 50px 80px;
+}
+
+/*
+**** DEFINIÇÕES PARA O EFEITO PARALLAX
+*/
+.caixa1, .caixa2, .caixa3, .caixa4, .caixa5, .caixa6 {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.caixa1 {
+    background-image: url(../imagens/imagem1.jpg);
+}
+
+.caixa2 {
+    background-image: url(../imagens/imagem2.jpg);
+}
+
+.caixa3 {
+    background-image: url(../imagens/imagem3.jpg);
+}
+
+.caixa4 {
+    background-image: url(../imagens/imagem4.jpg);
+}
+
+.caixa5 {
+    background-image: url(../imagens/imagem5.jpg);
+}
+
+.caixa6 {
+    background-image: url(../imagens/imagem6.jpg);
+}
+
+/* texto dentro do efeito parallax */
+.caixa-titulo {
+    position: absolute;
+    width: 100%;
+    left: 0%;
+    top: 50%;
+    text-align: center;
+}
+
+.caixa-titulo span.titulo {
+    color: #FFFFFF;
+/*    background: #111111;*/
+    font-size: 1.5em;
+    padding: 10px 20px;
+    letter-spacing: 5px;
+}
