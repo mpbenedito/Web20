@@ -1,0 +1,71 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/*
+**** TRANSPARÊNCIA
+*/
+#caixa-transp {
+	width: 210px;
+	height: 210px;
+	background: #B9C941 url(../imagens/camera.png);
+    margin: 25px;
+    color: #FFFFFF;
+}
+
+#caixa-transp h1 {
+/* Definir a transparência é utilizar cores com a propriedade utilizando rgba()     */
+    background: rgba( 255, 255, 255, 0.5);
+}
+
+/*
+**** DEGRADÊ
+*/
+#caixa-degrade1 {
+	width: 210px;
+	height: 210px;
+    background: linear-gradient(#CCCCCC, green);
+    float: left;
+    margin: 25px;
+}
+
+#caixa-degrade2 {
+	width: 210px;
+	height: 210px;
+	background: linear-gradient(to left, #CCCCCC, green);
+    float: left;
+    margin: 25px;
+}
+
+#caixa-degrade3 {
+	width: 210px;
+	height: 210px;
+	background: linear-gradient(135deg, #CCCCCC, green);
+    float: left;
+    margin: 25px;
+}
+
+#caixa-degrade4 {
+	width: 210px;
+	height: 210px;
+	background: linear-gradient(to right, #CCCCCC, green, yellow);
+    float: left;
+    margin: 25px;
+}
+
+#caixa-degrade5 {
+	width: 210px;
+	height: 210px;
+	background: radial-gradient(white, green);
+    float: left;
+    margin: 25px;
+}
+
+#caixa-degrade6 {
+	width: 210px;
+	height: 210px;
+	background: radial-gradient(white, green, orange);
+    float: left;
+    margin: 25px;
+}

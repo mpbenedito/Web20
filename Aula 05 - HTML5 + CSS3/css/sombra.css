@@ -1,0 +1,80 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#caixa {
+    width: 300px;
+    height: 300px;
+    padding: 8px;
+    margin: 20px;
+    background: #b5f7e6;
+    float: left;
+}
+
+#sombra1 {
+    color: #000000;
+    text-shadow: 8px 8px  red;
+}
+
+#sombra2 {
+    color: #000000;
+    text-shadow: 8px 8px rgba(255, 0, 0, 0.6);
+}
+
+#sombra3 {
+    color: #000000;
+    text-shadow: 8px 8px 10px rgba(255, 0, 0, 0.6);
+
+}
+
+#caixa-sombra1 {
+    width: 300px;
+    height: 300px;
+    padding: 8px;
+    margin: 20px;
+    background: #b5f7e6;
+    float: left;
+    box-shadow: 10px 10px #009670;
+}
+
+#caixa-sombra2 {
+    width: 300px;
+    height: 300px;
+    padding: 8px;
+    margin: 20px;
+    background: #b5f7e6;
+    float: left;
+    box-shadow: 10px 10px 10px #009670;
+}
+
+#caixa-forma1 {
+    width: 300px;
+    height: 300px;
+    padding: 8px;
+    margin: 20px;
+    background: #b5f7e6;
+    float: left;
+    box-shadow: -20px -20px #009670;
+    border-radius: 10px 50px 10px 50px;
+}
+
+#caixa-forma2 {
+    width: 300px;
+    height: 300px;
+    padding: 8px;
+    margin: 20px;
+    background: #b5f7e6;
+    float: left;
+    box-shadow: -20px -20px 10px #009670;
+    border-radius: 10px 50px 10px 50px;
+}
+
+#caixa-spread {
+    width: 250px;
+    height: 250px;
+    padding: 8px;
+    margin: 20px;
+    background: #b5f7e6;
+    float: left;
+    box-shadow: 30px 30px 0px 20px #009670;
+}

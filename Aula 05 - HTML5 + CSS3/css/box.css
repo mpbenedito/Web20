@@ -1,0 +1,105 @@
+* {
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container {
+/*	border: 1px solid red; */
+}
+
+
+/*
+**** TRATAMENTO BORDER RADIUS
+*/
+#caixa {
+	width: 200px;
+	height: 200px;
+	background: #B9C941;
+	padding: 10px;
+	margin: 10px;
+/* arredondamento de cantos */
+	border-radius: 20px;
+	float: left;
+}
+
+#bola {
+	width: 200px;
+	height: 200px;
+	background: #B9C941;
+	margin: 10px; 
+	border-radius: 100px;    
+	float: left;
+}
+
+.arredondamento {
+	border-radius: 150px;
+	float: left;
+}
+
+#imagem {
+	width: 200px;
+	height: 200px;
+	margin: 10px; 
+	float: left;
+}
+
+#imagem-arred {
+	width: 200px;
+	height: 200px;
+	margin: 10px; 
+	border-radius: 100px;    
+	float: left;
+}
+
+
+#caixa2 {
+	width: 200px;
+	height: 200px;
+	background: #B9C941;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 20px 80px 80px 80px;
+	float: left;
+}
+
+#caixa3 {
+	width: 200px;
+	height: 200px;
+	background: #B9C941;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 20px 80px;
+	float: left;
+}
+
+/*
+**** TRATAMENTO BOX SIZING
+*/
+#caixa-sem-padding {
+	width: 300px;
+	height: 300px;
+	margin-left: 10px;
+	background: #B9C941;
+	border-radius: 10px;
+	float: left;
+}
+
+#caixa-com-padding {
+	width: 300px;
+	height: 300px;
+	margin-left: 10px;
+	background: #B9C941;
+	padding: 50px;
+	border-radius: 10px;
+	float: left;
+}
+
+#caixa-com-box-sizing {
+	width: 300px;
+	height: 300px;
+	margin-left: 10px;
+	background: #B9C941;
+	padding: 50px;
+	box-sizing: border-box;
+	border-radius: 10px;
+	float: left;
+}

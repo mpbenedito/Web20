@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Box Sizing e Cantos Arredondados</title>
+
+<!-- normalize.css -->		
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" >
+
+<!-- css personalizado, do projeto -->		
+		<link rel="stylesheet" type="text/css" href="css/box.css" >
+	</head>
+
+
+	<body>
+		<div>
+			<h3>HTML5 + CSS3 - Recursos Especiais</h3>
+            <a href="normalize.hgml"></a>Normalize CSS</a> |
+            <a href="box-sizing-border-radius.html">Box Sizing e Cantos Arredondados</a> |
+			<a href="degrade.html">Degradê</a> |
+			<a href="sombra.html">Sombras</a> |
+			<a href="animacao.html">Animações</a>
+			<hr>
+		</div>
+
+<!-- CONTEÚDO -->
+		<div class="container">
+			<h2>Border Radius</h2>
+		</div>
+
+		<div class="container">
+			<div id="caixa">
+				<h3>Cantos Arredondados</h3>
+				<p>Arredondamento de cantos das caixas é possível utilizando a propriedade <em>border-radius</em>  dos elementos.</p>
+			</div>
+
+			<div id="bola">
+				<h3>Bola</h3>
+			</div>
+
+			<div id="imagem-arred">
+				<img class="arredondamento" width="200" height="200" src="imagens/perfil.jpg" alt="">
+			</div>
+	
+			<div id="caixa2">
+				<h3>Caixa Estilizada1 </h3>
+				<p>Caixa com diferentes border-radius.</p>
+			</div>
+
+			<div id="caixa3">
+				<h3>Caixa Estilizada 2</h3>
+				<p>Caixa com diferentes border-radius.</p>
+			</div>
+
+			<div style="clear: both"></div>
+		</div>
+		<hr>
+		<div class="container">
+			<h2>Box Sizing</h2>
+		</div>
+
+		<div class="container">
+			<div id="caixa-sem-padding">
+				<h3>Caixa Sem Padding</h3>
+				<p>Esta caixa não possui tamanho de 300x300 e está sem o padding.</p>
+			</div>
+
+			<div id="caixa-com-padding">
+				<h3>Caixa Com Padding</h3>
+				<p>Esta caixa também tem 300x300 porém está com padding de 50px, que se soma ao total do tamanho da caixa</p>
+			</div>
+
+			<div id="caixa-com-box-sizing">
+				<h3>Caixa Com Padding e Box Sizing</h3>
+				<p>Esta caixa também tem 300x300 e está com padding de 50px, mas está com o atributo box-sizing configurado, devolvendo-a ao seu tamanho esperado.</p>
+			</div>
+			<div style="clear: both"></div>
+		</div>
+		<hr>
+		<div>
+			<h3>Não esquecer de avaliar a necessidade dos prefixos -webkit- e -moz- para compatibilidade com navegadores mais antigos.</h3>
+		</div>
+
+
+	</body>
+</html>

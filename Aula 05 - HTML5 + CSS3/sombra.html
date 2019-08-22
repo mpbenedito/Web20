@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Sombras</title>
+
+<!-- normalize.css -->		
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" >
+
+<!-- css personalizado, do projeto -->		
+		<link rel="stylesheet" type="text/css" href="css/sombra.css" >
+	</head>
+
+
+	<body>
+		<div>
+			<h3>HTML5 + CSS3 - Recursos Especiais</h3>
+			<a href="normalize.hgml"></a>Normalize CSS</a> |
+			<a href="box-sizing-border-radius.html">Box Sizing e Cantos Arredondados</a> |
+			<a href="degrade.html">Degradê</a> |
+			<a href="sombra.html">Sombras</a> |
+			<a href="animacao.html">Animações</a>
+			<hr>
+		</div>
+
+<!-- CONTEÚDO -->
+		<div>
+			<h3>Aplicando o sombreamento em textos</h3>
+			<div id="caixa">
+				<h1 id="sombra1">Sombreamentos</h1>
+				<p>Os elementos de escrita possuem uma propriedade text-shadow, que ao ser configurada, define uma sombra para o texto. </p>
+				<p>text-shadow: desloc-x, desloc-y, blur, cor da sombra</p>
+				<p>(O parâmetro 3 de blur pode ser omitido)</p>
+			</div>
+
+			<div id="caixa">
+				<h1 id="sombra2">Sombreamentos</h1>
+				<p>Utilização do rgba() para definição de um sombreamento transparente</p>
+				<p>O sombreamento deste título é igual ao anterior, porém com uma transparência de 50% apresentando o background</p>
+		   </div>
+
+		   <div id="caixa">
+				<h1 id="sombra3">Sombreamentos</h1>
+				<p>Utilização de um BLUR (borrão)</p>
+				<p>Um terceiro número pode ser aplicado ao text-shadow para definir um blur.</p>
+		   </div>
+		   <div style="clear: both"></div>
+		</div>
+		<hr>
+		<div>
+			<h3>Aplicando o Sombreamento em elementos de display (div, por exemplo)</h3>
+			<div id="caixa-sombra1">
+				<h1>Box-Shadow</h1>
+				<p>O estilo box-shadow possui mesmas formas de utilização do text-shadow. </p>
+				<p>box-shadow: desloc-x, desloc-y, blur, spread, cor da sombra</p>
+				<p>(Os parâmetro 3 e 4 de blur e spread podem ser omitidos)</p>
+			</div>
+			<div id="caixa-sombra2">
+				<h1>Box-Shadow BLUR</h1>
+				<p>Aplicação de uma sombra a um elemento do tipo box. A sombra sólida dá lugar um borrão degradê</p>
+			</div>
+
+			<div id="caixa-forma1">
+				<h1>Caixa Estilizada</h1>
+				<p>Aplicação de box shadow em caixas estilizadas </p>
+			</div>
+			<div id="caixa-forma2">
+				<h1>Caixa Estilizada BLUR</h1>
+				<p>Aplicação de uma sombra a um elemento do tipo box. A sombra sólida dá lugar um borrão degradê</p>
+			</div>
+	
+			<div id="caixa-spread">
+					<h1>Spread</h1>
+					<p>Aplicação de uma sombra com spread. A sombra perde a proporcionalidade em relação ao elemento original, aumentando a área utilizada para apresentação.</p>
+					<p>Spread = Espalhamento</p>
+				</div>
+			</div>
+
+
+ 	</body>
+</html>
