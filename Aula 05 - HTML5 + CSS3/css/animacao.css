@@ -1,0 +1,116 @@
+* {
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	margin: 10px;
+}
+
+h4 {
+	padding: 10px;
+	color: #FFFFFF;
+}
+
+/*
+**** CAIXA 1 
+*/
+@keyframes animacao-caixa1 {
+	from {
+		background: #08f1ac;
+	}
+	to {
+		background: red;
+	}
+}
+
+
+
+#caixa1 {
+	width: 150px;
+	height: 150px;
+	background: #08f1ac;
+	animation-name: animacao-caixa1;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-delay: 1s;
+	float: left;
+}
+
+/*
+**** CAIXA 2
+*/
+@keyframes animacao-caixa2 {
+	from {
+		background: #08f1ac;
+		border-radius: 0;
+	}
+	to {
+		background: yellow;
+		border-radius: 75px;
+	}
+}
+
+#caixa2 {
+	width: 150px;
+	height: 150px;
+	background: #08f1ac;
+	animation-name: animacao-caixa2;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-delay: 1s;
+	float: left;
+}
+
+/*
+**** CAIXA 3
+*/
+@keyframes animacao-caixa3 {
+	from {
+		background: #08f1ac;
+		border-radius: 0;
+
+	}
+	to {
+		background: lightblue;
+		border-radius: 75px;
+		box-shadow: 20px 20px 20px 0 #000000;
+	}
+}
+
+#caixa3 {
+	width: 150px;
+	height: 150px;
+	background: #08f1ac;
+	animation-name: animacao-caixa3;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate; 
+	animation-delay: 1s;
+	float: left;
+}
+
+/*
+**** CAIXA 4
+*/
+@keyframes animacao-caixa4 {
+	from {
+		background: #08f1ac;
+		border-radius: 0;
+		top: 0;
+		left: 0;
+	}
+	to {
+		background: lightblue;
+		border-radius: 75px;
+		box-shadow: 20px 20px 20px 0 #000000;
+		top: 0px;
+		left: 200px;
+	}
+}
+
+#caixa4 {
+	width: 150px;
+	height: 150px;
+	background: #08f1ac;
+	position: relative;
+	animation: animacao-caixa4 5s 1s infinite alternate; 
+	float: left;
+}
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Tags Article, Section, Aside e Time</title>
+
+<!-- normalize.css -->		
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" >
+
+<!-- css personalizado, do projeto -->		
+		<link rel="stylesheet" type="text/css" href="css/novas-tags2.css" >
+
+
+	<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+	<![endif]-->		
+	</head>
+
+
+	<body>
+		<div>
+			<h3>HTML5 + CSS3 - Recursos Especiais</h3>
+			<a href="normalize.html">Normalize CSS</a> |
+			<a href="box-sizing-border-radius.html">Box Sizing e Cantos Arredondados</a> |
+			<a href="degrade.html">Degradê</a> |
+			<a href="sombra.html">Sombras</a> |
+			<a href="animacao.html">Animações</a> |
+			<a href="transicao.html">Transições</a> |
+			<a href="novas-tags.html">Tags Header, Nav e Footer</a>	|
+			<a href="novas-tags2.html">Tags Article, Section, Aside e Time</a>
+			<hr>
+			<p>Imaginando um site estruturado com as novas tags header, nav e footer, apresentados em cinza.</p>
+		</div>
+
+<!-- CONTEÚDO -->
+		<header>
+			<span>Logo do Site e Cabeçalho</span>
+		</header>
+
+		<nav>
+			<ul>
+				<li><a href="">Home</a></li>
+				<li><a href="">Sobre</a></li>
+				<li><a href="">Contato</a></li>
+			</ul>
+		</nav>
+
+		<article>
+			<h3>article: Novos Conteúdos</h3>
+			<p>Entende-se o article como uma div id=conteudo, ou seja, o container onde o conteúdo da página seria apresentado</p>
+			<p>Este conteúdo pode ser dividido em blocos menores, exemplos, menu lateral, bloco principal e conteúdo lateral.</p>
+			<p>No HTML5 esta divisão será representada pelas tag<em>section</em>.</p>
+			<hr>
+			<section>
+				<h4>section: Conteúdo1</h4>
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat eligendi quidem necessitatibus placeat dicta, consequuntur nihil, beatae quia nam non dolore cupiditate voluptates iusto dolor expedita. Vero voluptates praesentium esse.</p>
+			</section>
+			<section>
+				<h4>section: Conteúdo2</h4>
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat eligendi quidem necessitatibus placeat dicta, consequuntur nihil, beatae quia nam non dolore cupiditate voluptates iusto dolor expedita. Vero voluptates praesentium esse.</p>
+			</section>
+
+			<p>A tag<em>time</em> é utilizada para colocar relevância em datas de forma que os navegadores entendam o significado do conteúdo da página:</p>
+			<p>Exemplo: Atualizado em <time>26/08/2019.</time> </p>
+			<p>Esta tag time pode ser formatada de diversas formas dando flexibilidade á padronização do site.</p>
+		</article>
+
+		<aside>
+			<h3>Tag<em>aside</em></h3>
+			<p>É utilizada para conteúdos externos ao conteúdo principal, originalmente conteúdos laterais, de onde surgiu sua identificação.</p> 
+			<p>Necessário flutuar os conteúdos de article e aside para tê-los posicionados corretamente.</p>
+		</aside>
+
+		<article>
+			<h3>Compatibilidade de Navegadores</h3>
+			<p>Nem todos os navegadores conseguem compreender estas tags novas do HTML5, então é necessário realizar a compatibilização.</p>
+			<p>Procurar no Google: "html5 shiv"</p>
+			<p>Esta pesquisa levará a sites com conteúdos que devem ser copiados para o site em desenvolvimento. Geralmente são scripts de javascript.</p>
+			<p>Pesquisar neste projeto pela pasta js com o arquivo html5shiv.js</p>
+		</article>
+
+
+		<footer>
+			<p>Rodapé</p>
+		</footer>
+
+
+	</body>
+</html>
