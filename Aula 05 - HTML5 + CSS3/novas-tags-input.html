@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Novas Tags Input</title>
+
+<!-- normalize.css -->		
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" >
+
+<!-- css personalizado, do projeto -->		
+		<link rel="stylesheet" type="text/css" href="css/novas-input.css" >
+
+	</head>
+
+
+	<body>
+		<div>
+			<h3>HTML5 + CSS3 - Recursos Especiais</h3>
+			<a href="normalize.html">Normalize CSS</a> |
+			<a href="box-sizing-border-radius.html">Box Sizing e Cantos Arredondados</a> |
+			<a href="degrade.html">Degradê</a> |
+			<a href="sombra.html">Sombras</a> |
+			<a href="animacao.html">Animações</a> |
+			<a href="transicao.html">Transições</a> |
+			<a href="novas-tags.html">Tags Header, Nav e Footer</a>	|
+			<a href="novas-tags2.html">Tags Article, Section, Aside e Time</a> |
+			<a href="novas-tags-input.html">Novas Tags Input HTML5</a> |
+			<a href="flexbox.html">Flexible Box Layout</a>
+			<hr>
+		</div>
+
+<!-- CONTEÚDO -->
+		<form action="">
+
+			<!-- Nome - verificar a cláusula required-->
+			<label for="nome">Nome: </label>
+			<input type="text" id="nome" required>
+			<p class="observacao">Não é possível submeter este formulário se o campo Nome estiver em branco devido á nova cláula que pode ser colocada nos inpúts, identificando aqueles que são obrigatórios.</p>
+			<br><br>
+
+			<!-- Email - novo tipo específico para ler emails -->
+			<label for="email">Email: </label>
+			<input type="email" id="email">
+			<p class="observacao">Verifique que se não digitar algo no formato [nome]@[domínio] o submit do formulário não ocorre, devido ao type<em>"email"</em>colocado no input. </p>
+			<br><br>
+
+			<!-- Número -->
+			<label for="numero">Número: </label>
+			<input type="number" id="numero" min="0" max="10" step="2">
+			<p class="observacao">Campos numéricos podem ter de incremento e decremento ao lado da caixa text para inputs tipo<em>number</em>.</p>
+			<p class="observacao">É possível definir números mínimos e máximos (min e max)</p>
+			<p class="observacao">Definir o <em>step</em> indica quanto as setas de incremento e decremento irão variar</p>
+			<p class="observacao">O exemplo está com min=0, max=10 e step=2. Tente colocar números que excedam o range ou sejam ímpares e tente submeter o formulário.</p>
+			<br><br>
+
+			<!-- URL -->
+			<label for="url">URL: </label>
+			<input type="url" id="url" placeholder="ex: http://www.dominio.com.br">
+			<p class="observacao">Campos tipo<em>URL</em> obrigam o conteúdos iniciados com o formato http://www ou similares (ftp p.e.). Sem isso a página não é submetida.</p>
+			<br><br>
+
+			<!-- PESQUISA -->
+			<label for="pesquisa">Pesquisa: </label>
+			<input type="search" id="pesquisa">
+			<p class="observacao">Este input apresenta o diferencial de mostrar um x dentro da textbox quando o usuário começa a digitar algo. Isto é apenas para facilitar a limpeza da caixa de forma que a consulta seja refeita mais rapidamente.</p>
+			<br><br>
+
+			<!-- RANGE -->
+			<label for="range">Range: </label>
+			<input type="range" id="range" min="1" max="10" value="2">
+			<p class="observacao">O input<em>range</em>apresenta um slide button que pode ser movimentado para definição de um valor.</p>
+			<p class="observacao">Valores mínimos, máximos e iniciais podem ser definidos. O exemplo tem valor min=1, max=10 e inicial=2</p>
+			<p class="observacao">Como a distância entre os valore smínimo e máximo são 10 unidades, estes inclusos, o slide button é dividido em 10 porções. Tentar movimentar com as setas para confirmar.</p>
+			<br><br>
+
+			<!-- DATAS -->
+			<label for="data">Data: </label>
+			<input type="date" id="data">
+			<p class="observacao">O input<em>date</em>apresenta o calendário para pesquisa e só aceita datas válidas facilitando codificação.</p>
+			<br><br>
+
+			<!-- CORES -->
+			<label for="cor">Cor: </label>
+			<input type="color" id="cor">
+			<p class="observacao">O input<em>color</em>apresenta a paleta de cores baseadas no padrão rgb.</p>
+			<br><br>
+
+
+			<input type="submit" name="" value="Enviar">
+		</form>
+
+
+	</body>
+</html>

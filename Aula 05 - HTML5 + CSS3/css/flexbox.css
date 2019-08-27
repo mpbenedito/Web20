@@ -1,0 +1,315 @@
+* {
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#menu-sup {
+	margin: 10px;
+}
+
+p {
+	margin: 10px;
+}
+
+#container {
+	display: flex;
+	flex-direction: row;
+}
+/*
+**** flex-direction
+*/
+#conteudo-row {
+	background: #DCDCDC;
+	width: 250px;
+	height: 250px;
+	margin-left: 10px;
+	border: 1px solid red;
+	display: flex;
+	flex-direction: row;
+}
+
+#conteudo-row-reverse {
+	background: #DCDCDC;
+	height: 250px;
+	width: 250px;
+	margin-left: 10px;
+	border: 1px solid red;
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+#conteudo-column {
+	background: #DCDCDC;
+	height: 250px;
+	width: 250px;
+	margin-left: 10px;
+	border: 1px solid red;
+	display: flex;
+	flex-direction: column;
+}
+
+#conteudo-column-reverse {
+	background: #DCDCDC;
+	height: 250px;
+	width: 250px;
+	margin-left: 10px;
+	border: 1px solid red;
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+
+/*
+**** flex-wrap
+*/
+#conteudo-nowrap {
+	background: #DCDCDC;
+	height: 120px;
+	width: 120px;
+	margin-left: 10px;
+	border: 1px solid red;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+#conteudo-wrap {
+	background: #DCDCDC;
+	height: 120px;
+	width: 120px;
+	margin-left: 10px;
+	border: 1px solid red;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+#conteudo-wrap-reverse {
+	background: #DCDCDC;
+	height: 120px;
+	width: 120px;
+	margin-left: 10px;
+	border: 1px solid red;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap-reverse;
+}
+
+/*
+**** justify-content
+*/
+#conteudo-flex-start {
+	background: #DCDCDC;
+	height: 120px;
+	width: 120px;
+	margin-left: 10px;
+	border: 1px solid red;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+#conteudo-flex-end {
+	background: #DCDCDC;
+	height: 120px;
+	width: 120px;
+	margin-left: 10px;
+	border: 1px solid red;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+
+#conteudo-center {
+	background: #DCDCDC;
+	height: 120px;
+	width: 120px;
+	margin-left: 10px;
+	border: 1px solid red;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#conteudo-space-between {
+	background: #DCDCDC;
+	height: 120px;
+	width: 120px;
+	margin-left: 10px;
+	border: 1px solid red;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+#conteudo-space-around {
+	background: #DCDCDC;
+	height: 120px;
+	width: 120px;
+	margin-left: 10px;
+	border: 1px solid red;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+
+/*
+**** align-itens
+*/
+#conteudo-stretch {
+	background: #DCDCDC;
+	height: 150px;
+	width: 150px;
+	margin-left: 10px;
+	border: 1px solid red;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: stretch;
+}
+
+#conteudo-align-center {
+	background: #DCDCDC;
+	height: 150px;
+	width: 150px;
+	margin-left: 10px;
+	border: 1px solid red;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#conteudo-align-flex-start {
+	background: #DCDCDC;
+	height: 150px;
+	width: 150px;
+	margin-left: 10px;
+	border: 1px solid red;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+
+#conteudo-align-flex-end {
+	background: #DCDCDC;
+	height: 150px;
+	width: 150px;
+	margin-left: 10px;
+	border: 1px solid red;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: flex-end;
+}
+
+#conteudo-baseline {
+	background: #DCDCDC;
+	height: 250px;
+	width: 250px;
+	margin-left: 10px;
+	border: 1px solid red;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: baseline;
+}
+
+.item {
+	background: white;
+	border: 1px solid grey;
+	width: 35px;
+	height: 35px;
+	margin: 5px;
+}
+
+.item1 {
+	background: white;
+	border: 1px solid grey;
+	margin: 5px;
+	width: 35px;
+}
+
+/*
+*
+**** FORMATAÇÃO EM ITENS
+*/
+
+
+/* ORDENAÇÃO */
+#conteudo-itens {
+	background: #DCDCDC;
+	width: 150px;
+	height: 150px;
+	margin-left: 10px;
+	border: 1px solid red;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.item2 {
+	width: 50px;
+	height: 50px;
+	background: white;
+	border: 1px solid grey;
+	margin: 5px;
+	flex-grow: 0;
+}
+
+.ordem1 {
+	order: 1;
+}
+
+.ordem2 {
+	order: 2;
+}
+
+.ordem3 {
+	order: 3;
+}
+
+.ordem4 {
+	order: 4;
+}
+
+/* ALTERAÇÃO DE LEIAUTES */
+#conteudo-itens2 {
+	background: #DCDCDC;
+	width: 600px;
+	height: 70px;
+	margin-left: 10px;
+	border: 1px solid red;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.item3 {
+	width: 50px;
+	height: 50px;
+	background: white;
+	border: 1px solid grey;
+	margin: 5px;
+	flex-grow: 1;
+}
+
+.item4 {
+	width: 50px;
+	height: 50px;
+	background: white;
+	border: 1px solid grey;
+	margin: 5px;
+	flex-grow: 2;
+}

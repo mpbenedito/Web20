@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Flexbox - Flexible Box Layout</title>
+
+<!-- normalize.css -->		
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" >
+
+<!-- css personalizado, do projeto -->		
+		<link rel="stylesheet" type="text/css" href="css/flexbox.css" >
+
+	</head>
+
+
+	<body>
+		<div id="menu-sup">
+			<h3>HTML5 + CSS3 - Recursos Especiais</h3>
+			<a href="normalize.html">Normalize CSS</a> |
+			<a href="box-sizing-border-radius.html">Box Sizing e Cantos Arredondados</a> |
+			<a href="degrade.html">Degradê</a> |
+			<a href="sombra.html">Sombras</a> |
+			<a href="animacao.html">Animações</a> |
+			<a href="transicao.html">Transições</a> |
+			<a href="novas-tags.html">Tags Header, Nav e Footer</a>	|
+			<a href="novas-tags2.html">Tags Article, Section, Aside e Time</a> |
+			<a href="novas-tags-input.html">Novas Tags Input HTML5</a> |
+			<a href="flexbox.html">Flexible Box Layout</a>
+			<hr>
+		</div>
+
+<!-- CONTEÚDO -->
+		<p>Flexbox é uma implementação do CSS3 para facilitar a colocação dos elementos nos containers definidos no projeto. </p>
+		<p>Os exemplos apresentados aqui mexem apenas nos containers, sem posicionar os conteúdos numerados. Desta forma, é possível alguns leiautes já trabalhando o espalhamento em tela, sem se preocupar com as divisões.</p>
+
+		<hr>
+		<p>flex-direction: os elementos na codificação não mudam de posição. Apenas a definição do flex-direction que diz como serão apresentados.</p>
+		<p>Exemplos de utilização: row, row-reverse, column, column-reverse.</p>
+		<div id="container">
+			<div id="conteudo-row">
+				<div class="item">01</div>
+				<div class="item">02</div>
+				<div class="item">03</div>
+				<div class="item">04</div>
+			</div>
+	
+			<div id="conteudo-row-reverse">
+				<div class="item">01</div>
+				<div class="item">02</div>
+				<div class="item">03</div>
+				<div class="item">04</div>
+			</div>
+		
+			<div id="conteudo-column">
+				<div class="item">01</div>
+				<div class="item">02</div>
+				<div class="item">03</div>
+				<div class="item">04</div>
+			</div>
+
+			<div id="conteudo-column-reverse">
+				<div class="item">01</div>
+				<div class="item">02</div>
+				<div class="item">03</div>
+				<div class="item">04</div>
+			</div>
+		</div>
+
+		<hr>
+		<p>flex-wrap: indica se os componentes devem ou não mudar de linha se não couberem em seus containeres. Exemplos: nowrap, wrap, wrap-reverse. (em nowrap os conteúdos se expremem para caberem no container) </p>
+		<div id="container">
+			<div id="conteudo-nowrap">
+				<div class="item">01</div>
+				<div class="item">02</div>
+				<div class="item">03</div>
+				<div class="item">04</div>
+			</div>
+	
+			<div id="conteudo-wrap">
+				<div class="item">01</div>
+				<div class="item">02</div>
+				<div class="item">03</div>
+				<div class="item">04</div>
+			</div>
+		
+			<div id="conteudo-wrap-reverse">
+				<div class="item">01</div>
+				<div class="item">02</div>
+				<div class="item">03</div>
+				<div class="item">04</div>
+			</div>
+
+		</div>
+
+		<hr>
+		<p>justify-content: como os itens devem se espalhar horizontalmente pelo container: flex-start, flex-end, center, space-between, space-around</p>
+		<div id="container">
+			<div id="conteudo-flex-start">
+				<div class="item">01</div>
+				<div class="item">02</div>
+				<div class="item">03</div>
+				<div class="item">04</div>
+			</div>
+	
+			<div id="conteudo-flex-end">
+				<div class="item">01</div>
+				<div class="item">02</div>
+				<div class="item">03</div>
+				<div class="item">04</div>
+			</div>
+		
+			<div id="conteudo-center">
+				<div class="item">01</div>
+				<div class="item">02</div>
+				<div class="item">03</div>
+				<div class="item">04</div>
+			</div>
+
+			<div id="conteudo-space-between">
+				<div class="item">01</div>
+				<div class="item">02</div>
+				<div class="item">03</div>
+				<div class="item">04</div>
+			</div>
+
+			<div id="conteudo-space-around">
+				<div class="item">01</div>
+				<div class="item">02</div>
+				<div class="item">03</div>
+				<div class="item">04</div>
+			</div>
+		</div>
+
+		<hr>
+		<p>align-itens: como os itens devem se alinhar verticalmente: stretch, center, flex-start, flex-end, baseline (neste o texto se alinha e as divs acompanham o alinhamento do texto)</p>
+		<div id="container">
+			<div id="conteudo-stretch">
+				<div class="item1">01</div>
+				<div class="item1">02</div>
+				<div class="item1">03</div>
+				<div class="item1">04</div>
+			</div>
+	
+			<div id="conteudo-align-center">
+				<div class="item1">01</div>
+				<div class="item1">02</div>
+				<div class="item1">03</div>
+				<div class="item1">04</div>
+			</div>
+
+			<div id="conteudo-align-flex-start">
+				<div class="item1">01</div>
+				<div class="item1">02</div>
+				<div class="item1">03</div>
+				<div class="item1">04</div>
+			</div>
+
+			<div id="conteudo-align-flex-end">
+				<div class="item1">01</div>
+				<div class="item1">02</div>
+				<div class="item1">03</div>
+				<div class="item1">04</div>
+			</div>
+
+			<div id="conteudo-baseline">
+				<div class="item1" style="padding-top: 20px">01</div>
+				<div class="item1">02</div>
+				<div class="item1">03</div>
+				<div class="item1">04 <br> mais </div>
+			</div>
+		</div>
+
+		<hr>
+		<h3>Formatação em Itens</h3>
+		<p>Alterando a formatação de cada bloco de conteúdos mexendo em classes específicas. </p>
+		<p>Ordenação de blocos utilizando classes. Propriedade: <em>order</em></p>
+		<div id="conteudo-itens">
+			<div class="item2 ordem4">01</div>
+			<div class="item2 ordem2">02</div>
+			<div class="item2 ordem3">03</div>
+			<div class="item2 ordem1">04</div>
+		</div>
+		<hr>
+
+		<p>Divisão de espaçamento. Propriedade <em>flex-grow</em></p>
+		<div id="conteudo-itens2">
+			<div class="item2 ordem1">01</div>
+			<div class="item3 ordem2">02</div>
+			<div class="item4 ordem3">03</div>
+			<div class="item2 ordem4">04</div>
+		</div>
+		<hr>
+
+		
+
+
+	</body>
+</html>
