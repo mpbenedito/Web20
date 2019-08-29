@@ -11,114 +11,88 @@
 
 		<title>Bootstrap</title>
 	</head>
-	<body style="margin-bottom: 20px; padding: 16px;">
-		<div id="menu-aula">
-			<h3>Aula Bootstrap</h3>
+	<body style="margin-bottom: 20px; padding-left: 16px;">
+		<div id="menu-aula" class="sticky-top" style="background: lightgrey;">
+			<h3>Bootstrap - Alinhamento de Textos</h3>
 			<ul class="list-inline">
 				<li class="list-inline-item"><a href="formatar-textos.html">Formatação</a></li>
 				<li class="list-inline-item"><a href="alinhar-textos.html">Alinhamento</a></li>
+				<li class="list-inline-item"><a href="elementos-flutuantes.html">Elementos Flutuantes</a></li>
+				<li class="list-inline-item"><a href="cores-background.html">Cores e Background</a></li>
+				<li class="list-inline-item"><a href="margin-padding.html">Margin e Padding</a></li>
 			</ul>
-
-			<hr>
 		</div>
-
-		<h1>Cabeçalho 1</h1>
-		<h2>Cabeçalho 2</h2>
-		<h3>Cabeçalho 3</h3>
-		<h4>Cabeçalho 4</h4>
-		<h5>Cabeçalho 5</h5>
-		<h6>Cabeçalho 6</h6>
 		<hr>
 
-		<h4>Existem classes que aumentam a visibilidade de títulos chamadas DISPLAY</h4>
-		<h1 class="display-1">Display 1</h1>
-		<h1 class="display-2">Display 2</h1>
-		<h1 class="display-3">Display 3</h1>
-		<h1 class="display-4">Display 4</h1>
-		<hr>
+		<div>
 
-		<h4>Para destaque de parágrafos simples existe a class LEAD. Exemplo abaixo um texto sem classe LEAD e outro com.</h4>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam optio eligendi doloremque non maiores a doloribus praesentium labore dolorem placeat. Nisi, architecto atque ab cumque provident harum quo ipsum laudantium!</p>
-		<p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam optio eligendi doloremque non maiores a doloribus praesentium labore dolorem placeat. Nisi, architecto atque ab cumque provident harum quo ipsum laudantium!</p>
-		<hr>
+			<h5>Parágrafo justificado</h5>
+			<p>Classe: text-justify</p>
+			<p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores sapiente, accusantium ducimus provident consequuntur placeat exercitationem necessitatibus cupiditate enim libero iste perspiciatis rerum numquam? Dignissimos repellendus esse atque laudantium molestiae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quisquam beatae nihil quibusdam illum, natus sapiente voluptatibus ducimus perspiciatis iste commodi nemo maiores velit accusantium et dicta obcaecati optio quam? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam quidem similique, provident debitis, veritatis explicabo minima possimus temporibus obcaecati eos consequuntur vitae nulla in necessitatibus ab facere alias fuga velit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed porro recusandae, ipsam incidunt assumenda accusamus quae exercitationem, architecto laborum quos dolor qui deserunt dignissimos quidem ea rem in? Velit, rem?</p>
+			<hr>
 
-		<h4>Parágrafos MONOSPACE - classe TEXT-MONOSPACE</h4>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam optio eligendi doloremque non maiores a doloribus praesentium labore dolorem placeat. Nisi, architecto atque ab cumque provident harum quo ipsum laudantium!</p>
-		<p class="text-monospace">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam optio eligendi doloremque non maiores a doloribus praesentium labore dolorem placeat. Nisi, architecto atque ab cumque provident harum quo ipsum laudantium!</p>
-		<hr>
+			<h5>Sufixos de tamanho de dispositivos</h5>
+			<p>XL - Extra Large: >= 1200px</p>
+			<p>LG - Large: &gt;= 992px</p>
+			<p>MD - Medium: &gt;= 768px</p>
+			<p>SM - Small: &gt;= 576px</p>
+			<p>Estes sufixos são utilizados para determinas as classes que podem ser utilizadas para um tipo de dispositivo ou outro, trazendo a responsividade para a página.</p>
+			<p class="font-weight-bold">Classe: é definida por uma combinação de palavras: text-<span class="font-italic">tela-alinhamento</span> onde:</p>
+			<p><span class="font-italic">tela</span>: deve ser substituído pelo sufixo do tamanho que se deseja: sm, md, lg, xl</p>
+			<p><span class="font-italic">alinhamento</span>: deve ser substituído pelo alinhamento em tela: left, right, center</p>
+			<p>Exemplos: </p>
+			<p style="background: lightyellow;" class="text-sm-right">tela &gt;= 576px: text-sm-right</p>
+			<p style="background: lightblue;" class="text-md-right">tela &gt;= 768px: text-md-right</p>
+			<p style="background: lightgreen;" class="text-lg-right">tela &gt;= 992px: text-lg-right</p>
+			<p style="background: lightcoral;" class="text-xl-right">tela &gt;= 1200px: text-xg-right</p>
+			<hr>
 
-		<h4>Formatações de texto: normal, negrito, itálico</h4>
-		<p class="font-weight-normal">texto normal: classe font-weight-normal (a criação de uma class deste tipo é importante para utilização em textos majoritariamente em negritos podendo sofrer variação para normal em pequenos trechos. É uma reversão interessante)</p>
-		<p class="font-weight-bold">texto negrito: classe font-weight-bold</p>
-		<p class="font-italic">texto itálico: classe font-italic</p>
-		<hr>
+			<h5>Elementos Block para Inline</h5>
+			<p>Classe: d-inline transforma elementos cuja propriedade display padrão é block em elementos inline. Títulos e parágrafos são exemplos de elementos block</p>
+			<h6 class="bg-warning">Este é um título h6 BLOCK</h6>
+			<p class="bg-warning">Parágrafo BLOCK: Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore tempore assumenda est laborum ipsum porro fugiat illo mollitia dicta? Saepe ad libero aspernatur dolore cumque tempore corporis reprehenderit modi eius.</p>
+			<h6 class="bg-warning d-inline">Este é um título h6 INLINE.</h6>
+			<p class="bg-warning d-inline">Parágrafo INLINE: Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore tempore assumenda est laborum ipsum porro fugiat illo mollitia dicta? Saepe ad libero aspernatur dolore cumque tempore corporis reprehenderit modi eius.</p>
+			<hr>
+			<h5>Elementos Inline para Block</h5>
+			<p>Classe: d-block transforma elementos cuja propriedade display padrão é inline em elementos block. span é um elemento cujo padrão é inline</p>
+			<span class="bg-warning">Span INLINE 1</span>
+			<span class="bg-warning">Span INLINE 2</span>
+			<span class="bg-warning d-block">Span transformado BLOCK 1</span>
+			<span class="bg-warning d-block">Span transformado BLOCK 2</span>
+			<hr>
 
-		<h4>Formatação de Textos</h4>
-		<p>Classes: </p>
-		<p class="text-uppercase">text-uppercase = letras maiúculas</p>
-		<p class="text-lowercase">text-lowercase = letras minúsculas</p>
-		<p class="text-capitalize">text-capitalize = primeira letra maiúscula</p>
-		<hr>
+			<h5>Elementos InlineBlock</h5>
+			<p>Classe d-inlineblock transforma os elementos para terem um comportamento inlineblock.</p>
+			<p>Relembrando:</p>
+			<p><span class="font-weight-bold">Block</span>: o elemento avalia seu conteúdo e para apresentá-lo ocupa um "bloco" da tela disponível, portanto nele é possível aplicar margens ou definir tamanhos, por exemplo.</p>
+			<p><span class="font-weight-bold">Inline</span>: o elemento avalia seu conteúdo e ocupa o espaço estritamente necessário para apresentá-lo. </p>
+			<p><span class="font-weight-bold">InlineBlock</span>: o elemento ocupa o espaço restrito do seu conteúdo porém aceita que seja alocado em espaços cuja dimensão pode ser definida.</p>
 
-		<h4>Alinhamento dos textos</h4>
-		<p>Classes: </p>
-		<p class="text-right">text-right = Alinhamento a Direita</p>
-		<p class="text-left">text-left = Alinhamento a Esquerda</p>
-		<p class="text-center">text-center = Alinhamento Centralizado</p>
-		<hr>
+			<p>Elementos inline com tamanhos e margens definidas dentro de uma div (laranja largura=500px altura=150px). A div ocupa a área definida porém os dois elementos não precisam ocupar mais do que uma linha. A aplicação de margens verticais não surte efeito, apenas as laterais.</p>
+			<p>Elementos block com tamanhos e margens definidas dentro de uma div (laranja largura=500px altura=150px). A div ocupa a área definida e seus elementos ocuparam cada um uma linha e a aplicação de margens verticais surte efeito. </p>
+			<div class="bg-warning" style="width: 500px; height: 150px;">
+				<div style="padding:1px;">
+					<span class="bg-white" style="width: 100px; margin: 20px;">Inline 1</span>
+					<span class="bg-white" style="width: 100px; margin: 20px;">Inline 2</span>
 
-		<h4>Citações (quotes): utilizado para formatação de citações</h4>
-		<p>Tags: blockquote e cite</p>
-		<p>Classes: blockquote e blockquote-footer</p>
-		<blockquote class="text-right">
-			<p>texto normal - sem a formatação da citação </p>
-			<p class="blockquote">"texto de citação - a criação da tag blockquote é importante pois ela encapsula a tag de apresentadação da fonte citada <span class="font-italic">cite e da classe blockquote-footer</span>, como no exemplo abaixo"</p>
-			<footer class="blockquote-footer">
-				por
-				<cite>Marcelo de Paula</cite>
-			</footer>
-		</blockquote>
-		<hr>
+					<p class="bg-white" style="width: 100px; margin: 20px;">Block 1</p>
+					<p class="bg-white" style="width: 100px; margin: 20px;">Block 2</p>
+				</div>
+			</div>
+			<br>
 
-		<h4>Truncar textos</h4>
-		<p>Classe: text-truncate - Utilizado para fazer a apresentação de textos longos em telas de tamanho reduzido. Brincar mudando a largura do browser. No exemplo a baixo o texto truncado apresenta ... no final da linha e vai sendo apresentado à medida que o navegador é expandido.</p>
-		<p class="text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore architecto, maxime fugit nemo quisquam veniam? Praesentium aperiam voluptates eum nulla quia reiciendis! Labore rerum expedita perspiciatis totam nemo veniam suscipit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo odit obcaecati velit atque, nulla natus sapiente architecto voluptate ipsa iste quo? Minima distinctio, odit similique soluta vel quibusdam impedit delectus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum facilis excepturi adipisci repellat aliquam, delectus quae laudantium autem, explicabo ducimus, suscipit cumque tenetur cupiditate! Incidunt dolore facilis velit alias modi.</p>
-		<hr>
+			<p><span class="font-weight-bold">Classe: d-inline-block</span>: Elementos inline e block compartilhando comportamentos semelhantes na mesma div. Tem característica inline, mas aceitam definição de tamanho e margens </p>
+			<div class="bg-warning" style="width: 500px; height: 150px;">
+				<div style="padding:1px;">
+					<span class="bg-white d-inline-block" style="width: 100px; margin: 20px;">Inline 1</span>
+					<span class="bg-white d-inline-block" style="width: 100px; margin: 20px;">Inline 2</span>
+					<p class="bg-white d-inline-block" style="width: 100px; margin: 20px;">Block 1</p>
+					<p class="bg-white d-inline-block" style="width: 100px; margin: 20px;">Block 2</p>
+				</div>
+			</div>
 
-		<h4>Fortamatação de listas</h4>
-		<p>Classe: list-unstyled - deixa a lista sem a formatação habitual. exemplos</p>
-		<p>Lista Formatada, padrão html</p>
-		<ul>
-			<li>Item 1</li>
-			<li>Item 2</li>
-			<li>Item 3</li>
-		</ul>
-		<p>Lista Não Formatada, classe <span class="text-italic">list-unstyled</span></p>
-		<ul class="list-unstyled">
-			<li>Item 1</li>
-			<li>Item 2</li>
-			<li>Item 3</li>
-		</ul>
-		<p>Classes: list-inline e list-inline-item - formata a lista para ser apresentada em uma única linha</p>
-		<ul class="list-inline">
-			<li class="list-inline-item">Item 1</li>
-			<li class="list-inline-item">Item 2</li>
-			<li class="list-inline-item">Item 3</li>
-
-		</ul>
-		<hr>
-
-
-
-
-
-		
-
-		
-
-
-
-
+		</div>
 
 
 		<!-- Optional JavaScript -->

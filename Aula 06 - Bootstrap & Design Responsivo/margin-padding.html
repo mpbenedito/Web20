@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS 
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+		<title>Bootstrap</title>
+	</head>
+	<body style="margin-bottom: 20px; padding-left: 16px;">
+		<div id="menu-aula" class="sticky-top" style="background: lightgrey;">
+			<h3>Bootstrap - Margin e Padding</h3>
+			<ul class="list-inline">
+				<li class="list-inline-item"><a href="formatar-textos.html">Formatação</a></li>
+				<li class="list-inline-item"><a href="alinhar-textos.html">Alinhamento</a></li>
+				<li class="list-inline-item"><a href="elementos-flutuantes.html">Elementos Flutuantes</a></li>
+				<li class="list-inline-item"><a href="cores-background.html">Cores e Background</a></li>
+				<li class="list-inline-item"><a href="margin-padding.html">Margin e Padding</a></li>
+			</ul>
+		</div>
+
+		<div>
+			<!-- Aplicação de Margin
+			mt - Margin Top
+			mb - Margin Bottom
+			ml - Margin Left
+			mr - Margin Right
+			mx - Margin no eixo x (horizontal) esquerda/direita
+			my - Margin no eixo y (vertical) top/bottom
+			m  - Margin em todos os lados
+			Valor a definir (0 até 5)-->
+			<div style="border:1px solid red; background: lightgrey;">
+				<h3>Margens</h3>
+				<p>Classes: m/mt/mb/ml/mr/mx/my-[número], onde:</p>
+				<p>m: margem para todos os lados</p>
+				<p>mt: equivalente a margin-top</p>
+				<p>mb: equivalente a margin-bottom</p>
+				<p>ml: equivalente a margin-left</p>
+				<p>mr: equivalente a margin-right</p>
+				<p>mx: equivalente a margens horizontais (margin-right e margin-left)</p>
+				<p>my: equivalente a margens verticais (margin-top e margin-botttom)</p>
+				<p>[número]: um número entre 0 e 5 equivalente ao espaçamento da margem. A unidade de medida é a do bootstrap (REM). Não são pixels nem "em".</p>
+				<p>Exemplos: m-0, mt-1, ml-5</p>
+				<p>Exemplo de aplicação prática: a partir de um parágrafo em laranja, inicio as aplicações de parágrafos em sequência, cujas margens topo estão definidas em sequência de 0 a 5 e as margens inferiores sempre estão zeradas, para que uma não interfira na outra. </p>
+
+				<h4 class="bg-warning m-0">Elemento anterior com margens = 0 </h4>
+				<p style="border:1px solid red;" class="bg-info m-0">Conteúdo principal com margem 0 (p-0)</p>
+				<p style="border:1px solid red;" class="bg-info m-1">Conteúdo principal com margem 1 (p-1)</p>
+				<p style="border:1px solid red;" class="bg-info m-2">Conteúdo principal com margem 2 (p-2)</p>
+				<p style="border:1px solid red;" class="bg-info m-3">Conteúdo principal com margem 3 (p-3)</p>
+				<p style="border:1px solid red;" class="bg-info m-4">Conteúdo principal com margem 4 (p-4)</p>
+				<p style="border:1px solid red;" class="bg-info m-5">Conteúdo principal com margem 5 (p-5)</p>
+				<h4 class="bg-warning m-0">Elemento posterior com margens = 0 </h4>
+				<p>Notar que as margens deslocam os elementos dentro de seu container. No caso todos os elementos parágrafos &lt;p&gt; criaram uma área ao redor de si, porém não mudaram de tamanho.</p>
+				<p>Margens se sobrepoem. Perceber que as margens de um elemento com m-2 não se somou com os elementos m-2 e m3. Sempre prevaleceu a maior das margens, pois a menor foi montada e a seguinte apenas se sobrepôs.</p>
+			</div>
+
+
+			<!-- Aplicação de Padding
+			pt -> Padding Top
+			pb -> Padding Bottom
+			pl -> Padding Left
+			pr -> Padding Right
+			px -> Padding no eixo x (horizontal) esquerda/direita
+			py -> Padding no eixo y (vertical) top/bottom
+			p  -> Padding em todos os lados
+			Valor a definir (0 até 5)
+			-->
+			<div style="border:1px solid red; background: lightyellow;">
+				<h3>Padding</h3>
+				<p>Classes: p/pt/pb/pl/pr/px/py-[número], onde:</p>
+				<p>p: padding para todos os lados</p>
+				<p>pt: equivalente a padding-top</p>
+				<p>pb: equivalente a padding-bottom</p>
+				<p>pl: equivalente a padding-left</p>
+				<p>pr: equivalente a padding-right</p>
+				<p>px: equivalente a paddings horizontais (padding-right e padding-left)</p>
+				<p>py: equivalente a paddings verticais (padding-top e padding-botttom)</p>
+				<p>[número]: um número entre 0 e 5 equivalente ao espaçamento do padding. A unidade de medida é a do bootstrap (REM). Não são pixels nem "em".</p>
+				<p>Exemplos: p-0, pt-1, pl-5</p>
+				<p>Exemplo de aplicação prática: o mesmo elemento é apresentado repetidamente, sempre variando seu padding. O elemento é um parágrafo, sem alteração de suas margens. Apenas o padding é alterado.</p>
+				<p style="border:1px solid red;" class="bg-info p-0">Conteúdo principal com padding 0 (p-0)</p>
+				<p style="border:1px solid red;" class="bg-info p-1">Conteúdo principal com padding 1 (p-1)</p>
+				<p style="border:1px solid red;" class="bg-info p-2">Conteúdo principal com padding 2 (p-2)</p>
+				<p style="border:1px solid red;" class="bg-info p-3">Conteúdo principal com padding 3 (p-3)</p>
+				<p style="border:1px solid red;" class="bg-info p-4">Conteúdo principal com padding 4 (p-4)</p>
+				<p style="border:1px solid red;" class="bg-info p-5">Conteúdo principal com padding 5 (p-5)</p>
+				<p>Notar que as margens do componente não se deslocam. No caso as margens padrão dos parágrafos são mantidas e aparecem entre os elementos. Porém o elemento muda seu tamanho, conforme o padding cresce.</p>
+				<p>Também deve-ser perceber que os paddings não se sobrepoem. Eles se somam ás margens e aos próprios paddings anteriores.</p>
+			</div>
+		</div>
+	
+	
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<!-- removido chamada ao link e utilizada a carga do próprio site
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
