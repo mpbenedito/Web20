@@ -1,0 +1,14 @@
+#menu-aula {
+	background: lightgrey;
+}
+
+#texto-teste {
+	border: 1px solid grey;
+	width: 600px;
+	text-align: justify;
+	margin: 0 auto;
+}
+#texto-teste>p {
+	font-size: 20px;
+	color: blue;
+}

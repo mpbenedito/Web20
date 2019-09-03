@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS 
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+		<!-- CSS Personalizado. Sem bootstrap é assimq que se deve formatar para dispositivos diferentes -->
+		<link rel="stylesheet" type="text/css" media="screen" href="css/estilo.css">
+		<link rel="stylesheet" type="text/css" media="print" href="css/estilo-print.css">
+
+		<title>Bootstrap</title>
+
+		<style type="text/css">
+
+			/*Small devices (landscape phones)
+			@media (min-width:576px) { #texto-teste { 
+				background: lightyellow;
+			} }*/
+	
+			/*Medium devices (tablets, 768px e superior)
+			@media (min-width:768px) {#texto-teste { 
+				background: lightgreen;
+			} }*/
+	
+			/*Large devices (desktops, 992px e superior)
+			@media (min-width:992px) {#texto-teste { 
+				background: lightblue;
+			} }*/
+	
+			/*Extra large devices (large desktops, 1200px e superior)
+			@media (min-width:1200px) {#texto-teste { 
+				background: pink;
+			}}*/
+	
+	
+	
+			/**************************/
+			/* Extra small devices (portraint phones) *
+			@media (max-width:575.98px) {#texto-teste { 
+				background: orange;
+			} }
+	
+			/* Small devices (Landscape Phones) *
+			@media (max-width:767.98px) {#texto-teste { 
+				background: red;
+			} }
+	
+			/* Medium devices (Tablets) *
+			@media (max-width:991.98px) {#texto-teste { 
+				background: greenyellow;
+			} }
+	
+			/* Large devices (Desktops) *
+			@media (max-width:1199.98px) {#texto-teste { 
+				background: grey;
+			} }
+	*/
+	
+	
+			/******************************************/
+			/*Extra small devices (portrait phones, menor que 576px)*/
+			@media (max-width:575.98px) {
+				#texto-teste { 
+					background: orange;
+				} 
+			}	
+
+			/*Small devices (landscape phones, 576px e maiores)*/
+			@media (min-width: 576px) and (max-width:767.98px) {
+				#texto-teste {
+					background: pink;
+				} 
+			}
+	
+			/*Medium devices (tablets, 768px e maiores)*/
+			@media (min-width: 768px) and (max-width: 991.98px) {
+				#texto-teste {
+					background: lightblue;
+				} 
+			}
+	
+			/*Large devices (desktops, 992px e maiores)*/
+			@media (min-width: 992px) and (max-width: 1199.98px) { 
+				#texto-teste {
+					background: lightgreen;
+				} 
+			}
+	
+			/*Extra large devices (large desktops, 1200px  e maiores)*/
+			@media (min-width: 1200px) {
+				#texto-teste {
+					background: violet;
+				} 
+			}
+	
+		</style>
+	</head>
+
+	<body class="mb-3 px-3">
+		<div id="menu-aula" class="sticky-top">
+			<h3>Bootstrap - Media Queries</h3>
+			<ul class="list-inline">
+				<li class="list-inline-item px-3"><a href="formatar-textos.html">Formatação</a></li>
+				<li class="list-inline-item px-3"><a href="alinhar-textos.html">Alinhamento</a></li>
+				<li class="list-inline-item px-3"><a href="elementos-flutuantes.html">Elementos Flutuantes</a></li>
+				<li class="list-inline-item px-3"><a href="cores-background.html">Cores e Background</a></li>
+				<li class="list-inline-item px-3"><a href="margin-padding.html">Margin e Padding</a></li>
+				<li class="list-inline-item px-3"><a href="bordas-tamanhos.html">Bordas e Tamanhos</a></li>
+				<li class="list-inline-item px-3"><a href="media-query.html">MediaQuery</a></li>
+			</ul>
+		</div>
+
+<!-- Container da página -->
+		<div>
+			<div>
+				<h3>Em CSS puro existem 2 características importantes: Tipo de midia e Resolução</h3>
+				<h4>Tipos de Midia</h4>
+				<p>Posso criar estilizações específicas para midias. Exemplo, posso criar um estilo css específico para impressão.</p>
+				<ul>
+					<li>all - todos os dispositivos</li>
+					<li>aural - sintetizadores de voz</li>
+					<li>braille - leitores de Braille</li>
+					<li>embossed - impressoras de Braille</li>
+					<li>handheld - dispositivos de mão. P.e. celulares com telas pequenas</li>
+					<li>print - impressoras convencionais</li>
+					<li>projection - apresentação de slides</li>
+					<li>screen - monitores coloridos</li>
+					<li>tty - teleimpressores e terminais</li>
+					<li>tv - televisores</li>
+				</ul>
+			</div>
+			<div>
+				<h4>Resolução de telas:</h4>
+				<ul>
+					<li>320px - smartphones em modo retrato</li>
+					<li>480px - smartphones em modo paisagem</li>
+					<li>600px - tablets pequenos. P.e. Kindle (600 x 800 px)</li>
+					<li>768px - tablets maiores em modo retrato. P.e. iPad (768 x 1024 px)</li>
+					<li>1024px - tablets maiores em modo paisagem.</li>
+					<li>1200px - monitores wide</li>
+				</ul>
+			</div>
+			<hr>
+
+			<div>
+				<h3>Em Bootstrap são utilizados Media Queries.</h3>
+				<p>Recurso: @media ( dispositivo-resolução ) { classes de formatação } - definição da midia de apresentação dos conteúdos e a formatação desejada</p>
+				<p>Os pontos de resolução em que os leiautes se modificam são chamado breakpoints</p>
+				<p>Conhecendo os breakpoints é possível alterar cores, formas, alinhamentos, margens, posicionamentos.</p>
+				<p>Lembrar que não é possível utilizar ao mesmo tempo max-width e max-width sozinhos. Os breakpoints devem ser colocados entre intervalos com a clásula "and", num formato mais usual.</p>
+			</div>
+
+			<div id="texto-teste">
+				<p>Texto de teste</p>
+				<p>Estes textos estão formatados em estilos diferentes para exibição e impressão. Conferir o código html e CSS. Leia em tela e tente imprimir para comparação. Depois variar o tamanho do browser.</p>
+				<br>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam perferendis cupiditate iste unde. Necessitatibus veniam eius illum, impedit dolores praesentium aspernatur nihil adipisci? Cumque, harum? Eum magni ratione nulla sit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ipsam eos placeat rem, at totam, porro quisquam aliquid est possimus consequatur perspiciatis? Ut, aliquam sunt excepturi aperiam cumque accusantium delectus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Est impedit vel molestias odio debitis minus ipsa, quos, culpa necessitatibus mollitia sint atque animi sit soluta omnis ullam, excepturi rem dolorem.</p>
+			</div>
+
+		</div> <!-- fim do container da página -->
+		
+		
+		
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<!-- removido chamada ao link e utilizada a carga do próprio site
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>

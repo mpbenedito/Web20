@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS 
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+		<title>Bootstrap</title>
+
+		<!-- O certo seriam os estilos estarem em pastas distintas, porém os colocarei internos para facilitar a edição-->
+		<style type="text/css">
+			.largura {
+				margin-bottom: 200px; 
+				width: 600px; 
+				margin: 0 auto;
+				border: 1px solid red;
+			}
+
+			.altura {
+				width: 700px; 
+				height: 300px;
+				margin: 0 auto;
+				border: 1px solid gray;
+			}
+
+			.bordas {
+				margin-bottom: 200px; 
+				width: 600px; 
+				margin: 0 auto;
+			}
+
+		</style>
+	</head>
+
+	<body style="margin-bottom: 20px; padding-left: 16px;">
+		<div id="menu-aula" class="sticky-top" style="background: lightgrey;">
+			<h3>Bootstrap - Bordas e Tamanhos</h3>
+			<ul class="list-inline">
+				<li class="list-inline-item px-3"><a href="formatar-textos.html">Formatação</a></li>
+				<li class="list-inline-item px-3"><a href="alinhar-textos.html">Alinhamento</a></li>
+				<li class="list-inline-item px-3"><a href="elementos-flutuantes.html">Elementos Flutuantes</a></li>
+				<li class="list-inline-item px-3"><a href="cores-background.html">Cores e Background</a></li>
+				<li class="list-inline-item px-3"><a href="margin-padding.html">Margin e Padding</a></li>
+				<li class="list-inline-item px-3"><a href="bordas-tamanhos.html">Bordas e Tamanhos</a></li>
+				<li class="list-inline-item px-3"><a href="media-query.html">MediaQuery</a></li>
+			</ul>
+		</div>
+
+<!-- Container da página -->
+		<div>
+			<div>
+				<!-- classes de largura -->
+				<h3>Classes de Largura </h3>
+				<p>Para leiautes líquidos é necessário trabalhar com porcentagem nas dimensões dos componentes, então deve-se utilizar as classes específicas.</p>
+				<p>Classes: w-[porcentagem], onde porcentagem é o número representativo do percentual que o elemento deve ocupar, podendo ser: 25, 50, 75, 100 ou auto.</p>
+				<p>Exemplos:</p>
+	
+				<div class="largura">
+					<div class="bg-secondary w-25">w-25: width 25%</div>
+					<div class="bg-info  w-50">w-50: width 50%</div>
+					<div class="bg-warning  w-75">w-75: width 75%</div>
+					<div class="bg-secondary w-100">w-100: width 100%</div>
+					<div class="bg-info w-auto">w-auto: width auto</div>
+				</div>
+			</div>
+			<hr>
+
+			<div>
+				<!-- classes de altura -->
+				<h3>Classes de Altura</h3>
+				<p>Utilizadas para determinar a altura de elementos com leiaute líquido</p>
+				<p>Classes: h-[porcentagem], de forma análoga ás classes de largura, define o percentual de altura.</p>
+				<p>Exemplos:</p>
+				<div class="altura">
+					<div class="bg-warning d-inline-block h-25">h-25: height 25%</div>
+					<div class="bg-warning d-inline-block h-50">h-50: height 50%</div>
+					<div class="bg-warning d-inline-block h-75">h-75: height 75%</div>
+					<div class="bg-warning d-inline-block h-100">h-100: height 100%</div>
+					<div class="bg-warning d-inline-block h-auto">h-auto: height auto</div>
+				</div>
+			</div>
+			<hr>
+
+			<!-- Bordas
+			border        -> todas as bordas
+			border-top    -> borda superior
+			border-bottom -> borda inferior
+			border-right  -> bordar direita
+			border-left   -> borda esquerda
+
+			Cores de bordas
+			border-<cor>: primary, secondary, success, 
+				info, warning, danger, light, dark, white
+			-->
+			<div>
+				<h3>Classes de Bordas</h3>
+				<p>Colocação de bordas nos elementos</p>
+				<p><span class="font-weight-bold">Classes: border-[direção]</span>, onde [direção] define a colocação da borda, podendo ser top, right, bottom, left ou deixada em branco para bordas em todas as direções.</p>
+				<p></p>
+				<p>Colocação de cores das bordas</p>
+				<p><span class="font-weight-bold">Classes: border-[cor]</span>, onde [cor] pode ser primary, secondary, success, info, warning, danger, light, dark, white</p>
+				<p>Exemplos:</p>
+				<div class="bordas">
+					<div class="bg-white mb-2 border border-danger">border border-danger: todas as bordas vermelhas</div>
+					<div class="bg-white mb-2 border-top border-success">border-top border-success: borda superior verde</div>
+					<div class="bg-white mb-2 border-bottom border-warning">border-bottom border-warning: borda inferior laranja</div>
+					<div class="bg-white mb-2 border-right border-info">border-right border-info: borda direita azul</div>
+					<div class="bg-white mb-2 border-left border-dark">border-left border-dark: borda esquerda preta</div>
+				</div>
+			</div>
+
+			<br>
+			<br>
+
+			<div>
+			<!-- Border Radius 
+			opções: rounded, rounded-top, rounded-right, 
+					rounded-right, rounded-left, rounded-circle
+			-->
+				<h3>Bordas Arredondadas</h3>
+				<p>Arredondamento de bodas nos elementos</p>
+				<p><span class="font-weight-bold">Classes: rounded ou rounded-[direção]</span>, sendo a primeira a classe que arredonda todas as bordas e rounded-[direção] arredondará as bordas da direção especificada.</p>
+				<p>[direção] pode ser: top, bottom, right, left ou circle, sendo esta a última para a criação de elementos circulares</p>
+				<p><span class="font-weight-bold">IMPORTANTE: </span>As classes rounded <span class="font-weight-bold">DEVEM</span> ser precedidas da classe border.</p>
+				<p>Exemplos: ( o arredondamento é muito sutil, por isso um zoom nos elementos abaixo é recomendado</p>
+				<div class="bordas">
+					<div style="width: 150px; height: 150px;" class="bg-info p-5 mb-2 border rounded">rounded</div>
+					<div style="width: 150px; height: 150px;" class="bg-warning p-5 mb-2 border rounded-top">rounded top</div>
+					<div style="width: 150px; height: 150px;" class="bg-secondary p-5 mb-2 border rounded-bottom">rounded bottom</div>
+					<div style="width: 150px; height: 150px;" class="bg-info p-5 mb-2 border rounded-right">rounded right</div>
+					<div style="width: 150px; height: 150px;" class="bg-warning p-5 mb-2 border rounded-left">rounded left</div>
+					<div style="width: 150px; height: 150px;" class="bg-secondary p-5 border rounded-circle">rounded circle</div>
+				</div>
+			</div>
+
+		</div> <!-- fim do container da página -->
+		
+		
+		
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<!-- removido chamada ao link e utilizada a carga do próprio site
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
