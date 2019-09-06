@@ -88,12 +88,12 @@
 				<p>Utilizado para criação simplificada de barras de navegação.</p>
 				<p>Classes: navbar - prepara a criação da barra de navegação. É utilizada no container da barra de navegações (p.e. um elemento div ou nav).</p>
 				<p>Na definição da lista deve-se utilizar a classe navbar-nav.</p>
-				<p>Por último, em cada elemento deve-se aplicar a classe </p>
+				<p>Por último, em cada elemento deve-se aplicar a classe nav-item. </p>
 				<p>Só com estes elementos já é possível definir a barra, porém ela ficará na vertical.</p>
 				<p>Será necessário configurar ela na horizontal com a classe navbar-expand-sm/md/lg/xl, que definirá o tamanho de apresentação da barra.</p>
 				<p>Para criar uma identificação diretente para o logo, de forma que ele não se confunda com o menu de opções, aplica-se a classe navbar-brand nele.</p>
 				<p>Classes navbar-light e navbar-dark identificam as cores da barra de navegação: clara ou escura.</p>
-				<p>Definida a cor da barra de navegações define-se o background em que a barra aparecerá (p.e. bg-dark,bg-primary, bg-sedondary, bg-success, etc)</p>
+				<p>Definida a cor da barra de navegações define-se o background em que a barra aparecerá (p.e. bg-dark, bg-primary, bg-sedondary, bg-success, etc)</p>
 				<div style="width: 500px"> 
 					<nav class="navbar navbar-expand-md navbar-light bg-info">
 						<!-- logo do site -->
@@ -116,40 +116,142 @@
 							<li class="nav-item"><a class="nav-link" href="">Contatos</a></li>
 						</ul>
 					</nav>
-
-
-
 				</div>
-
 			</div>
+			<hr>
 			
+			<div>
+				<h4>Barra de navegação com menu responsivo</h4>
+				<p>O menu responsivo adotado será o do tipo hamburger, mais comuns nos apps.</p>
+				<p>Classes: navbar-toggler e navbar-toggler-icon para apresentação do ícone hamburger em um elemento button.</p>
+				<p>Atributos: data-toggle indica que o botão pode ser escondido e o data-target para apontar qual elemento exibir quando o botão for pressionado.</p>
+				<p>Classes: collapse e nav-bar-collapse no elemento da lista de itens da barra de navegação. </p>
+				<div> 
+					<nav class="navbar navbar-expand-md navbar-light bg-info">
+						<!-- logo do site -->
+						<a class="navbar-brand" href="">Chalé Hotel</a>
+						 
+						<!-- botão hamburger -->
+						<button class="navbar-toggler" data-toggle="collapse" data-target="#navegacao">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<!-- navegação do site -->
+						<div class="collapse navbar-collapse" id="navegacao">
+							<ul class="navbar-nav ml-auto">
+								<li class="nav-item"><a class="nav-link" href="">Home</a></li>
+								<li class="nav-item"><a class="nav-link" href="">Sobre</a></li>
+								<li class="nav-item"><a class="nav-link" href="">Serviços</a></li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+			<hr>
 
-			<h2>Barra de navegação com menu responsivo</h2>
-			
+			<div>
+				<h4>Barra de navegação com formulário</h4>
+				<p>É só inserir o formulário dentro do container que será escondido pelo botão, mantendo as classificações anteriores.</p>
+				<div> 
+					<nav class="navbar navbar-expand-md navbar-light bg-warning">
+						<!-- logo do site -->
+						<a class="navbar-brand" href="">Chalé Hotel</a>
+							
+						<!-- botão hamburger -->
+						<button class="navbar-toggler" data-toggle="collapse" data-target="#formulario">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<!-- navegação do site -->
+						<div class="collapse navbar-collapse" id="formulario">
+							<ul class="navbar-nav ml-auto">
+								<li class="nav-item"><a class="nav-link" href="">Home</a></li>
+								<li class="nav-item"><a class="nav-link" href="">Sobre</a></li>
+								<li class="nav-item"><a class="nav-link" href="">Serviços</a></li>
+							</ul>
 
+							<!-- formulário de pesquisa -->
+							<form class="form-inline" action="">
+								<input type="text" class="form-controle" placeholder="Pesquisar">
+								<button class="btn btn-outline-dark">Ok</button>
+							</form>
+						</div>
+					</nav>
+				</div>
+			</div>			
+			<hr>
 
-			<h2>Barra de navegação com formulário</h2>
-			
+			<div>
+				<h4>Barra de navegação com menu dropdown</h4>
+				<p>A proposta deste exercício é acrescentar um menu drop down no link de Serviços, então ele será classificado de forma diferente dos outros list itens.</p>
+				<div> 
+					<nav class="navbar navbar-expand-md navbar-light bg-success">
+						<!-- logo do site -->
+						<a class="navbar-brand" href="">Chalé Hotel</a>
+							
+						<!-- botão hamburger -->
+						<button class="navbar-toggler" data-toggle="collapse" data-target="#menudrop">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<!-- navegação do site -->
+						<div class="collapse navbar-collapse" id="menudrop">
+							<ul class="navbar-nav ml-auto">
+								<li class="nav-item"><a class="nav-link" href="">Home</a></li>
+								<li class="nav-item"><a class="nav-link" href="">Sobre</a></li>
 
-			
-			<h2>Barra de navegação com menu dropdown</h2>
-			
-			
-			<!--Cores
-			opções: bg-primary, bg-secondary, bg-success, bg-info,
-			bg-warning, bg-danger, bg-light, bg-dark
-			-->
-			<h2>Cores</h2>
-			
+								<!-- drop down aplicado em Serviços -->
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="">Serviços</a>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="">Serviço 1</a>
+										<a class="dropdown-item" href="">Serviço 2</a>
+										<a class="dropdown-item" href="">Serviço 3</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+			<hr>
 
-			<!--Alinhamentos
-			opções: fixed-top, fixed-bottom, sticky
-			-->
-			<h2>Alinhamentos</h2>
-			
+			<div>
+				<!--Cores opções: bg-primary, bg-secondary, bg-success, bg-info, bg-warning, bg-danger, bg-light, bg-dark -->
+				<h4>Cores</h4>
+				<p>Neste exercício farei a colorização das barras de menu</p>
 
-			<h1>Lorem ipsum dolor sit amet</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et libero id erat tristique fermentum placerat a erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed ac lobortis quam. Nunc vestibulum tincidunt arcu, at scelerisque velit ornare et. Vestibulum ut malesuada nibh.</p>
+				<div style="width: 500px"> 
+					<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+						<!-- logo do site -->
+						<a class="navbar-brand" href="">Chalé Hotel</a>
+					<!-- navegação do site -->
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item"><a class="nav-link" href="">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="">Sobre</a></li>
+							<li class="nav-item"><a class="nav-link" href="">Contatos</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<hr>
+
+			<div>
+				<!--Alinhamentos opções: fixed-top, fixed-bottom, sticky -->
+				<h4>Alinhamentos</h4>
+				<p>Classes: fixed-top, fixed-bottom, sticky-top</p>
+				<p>Lembrando: fixed-top e fixed-bottom prendem o elemento ao topo e rodapé da área de navegação.</p>
+				<p>Já sticky-top cola o elemento ao topo do seu container apenas, de forma que este role para tela mantendo o elemento sticky posicionado ao topo, porém quando todo o container rolar e deixar de ser visualizado o elemento classificado como sticky também deixe de ser visualizado.</p>
+				<div style="width: 500px"> 
+					<nav class="sticky-top navbar navbar-expand-md navbar-dark bg-primary">
+						<!-- logo do site -->
+						<a class="navbar-brand" href="">Chalé Hotel</a>
+					<!-- navegação do site -->
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item"><a class="nav-link" href="">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="">Sobre</a></li>
+							<li class="nav-item"><a class="nav-link" href="">Contatos</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
 
 		</div>
 	
