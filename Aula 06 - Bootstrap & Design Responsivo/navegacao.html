@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS 
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+		<title>Bootstrap</title>
+	</head>
+	<body style="margin-bottom: 20px; padding-left: 16px;">
+		<div id="menu-aula" class="sticky-top" style="background: lightgrey;">
+			<h3>Bootstrap - Barras de Navegação</h3>
+			<ul class="list-inline">
+				<li class="list-inline-item px-3"><a href="formatar-textos.html">Formatação</a></li>
+				<li class="list-inline-item px-3"><a href="alinhar-textos.html">Alinhamento</a></li>
+				<li class="list-inline-item px-3"><a href="elementos-flutuantes.html">Elementos Flutuantes</a></li>
+				<li class="list-inline-item px-3"><a href="cores-background.html">Cores e Background</a></li>
+				<li class="list-inline-item px-3"><a href="margin-padding.html">Margin e Padding</a></li>
+				<li class="list-inline-item px-3"><a href="bordas-tamanhos.html">Bordas e Tamanhos</a></li>
+				<li class="list-inline-item px-3"><a href="media-query.html">MediaQuery</a></li>
+				<li class="list-inline-item px-3"><a href="botoes.html">Botões</a></li>
+				<li class="list-inline-item px-3"><a href="navegacao.html">Navegação</a></li>
+			</ul>
+		</div>
+
+		<div>
+			<!-- Navegação
+			Tipos de navegação:
+				nav-pills
+				nav-tabs
+			opções de alinhamento: 
+				justify-content-center 
+				justify-content-end
+				flex-column	-->
+			<div>
+				<h4>Navegação simples</h4>
+				<p>Classe: nav, para menus de navegação. A classe nav aplicada ao elemento list irá subtrair os espaços e colocar os itens juntos numa mesma linha.</p>
+				<p>Os itens devem ser classificados como nav-item, preparando-os para receberem atributos.</p>
+				<p>Os elementos "a href" devem ser classificados como nav-link.</p>
+				<p>A indicação de qual página está ativa é dada pela classe nav-pills diretamente no container da lista e active no item que deve ser destacado.</p>
+				<p>Da mesma forma que existe o active é possível definir os links como disabled.</p>
+				<ul class="nav nav-pills">
+					<li class="nav-item"><a class="nav-link" href="">Home</a></li>
+					<li class="nav-item"><a class="nav-link active" href="">Sobre</a></li>
+					<li class="nav-item"><a class="nav-link" href="">Serviços</a></li>
+				</ul>
+			</div>
+			<hr>
+			
+			<div>
+				<h4>Navegação em abas</h4>
+				<p>Manter a classificação nav para o container, nav-item para os itens e nav-link para as referências.</p>
+				<p>Porém para a criação de abas o container deve ser do tipo nav-tabs. E o active define a aba que deve ser a selecionada no momento.</p>
+				<ul class="nav nav-tabs">
+					<li class="nav-item"><a class="nav-link active" href="">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="">Sobre</a></li>
+					<li class="nav-item"><a class="nav-link" href="">Serviços</a></li>
+				</ul>
+				<p>Por padrão as abas sempre são alinhadas á esquerda, porém é possível localizá-las ao centro e á direita.</p>
+				<p>Esta classe para posicionamento funciona tanto para navegação simples como para abas (nav-pills e nav-tabs, respectivamente).</p>
+				<h5>Abas alinhadas ao centro. Classe: justifty-content-center</h5>
+				<ul class="nav nav-tabs justify-content-center">
+					<li class="nav-item"><a class="nav-link" href="">Home</a></li>
+					<li class="nav-item"><a class="nav-link active" href="">Sobre</a></li>
+					<li class="nav-item"><a class="nav-link" href="">Serviços</a></li>
+				</ul>
+				<h5>Abas alinhadas á direita. Classe: justifty-content-end</h5>
+				<ul class="nav nav-tabs justify-content-end">
+					<li class="nav-item"><a class="nav-link" href="">Home</a></li>
+					<li class="nav-item"><a class="nav-link active" href="">Sobre</a></li>
+					<li class="nav-item"><a class="nav-link" href="">Serviços</a></li>
+				</ul>
+				<h5>Navegação simples ou em abas na vertical.</h5>
+				<ul class="nav nav-tabs flex-column">
+					<li class="nav-item"><a class="nav-link" href="">Home</a></li>
+					<li class="nav-item"><a class="nav-link active" href="">Sobre</a></li>
+					<li class="nav-item"><a class="nav-link" href="">Serviços</a></li>
+				</ul>
+			</div>
+			<hr>
+	
+			<div> 
+				<h4>Barra de navegação simples</h4>
+				<p>Utilizado para criação simplificada de barras de navegação.</p>
+				<p>Classes: navbar - prepara a criação da barra de navegação. É utilizada no container da barra de navegações (p.e. um elemento div ou nav).</p>
+				<p>Na definição da lista deve-se utilizar a classe navbar-nav.</p>
+				<p>Por último, em cada elemento deve-se aplicar a classe </p>
+				<p>Só com estes elementos já é possível definir a barra, porém ela ficará na vertical.</p>
+				<p>Será necessário configurar ela na horizontal com a classe navbar-expand-sm/md/lg/xl, que definirá o tamanho de apresentação da barra.</p>
+				<p>Para criar uma identificação diretente para o logo, de forma que ele não se confunda com o menu de opções, aplica-se a classe navbar-brand nele.</p>
+				<p>Classes navbar-light e navbar-dark identificam as cores da barra de navegação: clara ou escura.</p>
+				<p>Definida a cor da barra de navegações define-se o background em que a barra aparecerá (p.e. bg-dark,bg-primary, bg-sedondary, bg-success, etc)</p>
+				<div style="width: 500px"> 
+					<nav class="navbar navbar-expand-md navbar-light bg-info">
+						<!-- logo do site -->
+						<a class="navbar-brand" href="">Chalé Hotel</a>
+					<!-- navegação do site -->
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item"><a class="nav-link" href="">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="">Sobre</a></li>
+							<li class="nav-item"><a class="nav-link" href="">Contatos</a></li>
+						</ul>
+					</nav>
+
+					<nav class="navbar navbar-expand-md navbar-dark bg-success">
+							<!-- logo do site -->
+						<a class="navbar-brand" href="">Chalé Hotel</a>
+		<!-- navegação do site -->
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item"><a class="nav-link" href="">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="">Sobre</a></li>
+							<li class="nav-item"><a class="nav-link" href="">Contatos</a></li>
+						</ul>
+					</nav>
+
+
+
+				</div>
+
+			</div>
+			
+
+			<h2>Barra de navegação com menu responsivo</h2>
+			
+
+
+			<h2>Barra de navegação com formulário</h2>
+			
+
+			
+			<h2>Barra de navegação com menu dropdown</h2>
+			
+			
+			<!--Cores
+			opções: bg-primary, bg-secondary, bg-success, bg-info,
+			bg-warning, bg-danger, bg-light, bg-dark
+			-->
+			<h2>Cores</h2>
+			
+
+			<!--Alinhamentos
+			opções: fixed-top, fixed-bottom, sticky
+			-->
+			<h2>Alinhamentos</h2>
+			
+
+			<h1>Lorem ipsum dolor sit amet</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et libero id erat tristique fermentum placerat a erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed ac lobortis quam. Nunc vestibulum tincidunt arcu, at scelerisque velit ornare et. Vestibulum ut malesuada nibh.</p>
+
+		</div>
+	
+	
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<!-- removido chamada ao link e utilizada a carga do próprio site
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
