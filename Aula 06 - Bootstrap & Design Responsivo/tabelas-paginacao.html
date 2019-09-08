@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS 
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+		<title>Bootstrap</title>
+
+		<style>
+			section {
+				padding: 10px;
+				background: lightgoldenrodyellow;
+			}
+
+		</style>
+	</head>
+	<body style="margin-bottom: 20px; padding-left: 16px;">
+		<div id="menu-aula" class="sticky-top" style="background: lightgrey;">
+			<h3>Bootstrap - Alertas e Barras de Progresso</h3>
+			<ul class="list-inline">
+				<li class="list-inline-item px-3"><a href="formatar-textos.html">Formatação</a></li>
+				<li class="list-inline-item px-3"><a href="alinhar-textos.html">Alinhamento</a></li>
+				<li class="list-inline-item px-3"><a href="elementos-flutuantes.html">Elementos Flutuantes</a></li>
+				<li class="list-inline-item px-3"><a href="cores-background.html">Cores e Background</a></li>
+				<li class="list-inline-item px-3"><a href="margin-padding.html">Margin e Padding</a></li>
+				<li class="list-inline-item px-3"><a href="bordas-tamanhos.html">Bordas e Tamanhos</a></li>
+				<li class="list-inline-item px-3"><a href="media-query.html">MediaQuery</a></li>
+				<li class="list-inline-item px-3"><a href="botoes.html">Botões</a></li>
+				<li class="list-inline-item px-3"><a href="navegacao.html">Navegação</a></li>
+				<li class="list-inline-item px-3"><a href="listas.html">Listas</a></li>
+				<li class="list-inline-item px-3"><a href="formularios.html">Formulários</a></li>
+				<li class="list-inline-item px-3"><a href="input-group.html">Input Group</a></li>
+				<li class="list-inline-item px-3"><a href="alertas-progress-bar.html">Alertas e Barras de Progresso</a></li>
+				<li class="list-inline-item px-3"><a href="tabelas-paginacao.html">Tabelas e Paginação</a></li>
+			</ul>
+		</div>
+
+		<div>
+			<!-- Tabela simples -->
+			<section>
+				<h4>Tabelas: table</h4>
+				<p>Novas tags do HTML5 thead, tbody e tfoot, servem para agrupar os elementos do cabeçalho e do detalhamento da tabela. Com elas os navegadores qual parte da tabela participa do scroll de dados, mantendo o cabeçalho fixo no topo, ou numa impressão, mantendo o thead impresso em cada página.</p>
+				<P>Classe: table - já recebe toda a formatação para o header e para o body (altura, larguras, espaçamentos)</P>
+				<table class="table">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Produto</th>
+							<th>Marca</th>
+							<th>Preço</th>
+							<th>Validade</th>
+						</tr>
+					</thead>
+			
+					<tbody>
+						<tr>
+							<td>00001</td>
+							<td>Iphone X</td>
+							<td>Apple</td>
+							<td>R$ 6.999</td>
+							<td>31/12/2022</td>
+						</tr>
+						<tr>
+							<td>00002</td>
+							<td>Nexus 5</td>
+							<td>LG</td>
+							<td>R$ 999</td>
+							<td>08/07/2020</td>
+						</tr>
+						<tr>
+							<td>00003</td>
+							<td>Notebook VAIO</td>
+							<td>Sony</td>
+							<td>R$ 1.999</td>
+							<td>25/10/2021</td>
+						</tr>
+					</tbody>
+			
+				</table>
+			</section>
+			<hr>
+		
+			<!-- Tabela contextualizada -->
+			<section>
+				<h4>Tabela contextualizada</h4>
+				<p>Altera a cor de toda a tabela para um contexto de cores.</p>
+				<p>Classe: table-[opção], onde [opção] são as contextualizações conhecidas (primary, secondary, success, etc)</p>
+				<table class="table table-info">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Produto</th>
+							<th>Marca</th>
+							<th>Preço</th>
+							<th>Validade</th>
+						</tr>
+					</thead>
+				
+					<tbody>
+						<tr>
+							<td>00001</td>
+							<td>Iphone X</td>
+							<td>Apple</td>
+							<td>R$ 6.999</td>
+							<td>31/12/2022</td>
+						</tr>
+						<tr>
+							<td>00002</td>
+							<td>Nexus 5</td>
+							<td>LG</td>
+							<td>R$ 999</td>
+							<td>08/07/2020</td>
+						</tr>
+						<tr>
+							<td>00003</td>
+							<td>Notebook VAIO</td>
+							<td>Sony</td>
+							<td>R$ 1.999</td>
+							<td>25/10/2021</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+			<hr>
+			
+			<!-- Tabela apenas com cabeçalho contextualizada -->
+			<section>
+				<h4>Tabela com cabeçalho contextualizado</h4>
+				<p>Altera somente o cabeçalho para um contexto específco.</p>
+				<p>Classe: thead-[opção], onde [opção] são as contextualizações conhecidas (primary, secondary, success, etc)</p>
+				<table class="table table-info">
+					<thead class="thead-dark" >
+						<tr>
+							<th>#</th>
+							<th>Produto</th>
+							<th>Marca</th>
+							<th>Preço</th>
+							<th>Validade</th>
+						</tr>
+					</thead>
+				
+					<tbody>
+						<tr>
+							<td>00001</td>
+							<td>Iphone X</td>
+							<td>Apple</td>
+							<td>R$ 6.999</td>
+							<td>31/12/2022</td>
+						</tr>
+						<tr>
+							<td>00002</td>
+							<td>Nexus 5</td>
+							<td>LG</td>
+							<td>R$ 999</td>
+							<td>08/07/2020</td>
+						</tr>
+						<tr>
+							<td>00003</td>
+							<td>Notebook VAIO</td>
+							<td>Sony</td>
+							<td>R$ 1.999</td>
+							<td>25/10/2021</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+			<hr>
+		
+			<!-- Tabela com formatações striped e bordered -->
+			<section>
+				<h4>Tabela com formatações: table-striped, table-bordered, table-borderless</h4>
+				<p>table-striped: faz a diferenciação de cores entre linhas pares e ímpares, colocando uma formatação mais escura nas pares </p>
+				<p>table-bordered: faz a marcação de todas as bordas. Variação: table-borderless para não ter nenhuma borda</p>
+				<table class="table table-info table-striped table-bordered">
+					<thead class="thead-dark" >
+						<tr>
+							<th>#</th>
+							<th>Produto</th>
+							<th>Marca</th>
+							<th>Preço</th>
+							<th>Validade</th>
+						</tr>
+					</thead>
+				
+					<tbody>
+						<tr>
+							<td>00001</td>
+							<td>Iphone X</td>
+							<td>Apple</td>
+							<td>R$ 6.999</td>
+							<td>31/12/2022</td>
+						</tr>
+						<tr>
+							<td>00002</td>
+							<td>Nexus 5</td>
+							<td>LG</td>
+							<td>R$ 999</td>
+							<td>08/07/2020</td>
+						</tr>
+						<tr>
+							<td>00003</td>
+							<td>Notebook VAIO</td>
+							<td>Sony</td>
+							<td>R$ 1.999</td>
+							<td>25/10/2021</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+			<hr>
+
+			<!-- Tabela com linha contextualizada -->
+			<section>
+				<h4>Classes contextuais: table-success, table-danger, table...</h4>
+				<p>Aplicação do contexto em determinadas linhas da tabela, que é aplicar as classes table-[opção] numa linha.</p>
+				<table class="table table-info table-striped">
+					<thead class="thead-dark" >
+						<tr>
+							<th>#</th>
+							<th>Produto</th>
+							<th>Marca</th>
+							<th>Preço</th>
+							<th>Validade</th>
+						</tr>
+					</thead>
+				
+					<tbody>
+						<tr class="table-danger">
+							<td>00001</td>
+							<td>Iphone X</td>
+							<td>Apple</td>
+							<td>R$ 6.999</td>
+							<td>31/12/2022</td>
+						</tr>
+						<tr>
+							<td>00002</td>
+							<td>Nexus 5</td>
+							<td>LG</td>
+							<td>R$ 999</td>
+							<td>08/07/2020</td>
+						</tr>
+						<tr>
+							<td>00003</td>
+							<td>Notebook VAIO</td>
+							<td>Sony</td>
+							<td>R$ 1.999</td>
+							<td>25/10/2021</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+			<hr>
+		
+			<!-- Tabela em formato pequeno (table-sm) -->
+			<section>
+				<h4>Tabela pequena: table-sm</h4>
+				<p>O padrão da classe table define certos tamanhos, porém utilizando a classe table-sm é possível deixá-la mais compacta.</p>
+				<table class="table table-sm table-info table-striped table-bordered">
+					<thead class="thead-dark">
+						<tr>
+							<th>#</th>
+							<th>Produto</th>
+							<th>Marca</th>
+							<th>Preço</th>
+							<th>Validade</th>
+						</tr>
+					</thead>
+				
+					<tbody>
+						<tr>
+							<td>00001</td>
+							<td>Iphone X</td>
+							<td>Apple</td>
+							<td>R$ 6.999</td>
+							<td>31/12/2022</td>
+						</tr>
+						<tr>
+							<td>00002</td>
+							<td>Nexus 5</td>
+							<td>LG</td>
+							<td>R$ 999</td>
+							<td>08/07/2020</td>
+						</tr>
+						<tr>
+							<td>00003</td>
+							<td>Notebook VAIO</td>
+							<td>Sony</td>
+							<td>R$ 1.999</td>
+							<td>25/10/2021</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+			<hr>
+
+			<!-- Tabela em formato responsivo -->
+			<section>
+				<h4>Tabela responsiva: table-responsive</h4>
+				<p>A tabela precisa estar encapsulada num elemento responsivo, ao qual é aplicada a classe table-responsive</p>
+				<p>Para este exercício a tabela estará um pouco mais longa, com o acréscimo da coluna Descrição</p>
+				<p>Esta classificação acrescentará uma barra de navegação horizontal no elemento table, que aparecerá em dispositivos com telas menores.</p>
+				<div class="table-responsive">
+					<table class="table table-info table-striped">
+						<thead class="thead-dark" >
+							<tr>
+								<th>#</th>
+								<th>Produto</th>
+								<th>Descrição</th>
+								<th>Marca</th>
+								<th>Preço</th>
+								<th>Validade</th>
+							</tr>
+						</thead>
+					
+						<tbody>
+							<tr>
+								<td>00001</td>
+								<td>Iphone X</td>
+								<td>Lorem ipsum dolor sit amet </td>
+								<td>Apple</td>
+								<td>R$ 6.999</td>
+								<td>31/12/2022</td>
+							</tr>
+							<tr>
+								<td>00002</td>
+								<td>Nexus 5</td>
+								<td>Lorem ipsum dolor sit amet </td>
+								<td>LG</td>
+								<td>R$ 999</td>
+								<td>08/07/2020</td>
+							</tr>
+							<tr>
+								<td>00003</td>
+								<td>Notebook VAIO</td>
+								<td>Lorem ipsum dolor sit amet </td>
+								<td>Sony</td>
+								<td>R$ 1.999</td>
+								<td>25/10/2021</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+			<hr>
+
+			<!-- Definição da barra de paginação -->
+			<section>
+				<h4>Paginação: pagination, page-item, page-link - active, disabled</h4>
+				<p>Neste exercício será feita apenas a estilização dos componentes da paginação, pois para que a paginação realmente ocorresse seriam necessários conhecimentos para páginas dinâmicas, recuperação de informações do banco, os links deveriam procesar as cargas, etc..</p>
+				<p>Classe pagination aplicada a um elemento container, como uma lista. Isto formará os elementos deixando-os próximos.</p>
+				<p>Classe page-item aos elementos listados para a navegação.</p>
+				<p>Classses active e disabled para marcar a página atual e desabilitar alguma. No exemplo página 1 está ativa e o link da página Anterior está desabilitado, pro isso.</p>
+				<p>Classe page-link aplicado aos links de navegação</p>
+				<nav>
+					<ul class="pagination">
+						<li class="page-item disabled"><a href="" class="page-link">Anterior</a></li>
+						<li class="page-item active"><a href="" class="page-link">1</a></li>
+						<li class="page-item"><a href="" class="page-link">2</a></li>
+						<li class="page-item"><a href="" class="page-link">...</a></li>
+						<li class="page-item"><a href="" class="page-link">6</a></li>
+						<li class="page-item"><a href="" class="page-link">7</a></li>
+						<li class="page-item"><a href="" class="page-link">Próximo</a></li>
+					</ul>
+				</nav>
+			</section>
+			<hr>
+		
+			<!-- Definição do alinhamento da barra de paginação -->
+			<section>
+				<h4>Alinhamento: justify-content-ALINHAMENTO(center, end) </h4>
+				<p>O padrão de aiinhamento da barra de paginação é á esquerda, porém pode-se localizá-la ao centro ou á direita com as classes justify-content-center ou justify-content-end.</p>
+				<nav>
+					<ul class="pagination justify-content-center">
+						<li class="page-item disabled"><a href="" class="page-link">Anterior</a></li>
+						<li class="page-item active"><a href="" class="page-link">1</a></li>
+						<li class="page-item"><a href="" class="page-link">2</a></li>
+						<li class="page-item"><a href="" class="page-link">...</a></li>
+						<li class="page-item"><a href="" class="page-link">6</a></li>
+						<li class="page-item"><a href="" class="page-link">7</a></li>
+						<li class="page-item"><a href="" class="page-link">Próximo</a></li>
+					</ul>
+				</nav>
+			</section>
+			<hr>
+		
+			<!-- Tamanho da barra de paginação -->
+			<section>
+				<h4>Tamanho: pagination-TAMANHO(sm, lg) </h4>
+				<p>A barra de paginação também pode ter tamanho alterado, podendo ser do tipo pequena (sm) ou grande (lg)</p>
+				<p>Classes: pagination-sm e pagination-lg</p>
+
+				<nav>
+					<span>Small (pagination-sm):</span>
+					<ul class="pagination pagination-sm">
+						<li class="page-item disabled"><a href="" class="page-link">Anterior</a></li>
+						<li class="page-item active"><a href="" class="page-link">1</a></li>
+						<li class="page-item"><a href="" class="page-link">2</a></li>
+						<li class="page-item"><a href="" class="page-link">...</a></li>
+						<li class="page-item"><a href="" class="page-link">6</a></li>
+						<li class="page-item"><a href="" class="page-link">7</a></li>
+						<li class="page-item"><a href="" class="page-link">Próximo</a></li>
+					</ul>
+				</nav>
+	
+				<nav>
+					<span>Padrão (sem formatação)</span>
+					<ul class="pagination">
+						<li class="page-item disabled"><a href="" class="page-link">Anterior</a></li>
+						<li class="page-item active"><a href="" class="page-link">1</a></li>
+						<li class="page-item"><a href="" class="page-link">2</a></li>
+						<li class="page-item"><a href="" class="page-link">...</a></li>
+						<li class="page-item"><a href="" class="page-link">6</a></li>
+						<li class="page-item"><a href="" class="page-link">7</a></li>
+						<li class="page-item"><a href="" class="page-link">Próximo</a></li>
+					</ul>
+				</nav>
+
+	
+				<nav>
+					<span>Large (pagination-lg)</span>
+					<ul class="pagination pagination-lg">
+						<li class="page-item disabled"><a href="" class="page-link">Anterior</a></li>
+						<li class="page-item active"><a href="" class="page-link">1</a></li>
+						<li class="page-item"><a href="" class="page-link">2</a></li>
+						<li class="page-item"><a href="" class="page-link">...</a></li>
+						<li class="page-item"><a href="" class="page-link">6</a></li>
+						<li class="page-item"><a href="" class="page-link">7</a></li>
+						<li class="page-item"><a href="" class="page-link">Próximo</a></li>
+					</ul>
+				</nav>
+			</section>
+			<hr>
+		
+			<!-- Paginação com setas -->
+			<section>
+				<h4>Setas </h4>
+				<p>No lugar de apresentar links escritos é possível apresentar sinais formados por entidades html, contudo a utilização destas setas irá causar problemas aos leitores de tela, úteis para pessoas com deficiência visual. Para contorno desta situação os links não são suprimidos; eles são apenas escondidos com a classe sr-only (screen reader only) para serem apresentados apenas para os leitores de tela.</p>
+				<nav>
+					<ul class="pagination">
+						<li class="page-item disabled"><a href="" class="page-link"><span>&laquo;</span><span class="sr-only">Anterior</span></a></li>
+						<li class="page-item active"><a href="" class="page-link">1</a></li>
+						<li class="page-item"><a href="" class="page-link">2</a></li>
+						<li class="page-item"><a href="" class="page-link">...</a></li>
+						<li class="page-item"><a href="" class="page-link">6</a></li>
+						<li class="page-item"><a href="" class="page-link">7</a></li>
+						<li class="page-item"><a href="" class="page-link"><span>&raquo;</span><span class="sr-only">Próximo</span></a></li>
+					</ul>
+				</nav>
+			</section>
+		</div>
+			
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<!-- removido chamada ao link e utilizada a carga do próprio site
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
