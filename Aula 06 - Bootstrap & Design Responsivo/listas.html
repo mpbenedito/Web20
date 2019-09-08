@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS 
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+		<title>Bootstrap</title>
+	</head>
+	<body style="margin-bottom: 20px; padding-left: 16px;">
+		<div id="menu-aula" class="sticky-top" style="background: lightgrey;">
+			<h3>Bootstrap - Listas</h3>
+			<ul class="list-inline">
+				<li class="list-inline-item px-3"><a href="formatar-textos.html">Formatação</a></li>
+				<li class="list-inline-item px-3"><a href="alinhar-textos.html">Alinhamento</a></li>
+				<li class="list-inline-item px-3"><a href="elementos-flutuantes.html">Elementos Flutuantes</a></li>
+				<li class="list-inline-item px-3"><a href="cores-background.html">Cores e Background</a></li>
+				<li class="list-inline-item px-3"><a href="margin-padding.html">Margin e Padding</a></li>
+				<li class="list-inline-item px-3"><a href="bordas-tamanhos.html">Bordas e Tamanhos</a></li>
+				<li class="list-inline-item px-3"><a href="media-query.html">MediaQuery</a></li>
+				<li class="list-inline-item px-3"><a href="botoes.html">Botões</a></li>
+				<li class="list-inline-item px-3"><a href="navegacao.html">Navegação</a></li>
+				<li class="list-inline-item px-3"><a href="listas.html">Listas</a></li>
+				<li class="list-inline-item px-3"><a href="formularios.html">Formulários</a></li>
+				<li class="list-inline-item px-3"><a href="input-group.html">Input Group</a></li>
+			</ul>
+		</div>
+
+		<div style="margin-bottom: 200px;padding: 16px;">
+			<!-- Listas -->
+
+
+			<div>
+				<h4>Lista simples, apenas html</h4>
+				<ul>
+					<li>Meu item de lista 1</li>
+					<li>Meu item de lista 2</li>
+					<li>Meu item de lista 3</li>
+					<li>Meu item de lista 4</li>
+				</ul>
+			</div>
+			<hr>
+
+			<div>
+				<h4>List-group</h4>
+				<p>Classe list-group para formatação de listas, aplicada ao elemento ul, preparando o objeto para as próximas formatações</p>
+				<p>Classe list-group-item nos elemento li para fazer o padding, criar as caixas arredondadas.</p>
+				<p>Elementos classificados como list-group ajustam-se automaticamente ao tamanho da tela.</p>
+				<p>É possível aplicar as classes active e disabled para marcar de forma diferenciada um elemento da lista. No exemplo o item 3 está ativo e o 2 desabilitado.</p>
+				<ul class="list-group">
+					<li class="list-group-item">Meu item de lista 1</li>
+					<li class="list-group-item disabled">Meu item de lista 2</li>
+					<li class="list-group-item active">Meu item de lista 3</li>
+					<li class="list-group-item">Meu item de lista 4</li>
+				</ul>
+			</div>
+			<hr>
+
+			<!-- Listas com classe flush -->
+			<div>
+				<h4>List-flush</h4>
+				<p>É a mesma list group, classificada também com o list-group-flush para revmover as bordas laterais do elemento</p>
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item">Meu item de lista 1</li>
+					<li class="list-group-item disabled">Meu item de lista 2</li>
+					<li class="list-group-item active 	">Meu item de lista 3</li>
+					<li class="list-group-item">Meu item de lista 4</li>
+				</ul>
+			</div>
+			<hr>
+	
+			<!-- Listas com links -->
+			<div>
+				<h4>Lista de Links</h4>
+				<p>Mesmo processo do list-group. Inicia formatando o container ul e os links recebem a classe list-group-item</p>
+				<ul class="list-group">
+					<a class="list-group-item" href="#">Meu item de lista 1</a>
+					<a class="list-group-item disabled" href="#">Meu item de lista 2</a>
+					<a class="list-group-item active" href="#">Meu item de lista 3</a>
+					<a class="list-group-item" href="#">Meu item de lista 4</a>
+				</ul>
+			</div>
+			<hr>
+
+			<!-- Listas com classes contextuais 
+				classe: list-group-item-<opcoes>
+				opções: primary, secondary, success, info,	warning, danger, light, dark
+			-->
+			<div>
+				<h4>Classes contextuais</h4>
+				<p>Classificação dos itens conforme algum contexto adotado, diferenciado pela cor. </p>
+				<ul class="list-group">
+					<li class="list-group-item list-group-item-normal">Lista normal</li>
+					<li class="list-group-item list-group-item-primary">Lista primary</li>
+					<li class="list-group-item list-group-item-secondary">Lista secondary</li>
+					<li class="list-group-item list-group-item-success">Lista success</li>
+					<li class="list-group-item list-group-item-info">Lista info</li>
+					<li class="list-group-item list-group-item-warning">Lista warning</li>
+					<li class="list-group-item list-group-item-danger">Lista danger</li>
+					<li class="list-group-item list-group-item-light">Lista light</li>
+					<li class="list-group-item list-group-item-dark">Lista dark</li>
+				</ul>
+			</div>
+			<hr>
+
+			<!-- Badge 
+				classe: badge-<opcoes>
+				opções: primary, secondary, success, info,	warning, danger, light, dark
+			-->
+			<div>
+				<h4>Badges</h4>
+				<p>Classe: badge</p>
+				<p>Badges são "marcadores" visuais adicionados aos elementos da lista. Os itens 3 e 4 tem uma badges associadas.</p>
+				<p>As badges podem ser formatadas utilizando os contextos de cores: badge-opcao, onde opção são os conhecidos contextos primary, secondary, warning, info, etc.</p>
+				<ul class="list-group">
+					<li class="list-group-item">Meu item de lista 1</li>
+					<li class="list-group-item">Meu item de lista 2</li>
+					<li class="list-group-item">Meu item de lista 3 <span class="badge badge-warning">120</span></li>
+					<li class="list-group-item">Meu item de lista 4 <span class="badge badge-info">5</span></li>
+				</ul>
+			</div>
+			<hr>
+
+			<!-- Breadcrumb -->
+			<div>
+				<h4>Breadcrumbs ("Migalhas de pão")</h4>
+				<p>Identificação dos caminhos seguidos num mapa de site, p.e. topos de site que apresentam algo do tipo "Home / Menu1 / Submenu3 / Item2"</p>
+				<p>Classses: classe breadcrumb utilizando elementos ol</p>
+
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="">Home</a></li>
+				</ol>
+	
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="">Home</a></li>
+					<li class="breadcrumb-item active">Notícias</li>
+				</ol>
+	
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="">Home</a></li>
+					<li class="breadcrumb-item"><a href="">Notícias</a></li>
+					<li class="breadcrumb-item active">Jamilton Damasceno</li>
+				</ol>
+			</div>
+		</div>
+
+	
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<!-- removido chamada ao link e utilizada a carga do próprio site
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS 
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+		<title>Bootstrap</title>
+	</head>
+	<body style="margin-bottom: 20px; padding-left: 16px;">
+		<div id="menu-aula" class="sticky-top" style="background: lightgrey;">
+			<h3>Bootstrap - Formularios</h3>
+			<ul class="list-inline">
+				<li class="list-inline-item px-3"><a href="formatar-textos.html">Formatação</a></li>
+				<li class="list-inline-item px-3"><a href="alinhar-textos.html">Alinhamento</a></li>
+				<li class="list-inline-item px-3"><a href="elementos-flutuantes.html">Elementos Flutuantes</a></li>
+				<li class="list-inline-item px-3"><a href="cores-background.html">Cores e Background</a></li>
+				<li class="list-inline-item px-3"><a href="margin-padding.html">Margin e Padding</a></li>
+				<li class="list-inline-item px-3"><a href="bordas-tamanhos.html">Bordas e Tamanhos</a></li>
+				<li class="list-inline-item px-3"><a href="media-query.html">MediaQuery</a></li>
+				<li class="list-inline-item px-3"><a href="botoes.html">Botões</a></li>
+				<li class="list-inline-item px-3"><a href="navegacao.html">Navegação</a></li>
+				<li class="list-inline-item px-3"><a href="listas.html">Listas</a></li>
+				<li class="list-inline-item px-3"><a href="formularios.html">Formulários</a></li>
+				<li class="list-inline-item px-3"><a href="input-group.html">Input Group</a></li>
+			</ul>
+		</div>
+
+		<!-- formulários 
+			classe: form-control-<opcoes>
+			opções: sm, lg
+		-->
+		<div>
+			<h4>Formulários Estilizados com Bootstrap</h4>
+		</div>
+
+		<div style="background: lightgoldenrodyellow; padding: 5px;">
+			<h5>Elementos com características de display block.</h5>
+			<p>Perceber que existem vários tipos de elemento de formulários e cada um receberá formatações específicas.</p>
+			<p>Perceber que os elementos se adaptam ao tamanho da tela.</p>
+			<form>
+				<p>form-group: aplicada ao container irá isolar os elementos do container em um espaçamento pré-formatado.</p><br>
+				<p>form-control: aplicado aos inputs apresentará o comportamento dos elementos, estilizando-os</p>
+				<!-- caixas de texto -->
+				<div class="form-group">
+					<label for="usuario">Usuário</label>
+					<input class="form-control" type="text" id="usuario" placeholder="Digite seu usuário">
+				</div>
+				<br>
+			
+				<p>form-control-[tamanho]: Onde o tamanho são duas opções sm (small/pequeno) ou lg (large/grande)</p>
+				<!-- caixas de texto -->
+				<div class="form-group">
+					<input class="form-control form-control-sm" type="text" id="usuario" placeholder="form-control-sm" >
+					<input class="form-control" type="text" id="usuario" placeholder="input tamanho normal" >
+					<input class="form-control form-control-lg" type="text" id="usuario" placeholder="form-control-lg" >
+				</div>
+				<br>
+			
+				<p>Perceber que o email está desabilitado, porque ele está com atributo readonly.</p>
+				<p>A observação "Email será validado" está em tamanho menor, pois está estilizado com a tag small</p>
+				<div class="form-group">
+					<label for="email">Email</label>
+					<input class="form-control" type="email" id="email" placeholder="Digite seu email" readonly>
+					<small>Email será validado</small>
+				</div>
+				<br>
+			
+				<!-- select -->
+				<div class="form-group">
+					<p>Caixa de seleção: aplicar o form-control no elemento select</p>
+					
+					<label for="estados">Estados</label>
+					<select class="form-control"	id="estados">
+						<option>Acre</option>
+						<option>Alagoas</option>
+						<option>Amapá</option>
+						<option>...</option>
+					</select>
+				</div>
+				<br>
+			
+				<!-- textarea -->
+				<div class="form-group">
+					<p>Textarea: aplicando of form-control ao elemento textarea</p>
+					<label for="mensagem">Mensagem</label>
+					<textarea class="form-control" id="mensagem" rows="3"></textarea>
+				</div>
+				<br>
+			
+				<!-- file input -->
+				<div class="form-group">
+					<p>A classe para inputs do tipo file é o form-control-file, que irá estilizar o elemento da forma correta.</p>
+					<p>A label após o elemento que apresenta o arquivo selecionada é automática do elemento.</p>
+					<label for="arquivo">Arquivo</label>
+					<input class="form-control-file" type="file" id="arquivo">
+				</div>
+				<br>
+			
+				<!-- custom file input -->
+				<p>Existe uma segunda formatação para o input de arquivos que pode ser adotada também pelo bootstrap.</p>
+				<p>Classes: custom-file, custom-file-input e custom-file-label </p>
+				<div class="custom-file">
+					<label class="custom-file-label" for="arquivo2" >Selecione arquivo</label>
+					<input class="custom-file-input" type="file" id="arquivo2">
+				</div>
+				<br>
+				<br>
+				<br>
+			
+				<!-- range -->
+				<div class="form-group">
+					<p>Formatação de botões do tipo range (slide)</p>
+					<label id="range">Satisfação</label>
+					<input class="custom-range" type="range" id="range" min="1" max="50">
+				</div>
+				<br>
+				
+				<!-- button -->
+				<input class="btn btn-primary" type="submit" value="Salvar">
+			</form>
+		</div>
+		<hr>
+
+			
+		<div style="background: lightgoldenrodyellow; padding: 5px;">
+			<!-- Formulário inline -->
+			<h5>Elementos com características de display inline.</h5>
+			<p>Classe aplicada diretemente no formulário: form-inline</p>
+			<form class="form-inline">
+				<input class="form-control mr-2"	type="text" placeholder="Digite seu usuário">
+				<input class="form-control mr-2" type="password" placeholder="Digite sua senha">
+				<input class="form-control btn btn-primary" type="submit" value="Logar">
+			</form>
+			<br><br>
+		</div>
+		<hr>
+
+		<div style="background: lightgoldenrodyellow; padding: 5px;">
+			<h5>Formatações simples de elementos de fomulários</h5>
+			<p>Ainda não é validação. São apenas formatações para aplicar aos elementos após eles serem validados</p>
+			<p>Classes para os inputs:</p>
+			<p>is-vald - indca que o elemento passou pela validação com sucesso adicionando uma borda verde no elemento e o sinal de chek</p>
+			<p>is-invalid - indica que a validação do elemento não foi bem sucedida adicionando uma borda vermelha no elemento e o x vermelho</p>
+			<p>Para as mensagens de válido ou inválido é possível utilizar as classes valid-feedback e invalid-feedback</p>
+			<!-- 
+				Validação de formulário 
+				Classes: is-valid, is-invalid, invalid-feedback
+			-->
+			<form style="width: 500px;">
+				
+				<div class="form-group">
+					<label for="email-usuario">EMail</label>
+					<input class="form-control is-valid" type="text" id="email-usuario" placeholder="Digite seu e-mail">
+					<div class="valid-feedback">
+						EMail váldo (valid-feedback)
+					</div>
+				</div>
+				
+				<div>
+					<label for="senha-usuario">Senha</label>
+					<input class="form-control is-invalid" type="email" id="senha-usuario" placeholder="Digite sua senha">
+					<div class="invalid-feedback">
+						Senha inválida (invalid-feedback)
+					</div>
+				</div>
+				<br>
+				<br>
+				
+				<input class="btn btn-primary" type="submit" value="Logar">
+				
+			</form>
+			
+		</div>
+			
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<!-- removido chamada ao link e utilizada a carga do próprio site
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>

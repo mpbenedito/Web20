@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS 
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+		<title>Bootstrap</title>
+	</head>
+	<body style="margin-bottom: 20px; padding-left: 16px;">
+		<div id="menu-aula" class="sticky-top" style="background: lightgrey;">
+			<h3>Bootstrap - Input Groups</h3>
+			<ul class="list-inline">
+				<li class="list-inline-item px-3"><a href="formatar-textos.html">Formatação</a></li>
+				<li class="list-inline-item px-3"><a href="alinhar-textos.html">Alinhamento</a></li>
+				<li class="list-inline-item px-3"><a href="elementos-flutuantes.html">Elementos Flutuantes</a></li>
+				<li class="list-inline-item px-3"><a href="cores-background.html">Cores e Background</a></li>
+				<li class="list-inline-item px-3"><a href="margin-padding.html">Margin e Padding</a></li>
+				<li class="list-inline-item px-3"><a href="bordas-tamanhos.html">Bordas e Tamanhos</a></li>
+				<li class="list-inline-item px-3"><a href="media-query.html">MediaQuery</a></li>
+				<li class="list-inline-item px-3"><a href="botoes.html">Botões</a></li>
+				<li class="list-inline-item px-3"><a href="navegacao.html">Navegação</a></li>
+				<li class="list-inline-item px-3"><a href="listas.html">Listas</a></li>
+				<li class="list-inline-item px-3"><a href="formularios.html">Formulários</a></li>
+				<li class="list-inline-item px-3"><a href="input-group.html">Input Group</a></li>
+			</ul>
+		</div>
+
+		<div>
+			<h4>Input Groups</h4>
+			<p>Grupos criados para juntar os elementos utilizados no input de um formulários.</p>
+			<p>Existem classificações específicas para tratamento de alguns grupos comuns deixando os elementos preparados para receber determinados tipos de informação.</p>
+			<p>Classe padrão: input-group</p>
+
+
+			<form>
+				<div style="background: lightgoldenrodyellow; padding: 5px;">
+					<h5>Grupo prepend</h5>
+					<p>Prepend são grupos formatados antes do elemento input. Classe: input-group-prepend</p>
+					<p>O sinal @ está classificado como input-group-text. Utilizei o @, contudo pode ser qualquer string.</p>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text">@</span>
+						</div>
+						<input class="form-control" type="text" placeholder="e-mail">
+					</div> 
+				</div>
+				<hr>
+				
+				<div style="background: lightgoldenrodyellow; padding: 5px;">
+					<h5>Grupo append</h5>
+					<p>Append são os grupos formatados após o input. Classe: input-group-append</p>
+					<p>A classe input-group-text continua sendo utilizada para a parte fixa do elemento input.</p>
+					<div class="input-group">
+						<input class="form-control" type="text" placeholder="e-mail">
+						<div class="input-group-append">
+							<span class="input-group-text">@site.com</span>
+						</div>
+					</div> 
+				</div>
+				<hr>
+				
+				<div style="background: lightgoldenrodyellow; padding: 5px;">
+					<h5>URL customizada</h5>
+					<p>Formatações para URL personalizadas. É outro exemplo de prepend</p>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text">
+								https://youtube.com/
+							</span>
+						</div>
+						<input class="form-control" type="text" placeholder="nome_do_canal">
+					</div>
+				</div>
+				<hr>
+
+				<div style="background: lightgoldenrodyellow; padding: 5px;">
+					<h5>Moeda</h5>
+					<p>Aplicação de input-groups prepend e append juntos</p>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text">R$</span>
+						</div>
+						<input class="form-control" type="text" placeholder="Digite um valor">
+						<div class="input-group-append">
+							<span class="input-group-text">,00</span>
+						</div>
+					</div>	
+				</div>
+				<hr>
+
+				<div style="background: lightgoldenrodyellow; padding: 5px;">
+					<!-- type: checkbox / radio	-->
+					<h5>Checkbox / radio</h5>
+					<p>Aplicação das classes input-group-prepend e input-group-text em inputs do tipo checkbox e radiobox</p>
+					<p></p>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<div class="input-group-text">
+								<input type="checkbox">
+							</div> 
+							<input type="text" class="form-control">
+						</div>
+					</div>
+				</div>
+				<hr>
+
+				<div style="background: lightgoldenrodyellow; padding: 5px;">
+					<h5>Múltiplos inputs</h5>
+					<p>Os dois inputs formatam-se numa combinação em que parecem um único input, cantos externos arredondados. Cantos internos em formato collapse</p>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text">nome/e-mail</span>
+						</div>
+						<input class="form-control" type="text" placeholder="e-mail">
+						<input class="form-control" type="password" placeholder="senha">
+					</div> 
+				</div>
+				<hr>
+				
+				<div style="background: lightgoldenrodyellow; padding: 5px;">
+					<h5>Pesquisas</h5>
+					<p>Aplicação de um botão num input-group.</p>
+					<div class="input-group">
+						<input class="form-control" type="text" placeholder="Pesquisar" >
+						<div class="input-group-append">
+							<button class="btn btn-warning" type="button">Pesquisar</button>
+						</div>
+					</div>
+				</div>
+				
+			</form>
+							
+		</div>
+			
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<!-- removido chamada ao link e utilizada a carga do próprio site
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
