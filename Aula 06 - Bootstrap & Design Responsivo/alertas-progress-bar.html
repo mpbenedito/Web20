@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS 
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+		<title>Bootstrap</title>
+	</head>
+	<body style="margin-bottom: 20px; padding-left: 16px;">
+		<div id="menu-aula" class="sticky-top" style="background: lightgrey;">
+			<h3>Bootstrap - Alertas e Barras de Progresso</h3>
+			<ul class="list-inline">
+				<li class="list-inline-item px-3"><a href="formatar-textos.html">Formatação</a></li>
+				<li class="list-inline-item px-3"><a href="alinhar-textos.html">Alinhamento</a></li>
+				<li class="list-inline-item px-3"><a href="elementos-flutuantes.html">Elementos Flutuantes</a></li>
+				<li class="list-inline-item px-3"><a href="cores-background.html">Cores e Background</a></li>
+				<li class="list-inline-item px-3"><a href="margin-padding.html">Margin e Padding</a></li>
+				<li class="list-inline-item px-3"><a href="bordas-tamanhos.html">Bordas e Tamanhos</a></li>
+				<li class="list-inline-item px-3"><a href="media-query.html">MediaQuery</a></li>
+				<li class="list-inline-item px-3"><a href="botoes.html">Botões</a></li>
+				<li class="list-inline-item px-3"><a href="navegacao.html">Navegação</a></li>
+				<li class="list-inline-item px-3"><a href="listas.html">Listas</a></li>
+				<li class="list-inline-item px-3"><a href="formularios.html">Formulários</a></li>
+				<li class="list-inline-item px-3"><a href="input-group.html">Input Group</a></li>
+				<li class="list-inline-item px-3"><a href="alertas-progress-bar.html">Alertas e Barras de Progresso</a></li>
+			</ul>
+		</div>
+
+		<div>
+			<div class="p-2" style="background: lightgoldenrodyellow;">
+				<h4>Alertas</h4>
+				<p>Alertas são as mensagens de comuicação com o usuário, já bem conhecidas.</p>
+				<p>Classes: no container da mensagem de aviso, utilizo a classe alert para formatação do texto seguido da classe alert-[opção], sendo [opção] a definição já conhecida de cores (primary, secondary, etc.</p>
+	
+				<div class="alert alert-primary">
+					<strong>Primary</strong> você tem uma postagem pendente!
+				</div>
+				<div class="alert alert-secondary">
+					<strong>Secondary</strong> você tem uma postagem pendente!
+				</div>
+				<div class="alert alert-success">
+					<strong>Success</strong> você tem uma postagem pendente!
+				</div>
+				<div class="alert alert-danger">
+					<strong>Danger</strong> você tem uma postagem pendente!
+				</div>
+				<div class="alert alert-warning">
+					<strong>Warning</strong> você tem uma postagem pendente!
+				</div>
+				<div class="alert alert-info">
+					<strong>Info</strong> você tem uma postagem pendente!
+				</div>
+				<div class="alert alert-light">
+					<strong>Light</strong> você tem uma postagem pendente!
+				</div>
+				<div class="alert alert-dark">
+					<strong>Dark</strong> você tem uma postagem pendente!
+				</div>
+			</div>
+			<hr>
+						
+			<div class="p-2" style="background: lightgoldenrodyellow;">
+				<h4>Alerta com botão fechar</h4>
+				<p>Desenvolvimento de uma mensagem de aviso com o botão "Fechar".</p>
+				<p>Classes: no botão: aplicar close, junto com o atributo data-dismiss="alert"</p>
+				<p>No container, acrescento a classe alert-dismissible.</p>
+				<div class="alert alert-success alert-dismissible mx-auto" style="width: 400px;">
+					<button class="close" type="button" data-dismiss="alert">&times;</button>    <!-- Entidade do "X" de fechar-->
+					<strong>Fechar</strong> Alerta com botão fechar - clique no
+				</div>
+			</div>
+			<hr>
+			
+		
+			<div class="p-2" style="background: lightgoldenrodyellow;">
+				<h4>Alerta com mais conteúdos</h4>
+				<p>Apenas exercitando a possibilidade de aumentar a caixa de alertas para conter mais informação.</p>
+				<div class="alert alert-info">
+					<h5>Título</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a metus in purus malesuada vulputate. Sed lacinia quam massa, eu consectetur tortor faucibus sed.</p>
+					<hr>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a metus in purus malesuada vulputate. Sed lacinia quam massa, eu consectetur tortor faucibus sed.</p>
+				</div>
+			</div>	
+			<hr>
+		
+			<div class="p-2" style="background: lightgoldenrodyellow;">
+				<h4>Barra de progresso</h4>
+				<h5>Modo básico:</h5>
+				<p>Barras de progresso são elementos para interação visual com usuário informando sobre o andamento de algum tipo de processamento ou carga, p.e.</p>
+				<p>Classe: progress - colocada no container externo, formata uma região da tela para conter uma barra de incremento</p>
+				<p>Classe: progress-bar - colocada no container interno, indica a progressão da barra</p>
+				<div class="progress">
+					<div class="progress-bar" style="width: 63%">63%</div>
+				</div>
+				<br>
+				<p>Na classe externa posso alterar comprimento e posicionamento, p.e.</p>
+				<p>Na classe interna eu defino formatações da barra de evolução, como cor, padronagem, etc.</p>
+				<div class="progress w-25 m-auto">
+					<div class="progress-bar bg-success" style="width: 45%">45%</div>
+				</div>
+				<br>
+					
+				<h5>Altura</h5>
+				<p>Para mexer na altura altero a classe externa com o atributo height</p>
+				<div class="progress w-50" style="height: 2px">
+					<div class="progress-bar bg-info" style="width: 23%"></div>
+				</div>
+				<br>
+				<div class="progress w-50" style="height: 1em">
+					<div class="progress-bar bg-warning" style="width: 46%">46%</div>
+				</div>
+				<br>
+				<div class="progress w-50" style="height: 50px">
+					<div class="progress-bar bg-danger" style="width: 69%">69%</div>
+				</div>
+				<hr>
+						
+			
+				<h5>Listrado</h5>
+				<p>Apenas alterar o background da barra inerna com a classe progress-bar-striped</p>
+				<div class="progress">
+					<div class="progress-bar bg-warning progress-bar-striped" style="width: 70%">70%</div>
+				</div>
+				<hr>
+					
+			
+				<h5>Animado</h5>
+				<p>Apenas alterar o background da barra inerna com a classe progress-bar-animated</p>
+				<div class="progress">
+					<div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" style="width: 70%">70%</div>
+				</div>
+				<hr>
+					
+			
+				<h5>Múltiplas barras</h5>
+				<p>Apenas acrescentar divs internas, para apresentar definição de carga de vários recursos</p>
+				<div class="progress">
+					<div class="progress-bar bg-success" style="width: 20%">20%</div>
+					<div class="progress-bar bg-primary" style="width: 6%">6%</div>
+					<div class="progress-bar bg-info" style="width: 32%">32%</div>
+				</div>
+			</div>
+			
+		</div>
+			
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<!-- removido chamada ao link e utilizada a carga do próprio site
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
