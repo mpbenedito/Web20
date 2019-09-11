@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS 
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+		<title>Bootstrap</title>
+	</head>
+	<body style="margin-bottom: 20px; padding-left: 16px;">
+		<div id="menu-aula" class="sticky-top" style="background: lightgrey;">
+			<h3>Bootstrap - JumboTron e Alinhamento de Imagens</h3>
+			<ul class="list-inline">
+				<li class="list-inline-item px-3"><a href="formatar-textos.html">Formatação</a></li>
+				<li class="list-inline-item px-3"><a href="alinhar-textos.html">Alinhamento</a></li>
+				<li class="list-inline-item px-3"><a href="elementos-flutuantes.html">Elementos Flutuantes</a></li>
+				<li class="list-inline-item px-3"><a href="cores-background.html">Cores e Background</a></li>
+				<li class="list-inline-item px-3"><a href="margin-padding.html">Margin e Padding</a></li>
+				<li class="list-inline-item px-3"><a href="bordas-tamanhos.html">Bordas e Tamanhos</a></li>
+				<li class="list-inline-item px-3"><a href="media-query.html">MediaQuery</a></li>
+				<li class="list-inline-item px-3"><a href="botoes.html">Botões</a></li>
+				<li class="list-inline-item px-3"><a href="navegacao.html">Navegação</a></li>
+				<li class="list-inline-item px-3"><a href="listas.html">Listas</a></li>
+				<li class="list-inline-item px-3"><a href="formularios.html">Formulários</a></li>
+				<li class="list-inline-item px-3"><a href="input-group.html">Input Group</a></li>
+				<li class="list-inline-item px-3"><a href="alertas-progress-bar.html">Alertas e Barras de Progresso</a></li>
+				<li class="list-inline-item px-3"><a href="tabelas-paginacao.html">Tabelas e Paginação</a></li>
+				<li class="list-inline-item px-3"><a href="cards.html">Cartões (Cards)</a></li>
+				<li class="list-inline-item px-3"><a href="jumbotron.html">Jumbotron e Alinhamento de Imagens</a></li>
+				<li class="list-inline-item px-3"><a href="icones.html">Ícones</a></li>
+			</ul>
+		</div>
+
+		<div>
+			<div class="p-2" style="background: lightgoldenrodyellow;">
+				<h4>Jumbotron</h4>
+				<p>JumboTron é um elemento utilizado para a criação de áreas que precisam de mais destaque em tela (área principal, divulgações importantes, etc.) </p>
+				<p>Classe padrão é a jumbotron. </p>
+				<div class="jumbotron">
+					<div class="container">
+						<h1 class="display-4">Música para todos.</h1>
+						<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat et lorem quis, fringilla maximus nisl. Vivamus sed est pulvinar, aliquet purus ut, dictum elit.</p>
+						<hr>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<a class="btn btn-primary btn-lg" href="">Leia mais</a>
+					</div>
+				</div>
+			</div>
+			<hr>
+		
+			<div class="p-2" style="background: lightgoldenrodyellow;">
+				<h4>Estrutura para imagens</h4>
+				<p>Estrutura básica de integrar os textos com as imagens apresentadas. Classe media e media-body. Reparar que o título e o corpo do texto ficam alinhados com a imagem</p>
+				<div class="media">
+			  		<img class="mr-3" src="https://source.unsplash.com/random/60x60">
+			  		<div class="media-body">
+						<h5>Título do conteúdo</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat et lorem quis, fringilla maximus nisl. Vivamus sed est pulvinar, aliquet purus ut, dictum elit.</p>
+			  		</div>
+				</div>
+			</div>
+			<hr>
+
+			<div class="p-2" style="background: lightgoldenrodyellow;">
+				<h4>Alinhamentos: align-self-ALINHAMENTO (start, center, end) </h4>
+				<p>Existem alinhamentos específicos para posicionamento das imagens com os textos. Classes align-self-[posição], onde [posição] pode ser start, center, end. Padrão é start</p>
+				<p>Reparar que o alinhamento é vertical. Start é no topo do container, center é ao centro  e end é embaixo.</p>
+				<div class="media border">
+					<img class="mr-3 align-self-start" src="https://source.unsplash.com/random/60x60">
+					<div class="media-body">
+						<h5>Título do conteúdo - align-self-start</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat et lorem quis, fringilla maximus nisl. Vivamus sed est pulvinar, aliquet purus ut, dictum elit.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat et lorem quis, fringilla maximus nisl. Vivamus sed est pulvinar, aliquet purus ut, dictum elit.</p>
+					</div>
+				</div>
+
+				<div class="media border">
+					<img class="mr-3 align-self-center" src="https://source.unsplash.com/random/60x60">
+					<div class="media-body">
+						<h5>Título do conteúdo - align-self-center</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat et lorem quis, fringilla maximus nisl. Vivamus sed est pulvinar, aliquet purus ut, dictum elit.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat et lorem quis, fringilla maximus nisl. Vivamus sed est pulvinar, aliquet purus ut, dictum elit.</p>
+					</div>
+				</div>
+
+				<div class="media border">
+					<img class="mr-3 align-self-end" src="https://source.unsplash.com/random/60x60">
+					<div class="media-body">
+						<h5>Título do conteúdo - align-self-end</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat et lorem quis, fringilla maximus nisl. Vivamus sed est pulvinar, aliquet purus ut, dictum elit.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat et lorem quis, fringilla maximus nisl. Vivamus sed est pulvinar, aliquet purus ut, dictum elit.</p>
+					</div>
+				</div>
+			</div>
+			<hr>
+
+			<div class="p-2" style="background: lightgoldenrodyellow;">
+				<h4>Listas com imagens</h4>
+				<p>Transoformar a imagem num thumbnail simples de imagem + texto explicativo</p>
+				<ul class="list-unstyled">
+					<li class="media mb-2 border-bottom pb-2">
+						<img class="mr-2 align-self-center" src="https://source.unsplash.com/random/80x80">
+						<div class="media-body">
+							<h5>Elemento 1</h5>
+							<p mb-0>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat et lorem quis, fringilla maximus nisl.</p>
+						</div>
+					</li>
+					<li class="media mb-2 border-bottom pb-2">
+						<img class="mr-2 align-self-center" src="https://source.unsplash.com/random/80x80">
+						<div class="media-body">
+							<h5>Elemento 2</h5>
+							<p mb-0>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat et lorem quis, fringilla maximus nisl.</p>
+						</div>
+					</li>
+	
+				</ul>
+			</div>	
+
+
+		</div>
+			
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<!-- removido chamada ao link e utilizada a carga do próprio site
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
