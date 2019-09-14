@@ -45,6 +45,7 @@
 		</style>
 	</head>
 	<body style="margin-bottom: 20px; padding-left: 16px;">
+		<!-- menu principal -->
 		<div id="menu-aula" class="sticky-top" style="background: lightgrey;">
 			<h3>Bootstrap - Sistema de Grid</h3>
 			<ul class="list-inline">
@@ -66,10 +67,15 @@
 				<li class="list-inline-item px-3"><a href="jumbotron.html">Jumbotron e Alinhamento de Imagens</a></li>
 				<li class="list-inline-item px-3"><a href="icones.html">Ícones</a></li>
 				<li class="list-inline-item px-3"><a href="grid.html">Sistema de Grid</a></li>
+				<li class="list-inline-item px-3"><a href="classes-flexbox.html">Classes Flexbox</a></li>
+				<li class="list-inline-item px-3"><a href="margin-wrap.html">Margin e Wrap</a></li>
+				<li class="list-inline-item px-3"><a href="projeto-padrao.html"><strong>Projeto Padrão</strong></a></li>
 			</ul>
 		</div>
 
+		<!-- Conteúdo -->
 		<div>
+			<!-- explicação grid system -->
 			<section>
 				<h4>Bootstrap4 - Sistema de Grid</h4>
 				<p>O Bootstrap 4 tem por padrão uma divisão interna que possibilita a divisão de um site em até 12 partes.</p>
@@ -102,6 +108,7 @@
 			</section>
 			<hr>
 
+			<!-- exemplo de aplicação -->
 			<section>
 				<h4>Aplicando grids</h4>
 				<p>1) Definição do container: classe "container". A classe container, por si, já será centralizada. Se o tamanho da tela for reduzido o container também reduz.</p>
@@ -161,26 +168,26 @@
 					</div>
 				</div>
 			</section>
-		</div>
-		<hr>
-
-		<section>
-			<h4>Alteração dinâmica do breakpoint</h4>
-			<p>No mesmo container é possível definir tamanhos diferentes de ocupação de grids dependendo dos breakpoints definidos</p>
-			<p>Exemplo: o grid abaixo tem uma definição de tamanho para dispositivos bem pequenos e outro comportamento se o tamanho de tela aumenta</p>
-
-			<div class="container marcador-container">
-				<p>Exemplo 1:</p>
-				<p>Em telas pequenas os elementos se empilham, em telas médias eles se quebram em 2 linhas, em grandes telas eles ocupam só uma linha.</p>
-				<p>Assim as áreas do site terão comportamentos diferentes com vários tamanhos de tela. O tamanho das divisões somadas não pode exceder 12 espaços.</p>
-				<div class="row">
+			<hr>
+			
+			<!-- utilização dos breakpoints-->
+			<section>
+				<h4>Alteração dinâmica do breakpoint</h4>
+				<p>No mesmo container é possível definir tamanhos diferentes de ocupação de grids dependendo dos breakpoints definidos</p>
+				<p>Exemplo: o grid abaixo tem uma definição de tamanho para dispositivos bem pequenos e outro comportamento se o tamanho de tela aumenta</p>
+				
+				<div class="container marcador-container">
+					<p>Exemplo 1:</p>
+					<p>Em telas pequenas os elementos se empilham, em telas médias eles se quebram em 2 linhas, em grandes telas eles ocupam só uma linha.</p>
+					<p>Assim as áreas do site terão comportamentos diferentes com vários tamanhos de tela. O tamanho das divisões somadas não pode exceder 12 espaços.</p>
+					<div class="row">
 					<div class="marcador-rosa col-12 col-md-12 col-xl-4"><h3>Área 1</h3></div>
 					<div class="marcador-azul col-12 col-md-10 col-xl-4"><h3>Área 2</h3></div>
 					<div class="marcador-rosa col-12 col-md-2 col-xl-4"><h3>Área 3</h3></div>
 				</div>
 				<br>
 			</div>
-
+			
 			<div class="container marcador-container">
 				<p>Exemplo 2: </p>
 				<p>Em telas pequenas ocuparão áreas iguais; Em telas médias a área 1 ocupará 75% da área e em telas grandes a área 1 ocupará apenas 25%</p>
@@ -190,7 +197,7 @@
 				</div>
 				<br>
 			</div>
-
+			
 			<div class="container marcador-container">
 				<p>Exemplo 3: </p>
 				<p>Aplicando todas as 5 transições</p>
@@ -201,181 +208,240 @@
 				<br>
 				<br>
 			</div>
-		</section>
-		<hr>
-		
-		<section>
-			<h4>Largura Fixa</h4>
-			<p>É possível fazer uma divisão equalitária entre as áreas de conteúdo com a classe col (sem definição de dimensões ou grid)</p>
-			<p>Usar a classe col evita que o empilhamento de conteúdos apareça, mesmo que a tela seja a de pequenos dispositivos.</p>
-			<div class="container marcador-container">
-				<div class="row">
-					<div class="marcador-azul col">Área 1 (25%)</div>
-					<div class="marcador-azul col">Área 2 (25%)</div>
-					<div class="marcador-azul col">Área 3 (25%)</div>
-					<div class="marcador-azul col">Área 4 (25%)</div>
+			</section>
+			<hr>
+			
+			<!-- Largua Fixa -->
+			<section>
+				<h4>Largura Fixa</h4>
+				<p>É possível fazer uma divisão equalitária entre as áreas de conteúdo com a classe col (sem definição de dimensões ou grid)</p>
+				<p>Usar a classe col evita que o empilhamento de conteúdos apareça, mesmo que a tela seja a de pequenos dispositivos.</p>
+				<div class="container marcador-container">
+					<div class="row">
+						<div class="marcador-azul col">Área 1 (25%)</div>
+						<div class="marcador-azul col">Área 2 (25%)</div>
+						<div class="marcador-azul col">Área 3 (25%)</div>
+						<div class="marcador-azul col">Área 4 (25%)</div>
+					</div>
 				</div>
-			</div>
-		</section>
-		<hr>
-
-		<section>
-			<h4>Largura Automática (auto-layout)</h4>
-			<p>Neste modelo mantenho as proporções independente da tela do dispositivo.</p>
-			<div class="container marcador-container">
-				<div class="row">
-					<div class="marcador-rosa col-2">Área 1 (20%)</div>
-					<div class="marcador-rosa col-4">Área 2 (30%)</div>
-					<div class="marcador-rosa col-6">Área 3 (50%)</div>
+			</section>
+			<hr>
+			
+			<!-- Largura automática -->
+			<section>
+				<h4>Largura Automática (auto-layout)</h4>
+				<p>Neste modelo mantenho as proporções independente da tela do dispositivo.</p>
+				<div class="container marcador-container">
+					<div class="row">
+						<div class="marcador-rosa col-2">Área 1 (20%)</div>
+						<div class="marcador-rosa col-4">Área 2 (30%)</div>
+						<div class="marcador-rosa col-6">Área 3 (50%)</div>
+					</div>
 				</div>
-			</div>
-		</section>
-		<hr>
+			</section>
+			<hr>
 
-		<section>
-			<h4>Largura Igual Empilhada</h4>
-			<p>Se a quantidade de espaços no grid não for fornecida para a classe col, existindo apenas a definição dos breakpoints as divisões manterão a mesma proporção, porém abaixo do breakpoint o empilhamento será automático</p>
-			<p>Fazer a divisão dos conteúdos informando quantos espaços cada div irá ocupar. Classe col-[tamanho], onde:</p>
-			<p>[tamanho] = (não tem)/sm/md/lg/xl para definir o tamanho do monitor mínimo para exibição (ver media queries e breakpoints)</p>
-			<div class="container marcador-container">
-				<div class="row">
-					<div class="marcador-azul col-md">Área 1 (33.3%)</div>
-					<div class="marcador-azul col-md">Área 2 (33.3%)</div>
-					<div class="marcador-azul col-md">Área 3 (33.3%)</div>
+			<!-- Largura Igual Empilhada -->
+			<section>
+				<h4>Largura Igual Empilhada</h4>
+				<p>Se a quantidade de espaços no grid não for fornecida para a classe col, existindo apenas a definição dos breakpoints as divisões manterão a mesma proporção, porém abaixo do breakpoint o empilhamento será automático</p>
+				<p>Fazer a divisão dos conteúdos informando quantos espaços cada div irá ocupar. Classe col-[tamanho], onde:</p>
+				<p>[tamanho] = (não tem)/sm/md/lg/xl para definir o tamanho do monitor mínimo para exibição (ver media queries e breakpoints)</p>
+				<div class="container marcador-container">
+					<div class="row">
+						<div class="marcador-azul col-md">Área 1 (33.3%)</div>
+						<div class="marcador-azul col-md">Área 2 (33.3%)</div>
+						<div class="marcador-azul col-md">Área 3 (33.3%)</div>
+					</div>
 				</div>
-			</div>
-		</section>
-		<hr>
+			</section>
+			<hr>
 
-		<section>
-			<h4>Ordenando</h4>
-			<p>Como grids são totalmente desenvolvidos com o conceito do flexbox é possível fazer a ordenação dos elementos também por classificação.</p>
-			<p>Utilizar a classe order-[numero], onde [número] é a sequência de ordenação desejada</p>
-			<div class="container marcador-container">
-				<div class="row">
-					<div class="marcador-azul col-md-4 order-2">Área 1 - ordem 2</div>
-					<div class="marcador-rosa col-md-4 order-1">Área 2 - ordem 1</div>
-					<div class="marcador-rosa col-md-4 order-3">Área 3 - ordem 3</div>
+			<!-- ordenação de elementos -->
+			<section>
+				<h4>Ordenando</h4>
+				<p>Como grids são totalmente desenvolvidos com o conceito do flexbox é possível fazer a ordenação dos elementos também por classificação.</p>
+				<p>Utilizar a classe order-[numero], onde [número] é a sequência de ordenação desejada</p>
+				<div class="container marcador-container">
+					<div class="row">
+						<div class="marcador-azul col-md-4 order-2">Área 1 - ordem 2</div>
+						<div class="marcador-rosa col-md-4 order-1">Área 2 - ordem 1</div>
+						<div class="marcador-rosa col-md-4 order-3">Área 3 - ordem 3</div>
+					</div>
 				</div>
-			</div>
-		</section>
-		<hr>
-		
-		<section>
-			<h4>Offset</h4>
-			<p>Por padrão o row sempre ocupará todo a área útil do container.</p>
-			<p>Porém, existem situações que é necessário que as rows ocupem espaços com deslocamento no grid. </p>
-			<p>Nestes casos utiliza-se a classe offset-[tamanho]-[número], onde número é a quantidade de espaços do grid que devem ser deixados antes do primeiro elemento da row ser colocado.</p>
-			<p>No exemplo abaixo, é acrescentado um offset de 3 espaços para telas maiores que o 760px. Para telas menores a row ocupará os 12 espaços do grid</p>
-			<div class="container marcador-container">
-				<div class="row">
-					<div class="marcador-azul col-md-6 offset-md-3">Conteúdo centralizado</div>
+			</section>
+			<hr>
+			
+			<!-- aplicação de offset de deslocamento -->
+			<section>
+				<h4>Offset</h4>
+				<p>Por padrão o row sempre ocupará todo a área útil do container.</p>
+				<p>Porém, existem situações que é necessário que as rows ocupem espaços com deslocamento no grid. </p>
+				<p>Nestes casos utiliza-se a classe offset-[tamanho]-[número], onde número é a quantidade de espaços do grid que devem ser deixados antes do primeiro elemento da row ser colocado.</p>
+				<p>No exemplo abaixo, é acrescentado um offset de 3 espaços para telas maiores que o 760px. Para telas menores a row ocupará os 12 espaços do grid</p>
+				<div class="container marcador-container">
+					<div class="row">
+						<div class="marcador-azul col-md-6 offset-md-3">Conteúdo centralizado</div>
+					</div>
 				</div>
-			</div>
-		</section>
-		<hr>
-
-		<section>
-			<h4>Offset Múltiplos Alinhamentos</h4>
-			<p>É possível aplicar o offset não só em relação á borda do container mas a outros elementos.</p>
-			<p>No exemplo abaixo o offset do Conteúdo 2 aparecerá em relação ao Conteúdo 1, a partir de telas com 960px. Abaixo disso eles serão apresentados com empilhamento.</p>
-			<div class="container marcador-container">
-				<div class="row">
-					<div class="marcador-rosa col-md-3">Conteúdo 1</div>
-					<div class="marcador-azul col-md-3 offset-md-3">Conteúdo 2</div>
+			</section>
+			<hr>
+			
+			<!-- offset em múltiplos alinhamentos -->
+			<section>
+				<h4>Offset Múltiplos Alinhamentos</h4>
+				<p>É possível aplicar o offset não só em relação á borda do container mas a outros elementos.</p>
+				<p>No exemplo abaixo o offset do Conteúdo 2 aparecerá em relação ao Conteúdo 1, a partir de telas com 960px. Abaixo disso eles serão apresentados com empilhamento.</p>
+				<div class="container marcador-container">
+					<div class="row">
+						<div class="marcador-rosa col-md-3">Conteúdo 1</div>
+						<div class="marcador-azul col-md-3 offset-md-3">Conteúdo 2</div>
+					</div>
 				</div>
-			</div>
-		</section>
-		<hr>
+			</section>
+			<hr>
 
-		<section>
-			<h4>Aninhamento</h4>
-			<p>É possível realizar a divisão de uma área que seja de uma row, que utilize tantos espaços de grid quanto se deseja, em um novo grid de 12 espaços</p>
-			<p>Esta é a principal utilização do conceito de que um uma row sempre terá o espaço de seu container, não importa o tamanho deste container. E este espaço todo sempre será um novo grid de 12 divisões iguais.</p>
-			<p>Na prática, é colocar row dentro de row, dentro de row e definir, pelos breakpoints quando deve ocorrer o empilhamento.</p>
-
-			<div class="container marcador-container">
-				<div class="row">
-					<div class="marcador-azul col-md">
-						Container
-						<div class="row">
-							<div class="marcador-rosa col-lg"> Área 1</div>
-							<div class="marcador-rosa col-lg"> Área 2
-								<div class="row">
-									<div class="marcador-azul col-xl">Subárea 1</div>
-									<div class="marcador-azul col-xl">Subárea 2</div>
+			<!-- aninhamento -->
+			<section>
+				<h4>Aninhamento</h4>
+				<p>É possível realizar a divisão de uma área que seja de uma row, que utilize tantos espaços de grid quanto se deseja, em um novo grid de 12 espaços</p>
+				<p>Esta é a principal utilização do conceito de que um uma row sempre terá o espaço de seu container, não importa o tamanho deste container. E este espaço todo sempre será um novo grid de 12 divisões iguais.</p>
+				<p>Na prática, é colocar row dentro de row, dentro de row e definir, pelos breakpoints quando deve ocorrer o empilhamento.</p>
+				
+				<div class="container marcador-container">
+					<div class="row">
+						<div class="marcador-azul col-md">
+							Container
+							<div class="row">
+								<div class="marcador-rosa col-lg"> Área 1</div>
+								<div class="marcador-rosa col-lg"> Área 2
+									<div class="row">
+										<div class="marcador-azul col-xl">Subárea 1</div>
+										<div class="marcador-azul col-xl">Subárea 2</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-		<hr>
-
-
-		<section>
-			<div class="container">
-				<h2>Alinhamento vertical (align-items-ALINHAMENTO: start, center, end)</h2>
-				<div class="row">
-					<div class="col">Área 1</div>
-					<div class="col">Área 2</div>
-					<div class="col">Área 3</div>
-				</div>
-			</div>
-		</section>
-		<hr>
+			</section>
+			<hr>
 			
-		<section>
-			<div class="container">
-				<h2>Alinhamento horizontal individual (align-self-ALINHAMENTO: start, center, end)</h2>
-				<div class="row">
-					<div class="col">Área 1</div>
-					<div class="col">Área 2</div>
-					<div class="col">Área 3</div>
-				</div>
-			</div>
-		</section>
-		<hr>
-			
-		<section>
-			<div class="container">
-				<h2>Alinhamento horizontal colunas (justify-content-ALINHAMENTO: start, center, end)</h2>
-				<div class="row">
-					<div class="marcador-verde col-2">Área 1</div>
-					<div class="marcador-verde col-2">Área 2</div>
-					<div class="marcador-verde col-2">Área 3</div>
-				</div>
-			</div>
-		</section>
-		<hr>
-			
-		<section>
-			<div class="container">
-				<h2>Distribuição (justify-content-ALINHAMENTO: around, between, end)</h2>
-				<div class="row">
-					<div class="marcador-verde col-2">Área 1</div>
-					<div class="marcador-verde col-2">Área 2</div>
-					<div class="marcador-verde col-2">Área 3</div>
-				</div>
-			</div>
-		</section>
-		<hr>
-			
-		<section>
-			<div class="container">
-				<h2>Removendo espaçamento</h2>
-				<div class="row">
-					<div class="borda col-2">Área 1</div>
-					<div class="borda col-2">Área 2</div>
-					<div class="borda col-2">Área 3</div>
-				</div>
-			</div>
-		</section>
-		<hr>
+			<!-- alinhamento vertical dos componentes na row -->
+			<section>
+				<h4>Alinhamento vertical (align-items-ALINHAMENTO: start, center, end)</h4>
+				<p><strong>Não esquecer que as rows abaixo (área verde) estão com altura definida, para que os alinhamentos sejam percebidos.</strong></p>
+				<p>Possibilidade de deslocamento vertical dos componentes que já estão colados no grid, fazendo com que a row apresente os elementos no topo (padrão), no centro ou abaixo de sua área.</p>
+				<p>Align-items[posição] deve ser aplicada á row</p>
+				<div class="marcador-container container">
+					<br><span>Align-items-start (padrão)</span><br>
+					<div class="marcador-verde row align-items-start">
+						<div class="col marcador-rosa">Área 1</div>
+						<div class="col marcador-rosa">Área 2</div>
+						<div class="col marcador-rosa">Área 3</div>
+					</div>
 
-  
+					<br><span>Align-items-center</span><br>
+					<div class="marcador-verde row align-items-center">
+						<div class="col marcador-rosa">Área 1</div>
+						<div class="col marcador-rosa">Área 2</div>
+						<div class="col marcador-rosa">Área 3</div>
+					</div>
+					
+					<br><span>Align-items-end</span><br>
+					<div class="marcador-verde row align-items-end">
+						<div class="col marcador-rosa">Área 1</div>
+						<div class="col marcador-rosa">Área 2</div>
+						<div class="col marcador-rosa">Área 3</div>
+					</div>
+				</div>
+			</section>
+			<hr>
+				
+			<!-- alinhamento vertical dos componentes -->
+			<section>
+				<h4>Alinhamento vertical individual (align-self-ALINHAMENTO: start, center, end)</h4>
+				<p>Os componentes podem se deslocar individualmente pela row indicando a posição em que devem ser apresentados</p>
+				<p>Align-self-[posição] devem ser aplicados aos componentes flexbox que estão dentro da row</p>
+				<div class="marcador-container container">
+					<div class="marcador-verde row">
+						<div class="marcador-azul col align-self-start">Área 1 - Align-self-start</div>
+						<div class="marcador-azul col align-self-center">Área 2 - Align-self-center</div>
+						<div class="marcador-azul col align-self-end">Área 3 - Align-self-end</div>
+					</div>
+				</div>
+			</section>
+			<hr>
+			
+			<!-- alinhamento horizontal das colunas-->
+			<section>
+				<h4>Alinhamento horizontal colunas (justify-content-ALINHAMENTO: start, center, end)</h4>
+				<p>É possível deslocar a row toda para uma posição da tela. A classe justify-content-[posição] pode ser aplicada</p>
+				<p>Nos exemplos abaixo as áreas estão ocupando uma dimensão inferior a 12 para que possam aparecer deslocadas em tela</p>
+				<div class="marcador-container container">
+					<br><span>Justify-content-start (padrão)</span><br>
+					<div class="marcador-verde row justify-content-start">
+						<div class="marcador-rosa col-2">Área 1</div>
+						<div class="marcador-rosa col-2">Área 2</div>
+						<div class="marcador-rosa col-2">Área 3</div>
+					</div>
+					<br>
+					<br><span>Justify-content-center</span><br>
+					<div class="marcador-verde row justify-content-center">
+						<div class="marcador-rosa col-2">Área 1</div>
+						<div class="marcador-rosa col-2">Área 2</div>
+						<div class="marcador-rosa col-2">Área 3</div>
+					</div>
+					<br>
+					<br><span>Justify-content-end</span><br>
+					<div class="marcador-verde row justify-content-end">
+						<div class="marcador-rosa col-2">Área 1</div>
+						<div class="marcador-rosa col-2">Área 2</div>
+						<div class="marcador-rosa col-2">Área 3</div>
+					</div>
+					<br>
+					<br><span>Justify-content-around</span><br>
+					<div class="marcador-verde row justify-content-around">
+						<div class="marcador-rosa col-2">Área 1</div>
+						<div class="marcador-rosa col-2">Área 2</div>
+						<div class="marcador-rosa col-2">Área 3</div>
+					</div>
 
+					<br><span>Justify-content-between</span><br>
+					<div class="marcador-verde row justify-content-between">
+						<div class="marcador-rosa col-2">Área 1</div>
+						<div class="marcador-rosa col-2">Área 2</div>
+						<div class="marcador-rosa col-2">Área 3</div>
+					</div>
+				</div>
+			</section>
+			<hr>
+				
+			<!-- Remoção de espaçamentos-->
+			<section>
+				<h4>Removendo espaçamento</h4>
+				<p>Notar que no início de cada área existe um espaçamento como uma margem. Este espaço é chamado gutter.</p>
+				<p>A classe no-gutters, aplicada á row, remove esta margem do conteúdo</p>
+				<div class="marcador-container container">
+					<br><span>Sem no-gutters (padrão)</span><br>
+					<div class="row">
+						<div class="borda marcador-azul col-2">Área 1</div>
+						<div class="borda marcador-azul col-2">Área 2</div>
+						<div class="borda marcador-azul col-2">Área 3</div>
+					</div>
+
+					<br><span>Com no-gutters</span><br>
+					<div class="row no-gutters">
+						<div class="borda marcador-azul col-2">Área 1</div>
+						<div class="borda marcador-azul col-2">Área 2</div>
+						<div class="borda marcador-azul col-2">Área 3</div>
+					</div>
+				</div>
+			</section>
+			<hr>
+		</div>
+		
+		
 			
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->

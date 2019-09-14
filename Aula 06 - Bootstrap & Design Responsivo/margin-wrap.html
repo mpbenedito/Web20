@@ -9,9 +9,6 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 
-		<!-- Link de Ícones do Iconic-->
-		<link href="iconic/open-iconic-master/font/css/open-iconic-bootstrap.css" rel="stylesheet">
-
 		<title>Bootstrap</title>
 
 		<style>
@@ -19,12 +16,29 @@
 				padding: 10px;
 				background: lightgoldenrodyellow;
 			}
-
+			.caixa1 {
+				background: #f5f5f5;
+				height: 50px;
+			}
+			.caixa2 {
+				background: #f5f5f5;
+				height: 200px;
+			}
+			.item {
+				border:1px solid black;
+				padding: 5px;
+				background: bisque;
+			}
+			.marcador-container {
+				background: #5BF946;
+				border: 1px solid #36AE26;
+			}
 		</style>
 	</head>
 	<body style="margin-bottom: 20px; padding-left: 16px;">
+		<!-- menu principal -->
 		<div id="menu-aula" class="sticky-top" style="background: lightgrey;">
-			<h3>Bootstrap - Ícones</h3>
+			<h3>Bootstrap - Margin e Wrap</h3>
 			<ul class="list-inline">
 				<li class="list-inline-item px-3"><a href="formatar-textos.html">Formatação</a></li>
 				<li class="list-inline-item px-3"><a href="alinhar-textos.html">Alinhamento</a></li>
@@ -50,39 +64,93 @@
 			</ul>
 		</div>
 
+		<!-- Conteúdo -->
 		<div>
-            <section>
-                <h4>Utilização de ícones</h4>
-                <p>Algumas empresas já trabalham no desenvolvimento de ícones para o bootstrap, porque não existe uma biblioteca própria de ícones, então parceiros tiveram a iniciativa. Site do BootStrap tem relação de empresas e links.</p>
-                <p><a href="https://useiconic.com/open">Open Iconic</a> - necessário baixar o pacote de ícones</p>
-				<p><a href="https://fontawesome.com/">Font Awesome</a> - existem ícones pagos e grátis</p>
+			<!-- Margem Horizontal -->
+			<section>
+				<h4>Margin right/left auto (mr-auto, ml-auto)</h4>
+				<p>É possível alterar a margem dos componentes utilizando as classes de margem já vistas no bootstrap.</p>
+				<p>Reparar que a divisão de espaços é calcula e feita automaticamente</p>
+				<p>Exemplos de utilização</p>
+				<div class="marcador-container container">
+					<div class="caixa1 d-flex">
+						<div class="item mr-auto">Flex item 1 mr-auto</div>
+						<div class="item">Flex item 2</div>
+						<div class="item">Flex item 3</div>
+					</div>
+				</div>
+				<br>
+
+				<div class="marcador-container container">
+					<div class="caixa1 d-flex">
+						<div class="item">Flex item 1</div>
+						<div class="item mr-auto">Flex item 2 mr-auto</div>
+						<div class="item">Flex item 3</div>
+					</div>
+				</div>
+				<br>
+
+				<div class="marcador-container container">
+					<div class="caixa1 d-flex">
+						<div class="item">Flex item 1</div>
+						<div class="item mr-auto">Flex item 2 mr-auto</div>
+						<div class="item mr-auto">Flex item 3 mr-auto</div>
+					</div>
+				</div>
 			</section>
 			<hr>
+
+			<!-- Margem Vertical -->
+			<section>
+				<h4>Margin bottom/top auto (mb-auto, mt-auto)</h4>
+				<div class="marcador-container container">
+					<div class="caixa2 d-flex flex-column">
+						<div class="item">Flex item 1</div>
+						<div class="item mt-auto">Flex item 2 mt-auto</div>
+						<div class="item">Flex item 3</div>
+					</div>
+				</div>
+				<br>
+				
+				<div class="marcador-container container">
+					<div class="caixa2 d-flex flex-column">
+						<div class="item">Flex item 1</div>
+						<div class="item mt-auto">Flex item 2 mt-auto</div>
+						<div class="item mb-auto">Flex item 3 mb-auto</div>
+					</div>
+				</div>
+			</section>
+			<hr>
+
+			<!-- wrap e no-wrap -->
+			<section>
+				<h4>Wrap (flex-wrap, flex-nowrape)</h4>
+				<p>Por padrão, um container flex obriga os itens a se "expremerem" para que todos caibam dentro de si.</p>
+				<p>Porém é possível aplicar as classes wrap e nowrap para controlar quando os objetos deverão "pular linha". No-Wrap é o padrão</p>
+				<div class="marcador-container container">
+					<div class="caixa d-flex flex-wrap">
+						<div class="item">Flex item 1</div>
+						<div class="item">Flex item 2</div>
+						<div class="item">Flex item 3</div>
+						<div class="item">Flex item 4</div>
+						<div class="item">Flex item 5</div>
+						<div class="item">Flex item 6</div>
+						<div class="item">Flex item 7</div>
+						<div class="item">Flex item 8</div>
+						<div class="item">Flex item 9</div>
+						<div class="item">Flex item 10</div>
+						<div class="item">Flex item 11</div>
+						<div class="item">Flex item 12</div>
+						<div class="item">Flex item 13</div>
+						<div class="item">Flex item 14</div>
+						<div class="item">Flex item 15</div>
+					</div>
+				</div>
+			</section>
 			
-			<section>
-				<p>1) Baixar o arquivo dos fontes do site</p>
-				<p>2) Descompactar a pasta do projeto</p>
-				<p>3) Configurar o link com o CSS padrão</p>
-				<p>4) Nos sites aparecem as formas de utilização do CSS para o bootstrap</p>
-			</section>
-			<hr>
-
-			<section>
-				<h5>Ícone padrão</h5>
-				<span class="oi oi-bolt"></span>
-				<span class="oi oi-bell"></span>
-
-				<h5>Mesmo Ícone com classes</h5>
-				<span class="oi oi-bolt display-1 text-danger"></span>
-				<span class="oi oi-bell display-1 text-warning"></span>
-
-				<h5>Tag i</h5>
-				<i class="oi oi-clock display-1 text-success"></i>
-
-				<h5>Outros elementos</h5>
-				<p>Botões <button class="btn btn-dark oi oi-clock display-1 text-light"></button> </p>
-			</section>
 		</div>
+		
+		
 			
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->

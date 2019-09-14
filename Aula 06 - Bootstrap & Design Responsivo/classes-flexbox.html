@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS 
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+		<title>Bootstrap</title>
+
+		<style>
+			section {
+				padding: 10px;
+				background: lightgoldenrodyellow;
+			}
+
+			.caixa {
+		        background: #f5f5f5;
+				height: 150px;
+      		}
+
+      		.item {
+        		border:1px solid black;
+        		padding: 5px;
+      		}
+
+			.marcador-container {
+				background: #5BF946;
+				border: 1px solid #36AE26;
+			}
+
+
+		</style>
+	</head>
+	<body style="margin-bottom: 20px; padding-left: 16px;">
+		<!-- menu principal -->
+		<div id="menu-aula" class="sticky-top" style="background: lightgrey;">
+			<h3>Bootstrap - Classes Flexbox</h3>
+			<ul class="list-inline">
+				<li class="list-inline-item px-3"><a href="formatar-textos.html">Formatação</a></li>
+				<li class="list-inline-item px-3"><a href="alinhar-textos.html">Alinhamento</a></li>
+				<li class="list-inline-item px-3"><a href="elementos-flutuantes.html">Elementos Flutuantes</a></li>
+				<li class="list-inline-item px-3"><a href="cores-background.html">Cores e Background</a></li>
+				<li class="list-inline-item px-3"><a href="margin-padding.html">Margin e Padding</a></li>
+				<li class="list-inline-item px-3"><a href="bordas-tamanhos.html">Bordas e Tamanhos</a></li>
+				<li class="list-inline-item px-3"><a href="media-query.html">MediaQuery</a></li>
+				<li class="list-inline-item px-3"><a href="botoes.html">Botões</a></li>
+				<li class="list-inline-item px-3"><a href="navegacao.html">Navegação</a></li>
+				<li class="list-inline-item px-3"><a href="listas.html">Listas</a></li>
+				<li class="list-inline-item px-3"><a href="formularios.html">Formulários</a></li>
+				<li class="list-inline-item px-3"><a href="input-group.html">Input Group</a></li>
+				<li class="list-inline-item px-3"><a href="alertas-progress-bar.html">Alertas e Barras de Progresso</a></li>
+				<li class="list-inline-item px-3"><a href="tabelas-paginacao.html">Tabelas e Paginação</a></li>
+				<li class="list-inline-item px-3"><a href="cards.html">Cartões (Cards)</a></li>
+				<li class="list-inline-item px-3"><a href="jumbotron.html">Jumbotron e Alinhamento de Imagens</a></li>
+				<li class="list-inline-item px-3"><a href="icones.html">Ícones</a></li>
+				<li class="list-inline-item px-3"><a href="grid.html">Sistema de Grid</a></li>
+				<li class="list-inline-item px-3"><a href="classes-flexbox.html">Classes Flexbox</a></li>
+				<li class="list-inline-item px-3"><a href="margin-wrap.html">Margin e Wrap</a></li>
+			</ul>
+		</div>
+
+		<!-- Conteúdo -->
+		<div>
+			<!-- Introdução -->
+			<section>
+				<h4>Utilização de elementos Flexbox</h4>
+				<p>A aplicação das classes container e row, junto com as classes de posicionamento (col, align, justify, etc), basicamente é a aplicação do conceito de flexbox com a definição do grid de 12 espaços.</p>
+				<p>Porém é possível aplicar o próprio flexbox a um container sem o row, fugindo do conceito do grid. Os exercícios abaixo simulam esta aplicação, criando containers (cinza) com elementos internos que são modificados, dependendo da aplicação que se está demonstrando.</p>
+			</section>
+
+			<!-- Flex Container e Flex Items-->
+			<section>
+				<h4>Flex container e flex itens (d-flex, flex-row, flex-column, flex-row-reverse)</h4>
+				<p>A utilização da classe row cria um flex-container, onde os elementos são flex, porém arranjados em um grid.</p>
+				<p>Perceber que um elemento d-flex terá toda a extensão do elemento container. A presença dos gutters (espaçamentos) é perceptível, por causa da classe container (em verde)</p>
+				<div class="marcador-container container">
+					<p>Sem o row os elementos seriam apenas empilhados, pois o grid não existe, então não há distribuição colunada</p>
+					<div class="caixa">
+						<div class="item">Flex item 1</div>
+						<div class="item">Flex item 2</div>
+						<div class="item">Flex item 3</div>
+					</div>
+				</div>
+				<br>
+	
+				<div class="marcador-container container">
+					<p>Classe d-flex cria um flex container que pode ser trabalhado para esticar vertical e horizontalmente, sem o grid</p>
+					<div class="caixa d-flex">
+						<div class="item">Flex item 1</div>
+						<div class="item">Flex item 2</div>
+						<div class="item">Flex item 3</div>
+					</div>
+				</div>
+				<br>
+
+				<div class="marcador-container container">
+					<p>Classe flex-row cria elementos que podem ser esticdados apenas horizontalmente</p>
+					<div class="caixa d-flex flex-row">
+						<div class="item">Flex item 1</div>
+						<div class="item">Flex item 2</div>
+						<div class="item">Flex item 3</div>
+					</div>
+				</div><br>
+	
+				<div class="marcador-container container">
+					<p>Classe flex-column cria elementos que podem ser esticdados apenas verticalmente</p>
+					<div class="caixa d-flex flex-column">
+						<div class="item">Flex item 1</div>
+						<div class="item">Flex item 2</div>
+						<div class="item">Flex item 3</div>
+					</div>
+				</div><br>
+	
+				<div class="marcador-container container">
+					<p>Classe flex-row-reverse cria elementos que podem ser esticdados apenas horizontalmente, porém "espelhando" como os conteúdos seriam apresentados </p>
+					<div class="caixa d-flex flex-row-reverse">
+						<div class="item">Flex item 1</div>
+						<div class="item">Flex item 2</div>
+						<div class="item">Flex item 3</div>
+					</div>
+				</div>
+			</section>
+			<hr>
+		  
+			<!-- Alinhamento horizontal -->
+			<section>
+				<h4>Alinhamento horizontal: justify-content-ALINHAMENTO (start, center, end, around e between)</h4>
+				<div class="marcador-container container">
+					<br><span>Justify-content-start (padrão)</span><br>
+					<div class="caixa d-flex justify-content-start">
+						<div class="item">Flex item 1</div>
+						<div class="item">Flex item 2</div>
+						<div class="item">Flex item 3</div>
+					</div>
+				</div>
+				<br>
+
+				<div class="marcador-container container">
+					<br><span>Justify-content-center</span><br>
+					<div class="caixa d-flex justify-content-center">
+						<div class="item">Flex item 1</div>
+						<div class="item">Flex item 2</div>
+						<div class="item">Flex item 3</div>
+					</div>
+				</div>
+				<br>
+
+				<div class="marcador-container container">
+					<br><span>Justify-content-end</span><br>
+					<div class="caixa d-flex justify-content-end">
+						<div class="item">Flex item 1</div>
+						<div class="item">Flex item 2</div>
+						<div class="item">Flex item 3</div>
+					</div>
+				</div>
+				<br>
+
+				<div class="marcador-container container">
+					<br><span>Justify-content-around</span><br>
+					<div class="caixa d-flex justify-content-around">
+						<div class="item">Flex item 1</div>
+						<div class="item">Flex item 2</div>
+						<div class="item">Flex item 3</div>
+					</div>
+				</div>
+				<br>
+
+				<div class="marcador-container container">
+					<br><span>Justify-content-between</span><br>
+					<div class="caixa d-flex justify-content-between">
+						<div class="item">Flex item 1</div>
+						<div class="item">Flex item 2</div>
+						<div class="item">Flex item 3</div>
+					</div>
+				</div>
+
+			</section>
+			<hr>
+
+			<!-- Flexibilidade vertical-->
+			<section>
+				<h4>Colunas (d-flex, flex-column, flex-column-reverse)</h4>
+				<p>No padrão, os elementos d-flex já são flex-column, então só é preciso mostrar o flex-column-reverse que inverte a apresentação vertical dos itens</p>
+				<div class="marcador-container container">
+					<div class="caixa d-flex flex-column-reverse">
+						<div class="item">Flex item 1</div>
+						<div class="item">Flex item 2</div>
+						<div class="item">Flex item 3</div>
+					</div>
+				</div>
+			</section>
+			<hr>
+		  
+			<!-- Alinhamento vertical dos componentes -->
+			<section>
+				<h4>Alinhamento vertical: align-items-ALINHAMENTO (start, center, end, baseline e stretch)</h4>
+				<p>Os elementos podem ocupar posições verticais definidas. Observar que possuem alturas diferentes, o que facilita a visualização da aplicação do alinhamento.</p>
+				<div class="marcador-container container">
+					<br><span>Align-items-start</span>
+					<div class="caixa d-flex align-items-start">
+						<div class="item pt-4">Flex item 1</div>
+						<div class="item pt-5">Flex item 2</div>
+						<div class="item pb-4">Flex item 3</div>	
+					</div>
+				</div>
+				<br>
+
+				<div class="marcador-container container">
+					<br><span>Align-items-center</span>
+					<div class="caixa d-flex align-items-center">
+						<div class="item pt-4">Flex item 1</div>
+						<div class="item pt-5">Flex item 2</div>
+						<div class="item pb-4">Flex item 3</div>	
+					</div>
+				</div>
+				<br>
+
+				<div class="marcador-container container">
+					<br><span>Align-items-end</span>
+					<div class="caixa d-flex align-items-end">
+						<div class="item pt-4">Flex item 1</div>
+						<div class="item pt-5">Flex item 2</div>
+						<div class="item pb-4">Flex item 3</div>	
+					</div>
+				</div>
+				<br>
+					
+				<div class="marcador-container container">
+					<br><span>Align-items-baseline: os elementos, mesmo deslocados em consequência dos paddings aplicados, mantém uma unidade na linha do texto. </span>
+					<div class="caixa d-flex align-items-baseline">
+						<div class="item pt-4">Flex item 1</div>
+						<div class="item pt-5">Flex item 2</div>
+						<div class="item pb-4">Flex item 3</div>	
+					</div>
+				</div>
+				<br>
+	
+				<div class="marcador-container container">
+					<br><span>Align-items-stretch  (padrão): todos os componentes passam a ter o mesmo tamanho, que é a altura do container</span>
+					<div class="caixa d-flex align-items-stretch">
+						<div class="item pt-4">Flex item 1</div>
+						<div class="item pt-5">Flex item 2</div>
+						<div class="item pb-4">Flex item 3</div>	
+					</div>
+				</div>
+				<br>
+
+
+			</section>
+			<hr>
+		  
+			<!-- alinhamento vertical componente a componente -->
+			<section>
+				<h4>Alinhamento self: align-self-ALINHAMENTO (start, center, end, baseline e stretch)</h4>
+				<p>É possível realizar o alinhamento de cada um dos comopnentes, de forma independente. </p>
+				<p>Classes align-self-[posição]</p>
+				<div class="marcador-container container">
+					<div class="caixa d-flex">
+						<div class="item align-self-start">align-self-start</div>
+						<div class="item align-self-center">align-self-center</div>
+						<div class="item align-self-end">align-self-end</div>
+						<div class="item align-self-baseline">align-self-baseline</div>
+						<div class="item align-self-stretch">align-self-stretch (padrão)</div>
+					</div>
+				</div>
+			</section>
+				<li class="list-inline-item px-3"><a href="margin-wrap.html">Margin e Wrap</a></li>
+		</div>
+		
+		
+			
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<!-- removido chamada ao link e utilizada a carga do próprio site
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
