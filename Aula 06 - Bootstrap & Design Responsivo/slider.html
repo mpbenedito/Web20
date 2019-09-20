@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS 
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+		<!-- Font Awesome -->
+		<script src="https://kit.fontawesome.com/66d080483f.js"></script>
+
+
+		<title>Bootstrap</title>
+	</head>
+	<body style="margin-bottom: 20px; padding-left: 16px;">
+		<div id="menu-aula" class="sticky-top" style="background: lightgrey;">
+			<h3>Bootstrap - Botões</h3>
+			<ul class="list-inline">
+				<li class="list-inline-item px-3"><a href="formatar-textos.html">Formatação</a></li>
+				<li class="list-inline-item px-3"><a href="alinhar-textos.html">Alinhamento</a></li>
+				<li class="list-inline-item px-3"><a href="elementos-flutuantes.html">Elementos Flutuantes</a></li>
+				<li class="list-inline-item px-3"><a href="cores-background.html">Cores e Background</a></li>
+				<li class="list-inline-item px-3"><a href="margin-padding.html">Margin e Padding</a></li>
+				<li class="list-inline-item px-3"><a href="bordas-tamanhos.html">Bordas e Tamanhos</a></li>
+				<li class="list-inline-item px-3"><a href="media-query.html">MediaQuery</a></li>
+				<li class="list-inline-item px-3"><a href="botoes.html">Botões</a></li>
+				<li class="list-inline-item px-3"><a href="navegacao.html">Navegação</a></li>
+				<li class="list-inline-item px-3"><a href="listas.html">Listas</a></li>
+				<li class="list-inline-item px-3"><a href="formularios.html">Formulários</a></li>
+				<li class="list-inline-item px-3"><a href="input-group.html">Input Group</a></li>
+				<li class="list-inline-item px-3"><a href="alertas-progress-bar.html">Alertas e Barras de Progresso</a></li>
+				<li class="list-inline-item px-3"><a href="tabelas-paginacao.html">Tabelas e Paginação</a></li>
+				<li class="list-inline-item px-3"><a href="cards.html">Cartões (Cards)</a></li>
+				<li class="list-inline-item px-3"><a href="jumbotron.html">Jumbotron e Alinhamento de Imagens</a></li>
+				<li class="list-inline-item px-3"><a href="grid.html">Sistema de Grid</a></li>
+				<li class="list-inline-item px-3"><a href="icones.html">Ícones</a></li>
+				<li class="list-inline-item px-3"><a href="classes-flexbox.html">Classes Flexbox</a></li>
+				<li class="list-inline-item px-3"><a href="margin-wrap.html">Margin e Wrap</a></li>
+				<li class="list-inline-item px-3"><a href="projeto-padrao.html"><strong>Projeto Padrão</strong></a></li>
+ 				<li class="list-inline-item px-3"><a href="slider.html">Slider</a></li>
+			</ul>
+		</div>
+
+		<div>
+			<!-- carrossel simples -->
+			<div class="container">
+				<h4>Slider Simples</h4>
+				<p>Necessário dos recursos do javascript, jquery e popper, além do bootstrap</p>
+				<p>Classes necessárias: carousel e slide para iniciar. Configurar o atributo data-ride para carousel</p>
+				<p>Necessário ter a classe carousel-inner para identificar a área do carrossel</p>
+				<p>Os elementos que vão ser apresentados devem ser classificados como crousel-item. O primeiro é o active</p>
+				<div class="row">
+					<div class="col-sm-8 m-auto">
+						<div class="carousel slide" data-ride="carousel">
+							<div class="carousel-inner">
+								<div class="carousel-item active"><img src="imagens/imagem1.jpeg" alt="" class="img-fluid"></div>
+								<div class="carousel-item"><img src="imagens/imagem2.jpeg" alt="" class="img-fluid"></div>
+								<div class="carousel-item"><img src="imagens/imagem3.jpeg" alt="" class="img-fluid"></div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<hr>
+
+			<!-- carrossel com comandos -->
+			<div class="container">
+				<h4>Slider com controles</h4>
+				<p>Abaixo do inner, porém dentro do carrossel são definidos os controles no formato de a href. Eles trazem o ícone de previous e next para dentro da imagem.</p>
+				<p>Coloquei um span de um ícone pré-definido, porém pode ser um botão ou um ícone do "Iconic" ou "Font Ausesome"</p>
+				<div class="row">
+					<div class="col-sm-8 m-auto">
+						<div id="carrossel-1"	class="carousel slide" data-ride="carousel">
+							<div class="carousel-inner">
+								<div class="carousel-item active"><img src="imagens/imagem1.jpeg" alt="" class="img-fluid"></div>
+								<div class="carousel-item"><img src="imagens/imagem2.jpeg" alt="" class="img-fluid"></div>
+								<div class="carousel-item"><img src="imagens/imagem3.jpeg" alt="" class="img-fluid"></div>
+							</div>
+
+							<!-- Controles -->
+							<a href="#carrossel-1" class="carousel-control-prev" data-slide="prev">
+								<span class="carousel-control-prev-icon"></span>
+							</a>
+							<a href="#carrossel-1" class="carousel-control-next" data-slide="next">
+								<span class="carousel-control-next-icon"></span>
+							</a>
+	
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+
+			<!-- carrossel com indicações -->
+			<div class="container">
+				<h4>Slider com Indicações</h4>
+				<p>Os controles ficam abaixo da inner e os indicadores acima da inner</p>
+				<p>Classe utilizada é a carousel-indicators para o container dos indicadores</p>
+				<p>Os itens dos indicadores precisam utilizar os atributos data-target e data-slide-to</p>
+				<div class="row">
+					<div class="col-sm-8 m-auto">
+						<div id="carrossel-2" class="carousel slide" data-ride="carousel">
+							
+							<!-- Indicadores -->
+							<ol class="carousel-indicators">
+								<li class="active" data-target="#carrossel-2" data-slide-to="0"></li>
+								<li data-target="#carrossel-2" data-slide-to="1"></li>
+								<li data-target="#carrossel-2" data-slide-to="2"></li>
+							</ol>
+							
+							<div class="carousel-inner">
+								<div class="carousel-item active"><img src="imagens/imagem1.jpeg" alt="" class="img-fluid"></div>
+								<div class="carousel-item"><img src="imagens/imagem2.jpeg" alt="" class="img-fluid"></div>
+								<div class="carousel-item"><img src="imagens/imagem3.jpeg" alt="" class="img-fluid"></div>
+							</div>
+	
+							<!-- Controles -->
+							<a href="#carrossel-2" class="carousel-control-prev" data-slide="prev">
+								<span class="carousel-control-prev-icon"></span>
+							</a>
+							<a href="#carrossel-2" class="carousel-control-next" data-slide="next">
+								<span class="carousel-control-next-icon"></span>
+							</a>
+	
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+	
+			<!-- carrossel com legendas -->
+			<div class="container">
+				<h4>Slider com Legendas</h4>
+				<p>Os textos serão aplicados em containers junto de cada imagem</p>
+				<p>Classe utilizada é a carousel-caption</p>
+				<div class="row">
+					<div class="col-sm-8 m-auto">
+						<div id="carrossel-3" class="carousel slide" data-ride="carousel">
+							
+							<!-- Indicadores -->
+							<ol class="carousel-indicators">
+								<li class="active" data-target="#carrossel-2" data-slide-to="0"></li>
+								<li data-target="#carrossel-3" data-slide-to="1"></li>
+								<li data-target="#carrossel-3" data-slide-to="2"></li>
+							</ol>
+							
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<img src="imagens/imagem1.jpeg" alt="" class="img-fluid">
+									<div class="carousel-caption">
+										<h5>Item 1</h5>
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<img src="imagens/imagem2.jpeg" alt="" class="img-fluid">
+									<div class="carousel-caption bg-secondary">
+										<h5>Item 2</h5>
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<img src="imagens/imagem3.jpeg" alt="" class="img-fluid">
+									<div class="carousel-caption bg-secondary">
+										<h5>Item 2</h5>
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+									</div>
+								</div>
+							</div>
+	
+							<!-- Controles -->
+							<a href="#carrossel-3" class="carousel-control-prev" data-slide="prev">
+								<span class="carousel-control-prev-icon"></span>
+							</a>
+							<a href="#carrossel-3" class="carousel-control-next" data-slide="next">
+								<span class="carousel-control-next-icon"></span>
+							</a>
+	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<!-- removido chamada ao link e utilizada a carga do próprio site
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
