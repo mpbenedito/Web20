@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<!-- Meta tags Obrigatórias -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+		<!-- Estilo personalizado -->
+		<link rel="stylesheet" type="text/css" href="css/menu-aula.css">
+
+		<title>JavaScript</title>
+
+		<script>
+			/* Exemplo de criação de uma função 
+			-----------------------------------*/
+			function CalcularAreaTerreno( nComprimento, nLargura) {
+				var nArea = nComprimento * nLargura
+
+				return nArea
+			}
+
+			console.log( 'O terreno possui ' + CalcularAreaTerreno( 10, 25) + ' metros quadrados.') // utilização da função criada
+
+
+			/* Escopo de variáveis 
+			----------------------*/
+			// variável global
+			var cSerie = "Lost"
+			if (true) { console.log( "cSerie: " + cSerie ) }
+			console.log( "cSerie é uma variável global")
+
+			// variável de bloco com exemplo de roisting
+			var nVarGlobal = 12
+			if (true) {
+				var nVarBloco = 3
+				console.log( 'O bloco reconhece variáveis globais e do próprio bloco: nVarGlobal = ' + nVarGlobal + ' e nVarBloco = ' + nVarBloco)
+			}
+
+			function VarNoLog ( nVar1, nVar2) {
+				var nVarFuncao = 5
+				console.log( 'Chamada de função: reconhece variáveis globais e variáveis de blocos prévios nVarGlobal = ' + nVarGlobal + ' e nVarBloco = ' + nVarBloco) 
+			}
+			VarNoLog (nVarGlobal, nVarBloco)
+
+			if (true) {
+//				console.log( 'Bloco de código após função: '  + nVarGlobal + ' e nVarBloco = ' + nVarBloco + ' e nVarFuncao = ' + nVarFuncao)
+			}
+
+			/* Funções Anônimas e Wrapper
+			---------------------*/
+			var vEscreverLog = function( cNome ) {
+				console.log( cNome + ", esta impressão ocorre numa função anônima.")
+			}
+			vEscreverLog( 'Marcelo' )	// wrapper da função criada. A variável encapsula a função
+
+			/* Callback
+			-------------*/
+			// exemplo
+			function ExibirArtigo ( nId, CallBackSucesso, CallBackErro) {
+				//lógica da função seria recuperar um artigo identificado pelo id, por meio de uma requisição http
+				//o artigo retornando com true terá preenchido o ctitulo e cartigo e este será exibido (CallBackSucesso).
+				//Se não encontrar o artigo um tratamento de erro ocorrerá para que algo seja colocado no lugar (CallBackErro).
+				var lSucesso = true
+				var cTitulo = 'Funções de sucesso em javascript'
+				var cArtigo = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis doloribus id neque deleniti temporibus enim consectetur vero aliquam laborum. Porro adipisci dicta suscipit culpa delectus accusamus cum nemo, hic id!'
+
+				if ( lSucesso ) {
+					CallBackSucesso( cTitulo, cArtigo )
+				} else { 
+					CallBackSucesso( 'id ' + nId + 'não encontrado na base de dados')
+
+				}
+			}
+
+			// wrapper da função anônima para tratamento de sucesso
+			var vTrataSucesso = function( cVar1, cVar2 ) {
+				console.log('Titulo: ' + cVar1 )
+				console.log('Descrição: ' + cVar2 )
+			}
+
+			// wrapper da função anônima para tratamento do sucesso
+			var vTrataErro = function( cVar3) {
+				console.log('Descrição do Erro: ' + cVar3 )
+			}
+			//agora realizo a chamada á função de exibição do artigo cujo id é 2 (qualquer um, pois id não está sendo tratado)
+			ExibirArtigo(2, vTrataSucesso, vTrataErro)
+
+
+
+
+
+
+
+
+
+		</script>
+	</head>
+	<body>
+		
+		<div id="menu-aula" class="sticky-top">
+			<h4>Javascript</h4>
+			<ul class="nav nav-pills">
+				<li class="nav-item"><a class="nav-link" href="variaveis.html">Variáveis</a></li>
+				<li class="nav-item"><a class="nav-link" href="if-else.html">If-Else</a></li>
+				<li class="nav-item"><a class="nav-link" href="switch.html">Switch..Case</a></li>
+				<li class="nav-item"><a class="nav-link" href="operadores-aritmeticos.html">Operadores Aritméticos</a></li>
+				<li class="nav-item"><a class="nav-link" href="funcoes.html">Funções</a></li>
+ 			</ul>
+		</div>
+
+		<div class="conteudo">
+			<h4>Funções</h4>
+			<p>Principal utilização de funções é encapsular um bloco de códigos cujo objetivo é definido. O motivo é para tornar o código mais claro, melhorar a lógica, diminuir a repetibilidade deste bloco de código, entre outras. </p>
+			<p>Sintaxe: function NomeDaFuncao(parâmetro1, parâmetro2, ..., parâmetroN) {...}</p>
+			<p>As funções podem ou não ter um retorno. Se a função tem um retorno, o último comando executado deve ser um return especificando o valor a ser devolvido para o fluxo de execução.</p>
+			<p>Os nomes para as funções devem seguir as regras de criação de variáveis.</p>
+			<p>O tipo dos parâmetros não precisam de declaração, pois javascript não possui tipagem forte.</p>
+		</div>
+		<hr>
+
+		<div class="conteudo">
+			<h4>Flexibilidade de Parâmetros</h4>
+			<p>A assinatura de uma função é única. Se uma função for criada com 2 parâmetros posso passar 3 que o javascript não apresentará erro.</p>
+			<p>Porém, se uma função for definida com 2 parâmetros e só informarmos 1 não ocorrerá um erro, mas o retorno da função será do tipo undefined (NaN - not a number) e o fluxo de execução pode ser comprometido. </p>
+			<p>Como a característica do javascript é de não apresentar erros, deve-se tomar cuidado com a programação para a prevenção de problemas no fluxo de execução. A correta definição das funções deve ser executada.</p>
+		</div>
+		<hr>
+
+		<div class="conteudo">
+			<h4>Escopo de variáveis</h4>
+			<p>Existem 3 escopos previstos: global, função e de bloco.</p>
+			<p>Global é o escopo do script como um todo.</p>
+			<p>Função é o escopo restrito ao bloco em que uma função está definido</p>
+			<p>Bloco é o escopo em que se utiliza a criação dentro de bloco de códigos. Exemplo if, switch..case</p>
+			<p>Functions e blocos de código acessam normalmente variáveis globais</p>
+			<p>Variáveis definidas dentro de blocos são elevadas ao escopo global nativamente podem ser chamadas dentro de funções após sua criação. Isso é o roisting</p>
+			<p>Variáveis definidas em funções tem escopo apenas local e não podem ser acessadas externamente, ocorrendo um reference error. </p>
+			<p>Se um bloco de códigos for executado dentro de uma função e existir criação de variáveis dentro deste bloco a variável criada será elevada ao escopo da função e não ao script.</p>
+		</div>
+		<hr>
+
+		<div class="conteudo">
+			<h4>Funções Anônimas</h4>
+			<p>É possível criar funções sem um nome definido. </p>
+			<p>Sintaxe: function( [com/sem argumentos]) {...}</p>
+			<p>Para chamar uma função anônima utiliza-se o conceito do Wrapper, onde uma variável encapsula a função</p>
+			<p>Isso facilita a passagem de função como argumento de outra função, conceito de callback.</p>
+		</div>
+		<hr>
+
+		<div class="conteudo">
+			<h4>Callback</h4>
+
+		</div>
+
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis doloribus id neque deleniti temporibus enim consectetur vero aliquam laborum. Porro adipisci dicta suscipit culpa delectus accusamus cum nemo, hic id!</p>
+		<!-- JavaScript (Opcional) -->
+		<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	</body>
+</html>

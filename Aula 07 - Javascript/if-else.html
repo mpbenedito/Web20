@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<!-- Meta tags Obrigatórias -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+		<!-- Estilo personalizado -->
+		<link rel="stylesheet" type="text/css" href="css/menu-aula.css">
+
+		<title>JavaScript</title>
+
+		<script>
+		</script>
+	</head>
+	<body>
+		
+		<div id="menu-aula" class="sticky-top">
+			<h4>Javascript</h4>
+			<ul class="nav nav-pills">
+				<li class="nav-item"><a class="nav-link" href="variaveis.html">Variáveis</a></li>
+				<li class="nav-item"><a class="nav-link" href="if-else.html">If-Else</a></li>
+				<li class="nav-item"><a class="nav-link" href="switch.html">Switch..Case</a></li>
+				<li class="nav-item"><a class="nav-link" href="operadores-aritmeticos.html">Operadores Aritméticos</a></li>
+				<li class="nav-item"><a class="nav-link" href="funcoes.html">Funções</a></li>
+			</ul>
+		</div>
+
+		<div class="conteudo">
+			<h4>If - Else</h4>
+			<p>Controle de fluxos condicional: if (condição) {...} [else {...}]</p>
+			<p>Variação para o fluxo condicional é o encadeamento, do tipo if (condição) {...} else if (condição2) {...} else {...}</p>
+			<p>As condição são conseguidas pelos operadores de comparação:</p>
+			<p>Igual <strong class="text-danger">==</strong> se os valores comparados são iguais</p>
+			<p>Idêntico <strong class="text-danger">===</strong> se os valores comparados são iguais e do mesmo tipo</p>
+			<p>Diferente <strong class="text-danger">!=</strong> se os valores comparados são diferentes </p>
+			<p>Não Idêntico <strong class="text-danger">!==</strong> se os valores comparados são diferentes e de tipos diferentes</p>
+			<p>Menor <strong class="text-danger"><</strong> verifica se o valor da esquerda é menor que o da direita</p>
+			<p>Menor <strong class="text-danger">></strong> verifica se o valor da esquerda é maior que o da direita</p>
+			<p>Menor ou igual <strong class="text-danger"><=</strong> verifica se o valor da esquerda é menor ou igual que o da direita</p>
+			<p>Maior ou igual <strong class="text-danger">>=</strong> verifica se o valor da esquerda é maior ou igual que o da direita</p>
+			<p><strong>Ponto de atenção:</strong> '2' é igual a 2 (comparar somente valor), porém '2' não é idêntico a 2 (comparar valor e tipo). Então fazer atenção ao uso de == ou === nas comparações. O javascript faz um cast implícito de valores. </p>
+		</div>
+		<hr>
+
+		<div class="conteudo">
+			<h4>Casting</h4>
+			<p>Conversão explícita de tipos das variáveis</p>
+			<p><strong>tostring()</strong>: transforma números em texto. tostring não é função. É um método aplicao á classe var. Exemplo: nNotaAluno.tostring() é igual '7'</p>
+			<p><strong>parseInt()</strong>: converte textos em números. Exemplo parseint('2') é igual a 2</p>
+			<p>parseint('7.5') retorna um resultado de 7</p>
+			<p><strong>parsefloat()</strong>: também converte o texto em número, porém preserva a parte fracionária.</p>
+			<p>parsefloat('7.5') retorna um resultado de 7.5</p>
+		</div>
+		<hr>	
+
+		<div class="conteudo">
+			<h4>Operadore Lógicos</h4>
+			<p>Operador "E" <strong class="text-danger">&&</strong> possibilita o teste condicional (condição1) <strong>E</strong> (condição2). Se ambas forem verdadeiras o teste é válido.</p>
+			<p>Operador "Ou" <strong class="text-danger">!!</strong> possibilita o teste condicional (condição1) <strong>OU</strong> (condição2). Se apenas uma das condições for verdadeira o teste é considerado válido.</p>
+			<p>Operador "Não" <strong class="text-danger">!</strong> possibilita o teste inverso, ou seja, <strong>NÃO</strong> (condição). Se a condição for falsa o teste será válido.</p>
+		</div>
+		<hr>
+
+		<div class="conteudo">
+			<h4>Operador Ternario</h4>
+			<p>Forma condicional enxuta que permite teste de condições e possibilita apenas á atribuição de valores.</p>
+			<p>Sintaxe: (condição) <strong class="text-danger">?</strong> &lt;ação_verdadeiro&gt; <strong class="text-danger"> : </strong> &lt;ação_falso&gt;</p>
+			<p>Exemplo: var cResultado = (nNota >= nMedia && nFaltas <= nMaximoFaltas ) ? 'Aprovado' : 'Reprovado'</p>
+		</div>
+
+
+
+		
+		<!-- JavaScript (Opcional) -->
+		<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	</body>
+</html>
