@@ -76,26 +76,17 @@
 			}
 
 			// wrapper da função anônima para tratamento de sucesso
-			var vTrataSucesso = function( cVar1, cVar2 ) {
+			var vTrataSucesso = function(cVar1, cVar2) {
 				console.log('Titulo: ' + cVar1 )
 				console.log('Descrição: ' + cVar2 )
 			}
 
 			// wrapper da função anônima para tratamento do sucesso
-			var vTrataErro = function( cVar3) {
+			var vTrataErro = function(cVar3) {
 				console.log('Descrição do Erro: ' + cVar3 )
 			}
 			//agora realizo a chamada á função de exibição do artigo cujo id é 2 (qualquer um, pois id não está sendo tratado)
 			ExibirArtigo(2, vTrataSucesso, vTrataErro)
-
-
-
-
-
-
-
-
-
 		</script>
 	</head>
 	<body>
@@ -146,18 +137,16 @@
 			<h4>Funções Anônimas</h4>
 			<p>É possível criar funções sem um nome definido. </p>
 			<p>Sintaxe: function( [com/sem argumentos]) {...}</p>
-			<p>Para chamar uma função anônima utiliza-se o conceito do Wrapper, onde uma variável encapsula a função</p>
-			<p>Isso facilita a passagem de função como argumento de outra função, conceito de callback.</p>
+			<p>Uma correspondência é entender que a função anônima é como um bloco de código para outras linguagens. Isso facilita a passagem de função como argumento de outra função, conceito de callback.</p>
 		</div>
 		<hr>
 
 		<div class="conteudo">
 			<h4>Callback</h4>
-
+			<p>Na prática o Callback é como o bloco de código em outras linguagens. É uma função com retorno void, que pode ser utilizada dentro de outras funções desde que seja encapsulada por uma variável.</p>
+			<p>Olhar os exemplos de scriptm, contidos no código.</p>
 		</div>
 
-
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis doloribus id neque deleniti temporibus enim consectetur vero aliquam laborum. Porro adipisci dicta suscipit culpa delectus accusamus cum nemo, hic id!</p>
 		<!-- JavaScript (Opcional) -->
 		<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
