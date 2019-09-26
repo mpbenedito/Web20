@@ -7,3 +7,15 @@
     padding: 10px;
     background: lightyellow;
 }
+
+.caixa1 {
+    background: lightblue;
+    height: 50px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.caixa1 span {
+    align-self: center;
+}

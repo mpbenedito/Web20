@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<!-- Meta tags Obrigatórias -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+		<!-- Estilo personalizado -->
+		<link rel="stylesheet" type="text/css" href="css/menu-aula.css">
+
+		<title>JavaScript</title>
+
+		<script>
+			/* Eventos de Mouse
+			----------------------*/
+			function acaoClick() {
+				alert('Evento OnClick')
+			}
+
+			function acaoDblClick() {
+				alert('Evento OnDblClick')
+			}
+
+			function acaoOnMouseUp() {
+				alert('Evento OnMouseUp')
+			}
+
+			function acaoOnMouseOver() {
+				alert('Evento OnMouseOver')
+			}
+
+			function acaoOnMouseOut() {
+				alert('Evento OnMouseOut')
+			}
+
+			/* Eventos de Mouse
+			----------------------*/
+			function acaoOnKeyDown() {
+				alert("Evento onKeyDown")
+			}
+			function acaoOnKeyPress() {
+				alert("Evento onKeyPress")
+			}
+			function acaoOnKeyUp() {
+				alert("Evento onKeyUp")
+			}
+
+
+		</script>
+	</head>
+	<body>
+		
+		<div id="menu-aula" class="sticky-top">
+			<h4>Javascript</h4>
+			<ul class="nav nav-pills">
+				<li class="nav-item"><a class="nav-link" href="variaveis.html">Variáveis</a></li>
+				<li class="nav-item"><a class="nav-link" href="if-else.html">If-Else</a></li>
+				<li class="nav-item"><a class="nav-link" href="switch.html">Switch..Case</a></li>
+				<li class="nav-item"><a class="nav-link" href="operadores-aritmeticos.html">Operadores Aritméticos</a></li>
+				<li class="nav-item"><a class="nav-link" href="funcoes.html">Funções</a></li>
+				<li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
+ 			</ul>
+		</div>
+
+		<div class="conteudo">
+			<h4>Eventos</h4>
+			<p>No javascript é possível capturar os eventos de vários elementos que estão em tela ou momentos em que ações acontecem. </p>
+		</div>
+		<hr>
+
+		<div class="conteudo">
+			<h4>Eventos do Mouse</h4>
+			<p>Os 5 principais eventos que podem ser capturados do mouse: onclick, ondblclick, onmouseup, onmouseover, onmouseout.</p>
+			<p>Os eventos são configurados como atributos do elemento com o qual se deseja interagir. </p>
+			<p>Faça a interação com as caixas abaixo e acompanhe o código desta página.</p>
+			<div class="container d-flex justify-content-center">
+				<div onclick="acaoClick()" class="caixa1"><span>OnClick</span></div>
+				<div ondblclick="acaoDblClick()" class="caixa1 ml-3"><span>OnDblClick</span></div>
+				<div onmouseup="acaoOnMouseUp()" class="caixa1 ml-3"><span>onMouseUp</span></div>
+				<div onmouseover="acaoOnMouseOver()" class="caixa1 ml-3"><span>onMouseOver</span></div>
+				<div onmouseout="acaoOnMouseOut()" class="caixa1 ml-3"><span>onMouseOut</span></div>
+			</div>
+			<p>Nem todos os eventos de mouse estão disponíveis para todos os elementos do javascript. É necessário consultar documentação para saber quais estão disponíveis.</p>
+		</div>
+		<hr>
+
+		<div class="conteudo">
+			<h4>Eventos do Teclado</h4>
+			<p>Análogos aos eventos de mouse é possível avaliar codificar ações para eventos que acontecem no teclado.</p>
+			<p>Os principais eventos de teclado são> onkeydown, onkeypress e onkeyup.</p>
+			<p>Utilizar as caixas de texto abaixo para testar os eventos. Avaliar o código</p>
+			<input onkeydown="acaoOnKeyDown()" type="text" placeholder="onKeyDown">
+			<input onkeypress="acaoOnKeyPress()" type="text" placeholder="onKeyPress">
+			<input onkeyup="acaoOnKeyUp()" type="text" placeholder="onKeyUp">
+		</div>
+		<hr>
+
+		
+
+		<!-- JavaScript (Opcional) -->
+		<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	</body>
+</html>
