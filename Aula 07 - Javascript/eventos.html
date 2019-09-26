@@ -48,10 +48,31 @@
 				alert("Evento onKeyUp")
 			}
 
+			/* Eventos de Janela
+			----------------------*/
+			function acaoOnResize() {
+				alert("Evento onResize")
+			}
+			function acaoOnScroll() {
+				alert("Evento onScroll")
+			}
+
+			/* Eventos de Formulário
+			------------------------*/
+			function acaoOnFocus() {
+				console.log("Evento OnFocus")
+			}
+			function acaoOnBlur() {
+				alert("Evento OnBlur")
+			}
+			function acaoOnChange() {
+				alert("Evento OnChange")
+			}
+
 
 		</script>
 	</head>
-	<body>
+	<body onresize="acaoOnResize()" onscroll="acaoOnScroll()">
 		
 		<div id="menu-aula" class="sticky-top">
 			<h4>Javascript</h4>
@@ -62,6 +83,7 @@
 				<li class="nav-item"><a class="nav-link" href="operadores-aritmeticos.html">Operadores Aritméticos</a></li>
 				<li class="nav-item"><a class="nav-link" href="funcoes.html">Funções</a></li>
 				<li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
+				<li class="nav-item"><a class="nav-link" href="dom.html">DOM - Document Object Model</a></li>
  			</ul>
 		</div>
 
@@ -90,7 +112,7 @@
 		<div class="conteudo">
 			<h4>Eventos do Teclado</h4>
 			<p>Análogos aos eventos de mouse é possível avaliar codificar ações para eventos que acontecem no teclado.</p>
-			<p>Os principais eventos de teclado são> onkeydown, onkeypress e onkeyup.</p>
+			<p>Os principais eventos de teclado são: onkeydown, onkeypress e onkeyup.</p>
 			<p>Utilizar as caixas de texto abaixo para testar os eventos. Avaliar o código</p>
 			<input onkeydown="acaoOnKeyDown()" type="text" placeholder="onKeyDown">
 			<input onkeypress="acaoOnKeyPress()" type="text" placeholder="onKeyPress">
@@ -98,7 +120,22 @@
 		</div>
 		<hr>
 
+		<div class="conteudo">
+			<h4>Eventos de Formulário</h4>
+			<p>São eventos disparados quando da interação com elementos de um formulário.</p>
+			<p>Os principais eventos de teclado são: onfocus, onblur e onchange.</p>
+			<input onfocus="acaoOnFocus()" type="text" placeholder="onfocus">
+			<input onblur="acaoOnBlur()" type="text" placeholder="onblur">
+			<input onchange="acaoOnChange()" type="text" placeholder="onchange">
+		</div>
+		<hr>
 		
+		<div class="conteudo">
+			<h4>Eventos de Janela (frame)</h4>
+			<p>São eventos disparados quando da interação com a janela de exibição da página e algum elemento sofre redimiensionamento.</p>
+			<p>Os principais eventos de teclado são: onresize e onscroll.</p>
+			<p>Alterar o tamanho da tela e fazer as rolagens. Geralmente o elemento que recebe a parametrização é o body. </p>
+		</div>
 
 		<!-- JavaScript (Opcional) -->
 		<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
