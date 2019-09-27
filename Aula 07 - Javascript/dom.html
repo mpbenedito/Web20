@@ -13,8 +13,76 @@
 
 		<title>JavaScript</title>
 
+		<script>
+			/* Função do exemplo 1 de manipulação de estilos
+			----------------------*/
+			function distribuiCaracter() {
+				// selecionar o valor digitado
+				var cCaracter = document.getElementById("entrada").value
+
+				// limpar o campo de digitação
+				document.getElementById("entrada").value = ""
+
+				//limpar espaços na extrimidade de uma string
+				cCaracter.trim()
+
+				// tomar a decisão
+				switch (cCaracter) {
+					case '0':
+					case '1':
+					case '2':
+					case '3':
+					case '4':
+					case '5':
+					case '6':
+					case '7':
+					case '8':
+					case '9':
+						document.getElementById("apenas_numeros").value += cCaracter
+						break
+					default:
+						document.getElementById("apenas_letras").value += cCaracter
+				}
+			}
+
+
+			/* Função do exemplo 2 de manipulação de estilos
+			----------------------*/
+			function mudaCaixa(cCor) {
+				document.getElementById("caixa-exemplo2").style.background = cCor
+			}
+			function mudaTamCaixa(cTam) {
+				document.getElementById("caixa-exemplo2").style.width = cTam
+				document.getElementById("caixa-exemplo2").style.height = cTam
+			}
+
+			/* Função do exemplo de alteração de classe
+			-------------------------------------------*/
+			function alteraClasse() {
+				if (document.getElementById('mensagem').className == "estilo1") {
+					document.getElementById('mensagem').className = "estilo2"
+				} else {
+					document.getElementById('mensagem').className = "estilo1"
+				}
+
+
+			}
+		</script>
+
+		<style>
+			.estilo1 {
+				background: #FF0000;
+				color: white;
+			}
+
+			.estilo2 {
+				background: #0000FF;
+				color: white;
+			}
+		</style>
+
 	</head>
-	<body onresize="acaoOnResize()" onscroll="acaoOnScroll()">
+	<body>
 		
 		<div id="menu-aula" class="sticky-top">
 			<h4>Javascript</h4>
@@ -60,19 +128,60 @@
 				<li><p>getElementSByName() - retorno: HTML Node List</p></li>
 			</ul>
 			<p>Esta diferenciação é importante para os tratamentos que devem ser dados em cada situação.</p>
+
+			<!-- Scripts necessários para testes na div anterior.-->
+			<script>
+				console.log("document.getElementById('nome_usuario') = " + document.getElementById('nome_usuario'))
+				console.log(document.getElementById('nome_usuario'))
+				console.log("document.getElementsByTagName('input') = " + document.getElementsByTagName('input'))
+				console.log(document.getElementsByTagName('input'))
+				console.log("document.getElementsByClassName('campo_texto') = " + document.getElementsByClassName('campo_texto'))
+				console.log(document.getElementsByClassName('campo_texto'))
+				console.log("document.getElementsByName('nome') = " + document.getElementsByName('nome'))
+				console.log(document.getElementsByName('nome'))
+			</script>
+		</div>
+		<hr>
+
+		<div class="conteudo">
+			<h4>Manipulando estilos dos elementos</h4>
+			<p>Os exemplos abaixo são sobre a manipulação de elementos no dom utilizando os métodos de seleção vistos acima.</p>
+			<h5>Exemplo 1</h5>
+			<p>São 3 inputs: um de entrada e dois para saída. Na entrada se uma letra for pressionada ela aparecerá na saída de letras. Se for número aparecerá na saída de números.</p>
+			<p>Capturar a tecla: método onkeyup, porque up é possível ter a certeza do que foi digitado.</p>
+			<p>O Atributo .value de um elemento possui o seu valor.</p>
+			<input type="text" placeholder="Digite um caracter aqui" onkeyup="distribuiCaracter()" id="entrada">
+			<br><br>
+			<span>Letras: </span>
+			<input type="text" disabled id="apenas_letras">
+			<span>Números: </span>
+			<input type="text" disabled id="apenas_numeros">
+			<hr>
+			<h5>Exemplo 2</h5>
+			<p>Manipulação no estilo de objetos para fazer a interação visual. Este exemplo altera o atributo .style dos elementos, ou seja, o atributo inline.</p>
+			<button type="button" onclick="mudaCaixa('#FF0000')" class="btn btn-danger">Vermelho</button>
+			<button type="button" onclick="mudaCaixa('#00FF00')" class="btn btn-success">Verde</button>
+			<button type="button" onclick="mudaCaixa('#0000FF')" class="btn btn-info">Azul</button>
+			<br><br>
+			<button type="button" onclick="mudaTamCaixa('050px')" class="btn btn-outline-dark">Pequeno 50x50</button>
+			<button type="button" onclick="mudaTamCaixa('100px')" class="btn btn-outline-dark">Médio 100x100</button>
+			<button type="button" onclick="mudaTamCaixa('150px')" class="btn btn-outline-dark">Grande 150x150</button>
+			<hr>	
+			<div style="border: 1px solid black; width:100px; height: 100px;" id="caixa-exemplo2"></div>
+		</div>
+		<hr>
+
+		<div class="conteudo">
+			<h4>Manipulação de classes dos elementos</h4>
+			<p>Basicamente é alterar as classes dos elementos de forma que sua representação visual seja alterada.</p>
+			<P>Busca-se o elemento e para que o atributo .classname seja alterado.</P>
+			<span id="mensagem" class="estilo1">Modificando o estilo do elemento</span>
+			<button type="button" onclick="alteraClasse()">Aplicar classe</button>
+
 		</div>
 
-		<script>
-			console.log("document.getElementById('nome_usuario') = " + document.getElementById('nome_usuario'))
-			console.log(document.getElementById('nome_usuario'))
-			console.log("document.getElementsByTagName('input') = " + document.getElementsByTagName('input'))
-			console.log(document.getElementsByTagName('input'))
-			console.log("document.getElementsByClassName('campo_texto') = " + document.getElementsByClassName('campo_texto'))
-			console.log(document.getElementsByClassName('campo_texto'))
-			console.log("document.getElementsByName('nome') = " + document.getElementsByName('nome'))
-			console.log(document.getElementsByName('nome'))
-		</script>
-	
+
+
 
 		<!-- JavaScript (Opcional) -->
 		<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
