@@ -14,7 +14,24 @@
 		<title>JavaScript</title>
 
 		<script>
+			function MudaCor(cCor) {
+				document.getElementById('entrada').style.background = cCor
+			}
+
+			function AvaliaTexto() {
+				var cConteudo = document.getElementById('entrada').value 
+
+				if (cConteudo.length >= 3 ) { 
+					MudaCor('#00FF00')
+				}	
+				else { 
+					MudaCor('#FF0000')
+				}
+			}
+
+
 		</script>
+
 	</head>
 	<body>
 		
@@ -33,22 +50,20 @@
 		</div>
 
 		<div class="conteudo">
-			<h4>Switch..Case</h4>
-			<p>Com base em um determinado valor o Switch..Case também é um comando condicional pelo qual pode-se seguir diversos fluxos no código.</p>
-			<p>Switch sempre trabalha de forma implícita com o operador Igual e Idêntico (===)</p>
-			<p>switch (variável)</p>
-			<p>&nbsp;case valor1</p>
-			<p>&nbsp;&nbsp; [Relação de Comandos }</p>
-			<p>&nbsp;&nbsp;break</p>
-			<p>&nbsp;case valor2</p>
-			<p>&nbsp;&nbsp;{ Relação de Comandos }</p>
-			<p>&nbsp;&nbsp;break</p>
-			<p>&nbsp;default</p>
-			<p>&nbsp;&nbsp;{ Relação de Comandos }</p>
-			<p>&nbsp;&nbsp;break</p>
-			<p>Se o comando break não for utilizado o fluxo de execução seguirá interpretando e executando os comandos dos cases abaixo. O break interrompe o fluxo de execução e o coloca logo abaixo do último break</p>
+			<h4>Exercício 01 - DOM</h4>
+			<p>Crie um campo &lt;input type="text"&gt; e aplique os seguintes controles com base nos eventos abaixo:</p>
+			<ul>
+				<li>No evento de foco modifique o background do input para amarelo.</li>
+				<li>Quando o campo perder o foco, recupere o seu respectivo valor</li>
+			</ul>
+			<p>Caso o conteúdo contido no campo tenha menos de 3 caracteres o mesmo deve ter seu background alterado para vermelho.</p>
+			<p>Caso o conteúdo contido no campo tenha 3 caracteres ou mais o background deve ser alterado para verde.</p>
+			<hr>
+			<h5>Solução: </h5>
+			<input type="text" id="entrada" onfocus="MudaCor('#FFFF00')" onblur="AvaliaTexto()" placeholder="Digite o texto">
+
 		</div>
-		
+
 		<!-- JavaScript (Opcional) -->
 		<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
