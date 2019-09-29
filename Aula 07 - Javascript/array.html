@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<!-- Meta tags Obrigatórias -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+		<!-- Estilo personalizado -->
+		<link rel="stylesheet" type="text/css" href="css/menu-aula.css">
+
+		<title>JavaScript</title>
+
+		<script>
+			/* Estrutura array Básico
+			-------------------------- */
+			var aListaFrutas = Array()
+			aListaFrutas[1] = 'banana'
+			aListaFrutas[2] = 'maçã'
+			aListaFrutas[3] = 'goiaba'
+			aListaFrutas[5] = 'uva'
+			aListaFrutas['a'] = 'pera'
+			console.log(aListaFrutas)
+			console.log('Elemento 1: ' + aListaFrutas[1])
+			console.log('Elemento "a": ' + aListaFrutas['a'])
+
+
+			/* Estrutura array multidimensional
+			-----------------------------------*/
+			var aListaCompras = Array()
+			aListaCompras[0] = ['Banana', 1, 'Dúzia']
+			aListaCompras[1] = ['Trigo', 2, 'Kg']
+			aListaCompras[3] = ['Leite', 1, 'Litro']
+			console.log('aListCompras: ')
+			console.log(aListaCompras)
+
+
+			/* Inclusão de elementos 
+			------------------------*/
+			var aListaCarros = ['Siena', 'Agile']
+			console.log('Array aListaCarros básico:')
+			console.log(aListaCarros)
+
+			aListaCarros.push('Fox')
+			console.log('Incluindo no fim da lista: push()')
+			console.log(aListaCarros)
+
+			aListaCarros.unshift('Uno')
+			console.log('Incluindo no topo da lista: unshift()')
+			console.log(aListaCarros)
+
+
+			/* Exclusão de Elementos
+			------------------------*/
+			aListaCarros.shift()
+			console.log('Removendo o topo da lista')
+			console.log(aListaCarros)
+
+			aListaCarros.pop()
+			console.log('Removendo o último elemento')
+			console.log(aListaCarros)
+
+
+			/* Pesquisa de elementos
+			------------------------*/
+			var aListaCoisas = ['bola', 'abacaxi', 'ovo', 'carro', 'livro', 'bicicleta', 'chave ']
+			console.log('Array básico')
+			console.log(aListaCoisas)
+			console.log('Buscando o elemento ovo')
+			console.log(aListaCoisas.indexOf('ovo'))
+			console.log('Buscando o elemento cadeira')
+			console.log(aListaCoisas.indexOf('cadeira'))
+
+
+			/* Ordenação de elementos
+			------------------------*/
+			console.log('Array desordenado')
+			console.log(aListaCoisas)
+			console.log('Array ordenado')
+			aListaCoisas.sort()
+			console.log(aListaCoisas)
+
+			function OrdenaDecrescente(a, b) { return (a<b)? 1: (a>b)? -1: 0  } 
+			console.log('Array decrescente')
+			aListaCoisas.sort(OrdenaDecrescente)
+			console.log(aListaCoisas)
+
+			/* Ordenação numérica
+			---------------------*/
+			var aNumeros = ['15', '3', '17', '1', '156', '46', '8', '72']
+			console.log('Array desordenado')
+			console.log(aNumeros)
+
+			aNumeros.sort()
+			console.log('Array ordenado com sort')
+			console.log(aNumeros)
+
+			function OrdenaNumeros(a, b) { return a-b }
+			function OrdenaNumerosDecrescentes(a, b) { return b-a}
+			aNumeros.sort(OrdenaNumeros)
+			console.log('Array ordenado respeitando a ordem numérica (utiliza callback)')
+			console.log(aNumeros)
+			aNumeros.sort(OrdenaNumerosDecrescentes)
+			console.log('Array ordenado respeitando a ordem numérica decrescente (utiliza callback)')
+			console.log(aNumeros)
+
+
+
+
+		</script>
+
+		<style>
+		</style>
+
+	</head>
+	<body>
+		
+		<div id="menu-aula" class="sticky-top">
+			<h4>Javascript</h4>
+			<ul class="nav nav-pills">
+				<li class="nav-item"><a class="nav-link" href="variaveis.html">Variáveis</a></li>
+				<li class="nav-item"><a class="nav-link" href="if-else.html">If-Else</a></li>
+				<li class="nav-item"><a class="nav-link" href="switch.html">Switch..Case</a></li>
+				<li class="nav-item"><a class="nav-link" href="operadores-aritmeticos.html">Operadores Aritméticos</a></li>
+				<li class="nav-item"><a class="nav-link" href="funcoes.html">Funções</a></li>
+				<li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
+				<li class="nav-item"><a class="nav-link" href="dom.html">DOM - Document Object Model</a></li>
+				<li class="nav-item"><a class="nav-link" href="exercicio1-dom.html">Exercício DOM</a></li>
+				<li class="nav-item"><a class="nav-link" href="array.html">Arrays</a></li>
+ 			</ul>
+		</div>
+
+		<div class="conteudo">
+			<h4>Arrays Básicos</h4>
+			<p>São elementos de programação já verificados em outras linguagens, com possibilidade de manipulação em vários códigos com significância de coleções de elementos.</p>
+			<p>Array é um tipo de variável. Forma de criação: var &lt;nome_variavel&gt; = Array() ou var &lt;nome_variavel&gt; = []</p>
+			<p>O tamanho do array é definido dinamicamente e não precisa ser declarado em sua criação.</p>
+			<p>Os índices começam de 0, ou seja, o primeiro elemento de um array é o de índice 0.</p>
+			<p>Os índices também podem ser alfanuméricos, desta forma são conhecidos como chaves. Inspecionar esta página para entender.</p>
+			<p>É possível fazer a atribuição direta dos elementos já na declaração: var &lt;nome_variavel&gt; = Array(elemento 0, elemento1, elemento2, elemento3) ou var &lt;nome_variavel&gt; = [elemento 0, elemento1, elemento2, elemento3]</p>
+			<p><strong>Ponto de atenção:</strong> atributo lenght conta apenas os elementos de um array que estão sequenciais começando do elemento 0. Portanto, utilizar índices alfanuméricos pode trazer problemas na hora de contar os elementos.</p>
+		</div>
+		<hr>
+
+		<div class="conteudo">
+			<h4>Arrays Multidimensionais</h4>
+			<p>Os elementos de um array bidimensional são outros arrays, portanto todas as características do array básico são válidas.</p>
+			<p>Não existe limite para a multidimensionalidade de um array</p>
+		</div>
+		<hr>
+
+		<div class="conteudo">
+			<h4>Inclusão e Exclusão de Elementos</h4>
+			<p>Existem métodos específicos para inclusão e remoção de elementos.</p>
+			<p>Inclusão: o array é uma pilha, portanto é possível incluir tanto no topo (elemento0) quanto no fim do array (último elemento). Método utilizado para incluir no fim é o push() e para incluir no topo é o unshift().</p>
+			<P>Exclusão: para escluir elemento no final do array utiliza-se o método pop() e no início do elemento utliza-se o shift(). Não se passa parâmetros, pois pop e shift buscam o primeiro e o último respectivamente.</P>
+			<p>Os métodos de inclusão e exclusão são válidos tanto para vetores quanto para arrays multidimensionais</p>
+		</div>
+		<hr>
+
+		<div class="conteudo">
+			<h4>Pesquisa em Arrays</h4>
+			<p>Método: indexof(&lt;conteúdo a ser pesquisado&gt;), retornará o primeiro índice ou chave em que o elemento pesquisado foi encontrado</p>
+			<p>Se o elemento não  for encontrado o retorno será -1</p>
+		</div>
+	
+		<div class="conteudo">
+			<h4>Ordenação de Arrays</h4>
+			<p>Método: .sort() age sobre o próprio array realinhando os elementos e ajusatando os índices. É utilizado especificamente para ordenação alfanumérica.</p>
+			<p>Ordenação em valores numéricos é necessário trabalhar com função específica de callback. Da mesma forma deve se criar um callback para ordenação decrescente e outros exemplos</p>
+		</div>
+
+			
+		<!-- JavaScript (Opcional) -->
+		<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	</body>
+</html>
