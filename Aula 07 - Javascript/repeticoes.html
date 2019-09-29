@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<!-- Meta tags Obrigatórias -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+		<!-- Estilo personalizado -->
+		<link rel="stylesheet" type="text/css" href="css/menu-aula.css">
+
+		<title>JavaScript</title>
+
+		<script>
+			/* Comando While
+			-----------------*/
+			var x = 1
+			console.log('Início Teste While')
+			while ( x <= 10) {
+				console.log('x = ' + x)
+				x++
+			}
+			console.log('Fim Teste While')
+
+
+			/* Do..While
+			-------------*/
+			var y = 0
+			console.log('Início Teste Do..While')
+			do {
+				console.log( 'y = ' + y)
+				y++
+			} while (y <= 10)
+			console.log('Fim Teste Do..While')
+
+
+			/* For
+			-------*/
+			console.log('Início Teste For')
+			for( var i = 10; (i >= 1) ; i-- ) {
+				console.log( 'i = ' + i)
+			}
+			console.log('Fim Teste For')
+
+
+			/* For..in
+			----------*/
+			console.log('Início Teste For..In')
+			var aListaPessoas = ['Marcelo', 'Isabel', 'José', 'Cristina', 'Marcio', 'Lilian']
+			aListaPessoas['entrao'] = 'Joaquim'
+			aListaPessoas[10] = 'Nair'
+			for ( var nIndice in aListaPessoas ) {
+				console.log(nIndice + ': ' + aListaPessoas[nIndice])
+			}
+			console.log('Fim Teste For..In')
+
+
+			/* For..each
+			----------*/
+			function ListaCarros( cValor, nIndice, aPrincipal ) {
+				console.log('Carro ' + ( nIndice +1) + ' de ' + aPrincipal.length + ': ' + cValor)
+			}
+
+			console.log('Início Teste ForEach')
+			var aCarros = ['Uno', 'Fiesta', 'Clio', 'Gol', 'Corsa', 'Siena', 'HB20']
+			aCarros[10] = 'Fox'
+			aCarros['depreciado'] = 'Fusca'
+			aCarros.forEach( ListaCarros )
+			console.log('Fim Teste ForEach')
+
+		</script>
+
+	</head>
+	<body>
+		
+		<div id="menu-aula" class="sticky-top">
+			<h4>Javascript</h4>
+			<ul class="nav nav-pills">
+				<li class="nav-item"><a class="nav-link" href="variaveis.html">Variáveis</a></li>
+				<li class="nav-item"><a class="nav-link" href="if-else.html">If-Else</a></li>
+				<li class="nav-item"><a class="nav-link" href="switch.html">Switch..Case</a></li>
+				<li class="nav-item"><a class="nav-link" href="operadores-aritmeticos.html">Operadores Aritméticos</a></li>
+				<li class="nav-item"><a class="nav-link" href="funcoes.html">Funções</a></li>
+				<li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
+				<li class="nav-item"><a class="nav-link" href="dom.html">DOM - Document Object Model</a></li>
+				<li class="nav-item"><a class="nav-link" href="exercicio1-dom.html">Exercício DOM</a></li>
+				<li class="nav-item"><a class="nav-link" href="array.html">Arrays</a></li>
+				<li class="nav-item"><a class="nav-link" href="exercicio2-array.html">Exercício Arrays</a></li>
+				<li class="nav-item"><a class="nav-link" href="repeticoes.html">Estruturas de Repetição</a></li>
+ 			</ul>
+		</div>
+
+		<div class="conteudo">
+			<h4>Estruturas de Repetição</h4>
+			<p>Estruturas de execução de código de forma repetitiva, porém com alterações dinâmicas possibilitando a redução de código.</p>
+		</div>
+		<hr>
+
+		<div class="conteudo">
+			<h4>While</h4>
+			<p>Sintaxe básica: while (&lt;condição&gt;) {...}</p> 
+			<p>Enquanto a &lt;condição&gt; for verdadeira o laço será executado. Se a condição se inicia em falso a repetição nem ocorre.</p>	
+			<p>A instrução break causa a interrupção da estrutura de repetição e desvia o fluxo de interpretação para as instruções seguintes ao bloco While().</p>
+			<p>A instrução continue também causa a interrupção do bloco de comandos e força uma nova avaliação da condição while, e o fluxo de interpretação dos comandos continua do início do while()</p>
+		</div>
+		<hr>
+
+		<div class="conteudo">
+			<h4>Do..While</h4>
+			<p>Sintaxe básica: do {...} while (&lt;condição&gt;) </p> 
+			<p>A avaliação da condição só ocorre após a primeira execução do bloco de códigos. E enquanto a condição for verdadeira o bloco será repetido. Quando a condição tornar-se falsa o bloco de código para de ser repetido.</p>
+			<p>As instruções break e continue também são válidas nas estruturas do..while e funcionam de forma análoga.</p>
+		</div>
+		<hr>
+
+		<div class="conteudo">
+			<h4>For</h4>
+			<p>Sintaxe básica: for( variável; condição; controle) {...}</p>
+			<p>A variável utilizada não precisa ser declarada fora da estrutura de repetição</p>
+			<p>A estrutura for resume as avaliações de repetições baseadas em valores numéricos.</p>
+			<p>Se a condição se inicia de forma falsa o bloco de códigos nem é executado.</p>
+			<p>As instruções continue e break funcionam no for.</p>
+		</div>
+		<hr>
+
+		<div class="conteudo">
+			<h4>For..in</h4>
+			<p>Sintaxe básica: for ( variável in array ) {...}</p>
+			<p>Forma prática de se trabalhar com arrays, o For..in executa o bloco de códigos para cada elemento de um array que for indicado.</p>
+			<p>A variável não recebe o elemento, mas o índice do array. Assim que o bloco de código é executado o índice do array se incrementa automaticamente.</p>
+			<p>As instruções continue e break funcionam no for..in.</p>
+			<p>Todas as posições do array são recuperadas até mesmo aquelas que estão indexadas por uma chave alfanumérica.</p>
+			<p>Outra funcionalidade é que o for..in percorre todas as posições do array que são válidas. As posições vazias naõ são listadas.</p>
+		</div>
+		<hr>
+
+		<div class="conteudo">
+			<h4>ForEach</h4>
+			<p>Por definição do javascript o foreach não é uma estrutura de repetição, pois é uma função que trabalha com repetição, portanto pode ser avaliado no contexto destes exercícios. Trabalha de forma muito parecida com o for..in</p>
+			<p>Sintaxe Básica: &LT;variável_array&gt;.foreach( _função_callback( valor, índice, variável_array ) )</p>
+			<p>Por se tratar de um método do prototype Array(), o foreach() encaminha para a função de callback 3 parâmetros: valor do elemento, o índice dele e o próprio array.</p>
+			<p>Ao ser chamado, o método foreach executará o conteúdo da função de callback para cada elemento do array, porém elementos indexados por chave alfanuméricas são ignorados, ou seja, o foreach só funcionará em elementos com índice numérico. Elementos em branco não são considerados.</p>
+		</div>
+
+	
+
+		<!-- JavaScript (Opcional) -->
+		<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	</body>
+</html>

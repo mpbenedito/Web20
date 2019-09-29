@@ -14,27 +14,40 @@
 		<title>JavaScript</title>
 
 		<script>
-			// string
-			var ctexto = 'Curso de Javascript'
+			/* Variáveis globais da página
+			------------------------------- */
+			var aObjetos = Array('Cadeira', 'Impressora', 'Garfo')
 
-			// números
-			var nInteiro = 8
-			var nFracao = -56.89890
+			/* Funcçoes utilizadas
+			----------------------*/
+			function Adicionar() {
+				var cConteudo = document.getElementById('entrada').value
 
-			// boolean
-			var lCondicao = true
+				cConteudo.trim()
 
-			// uutilização de alert
-			//alert("Alert: nFracao = " + nFracao)
+				var nPosicao
+				if ( cConteudo.length === 0 ) {
+					alert('Informe um valor válido')
+				} else {
+					nPosicao = aObjetos.indexOf(cConteudo)
+					if (nPosicao == -1) {
+						aObjetos.push(cConteudo)
+						console.log(aObjetos)
+					} else {
+						alert('Objeto já foi adicionado')
+					}
+				}
 
-			// escrever valores dentro do browser
-			document.write(ctexto)
+				document.getElementById('entrada').value = ''
+			}
 
-			// escrever no console.log
-			console.log(ctexto)
-
+			function Ordenar() {
+				aObjetos.sort()
+				console.log(aObjetos)
+			}
 
 		</script>
+
 	</head>
 	<body>
 		
@@ -52,25 +65,45 @@
 				<li class="nav-item"><a class="nav-link" href="array.html">Arrays</a></li>
 				<li class="nav-item"><a class="nav-link" href="exercicio2-array.html">Exercício Arrays</a></li>
 				<li class="nav-item"><a class="nav-link" href="repeticoes.html">Estruturas de Repetição</a></li>
-			</ul>
+ 			</ul>
 		</div>
 
 		<div class="conteudo">
-			<h4>Declaração e atribuição</h4>
-			<p>Sintaxe base: var [nome_da_variavel] = [conteúdo]</p>
-			<p>Para Strings utilizar o conteúdo entre aspas simples ou duplas. Ex: var cTexto = "curso"</p>
-			<p>Variáveis numéricas podem ser inteiras ou float, positivos ou negativos: var nInteiro = -8 ou var nFracao = 0.8</p>
-			<p>Variáveis lógicas são as variáveis padrão boolean que podem ser apenas True ou False. Ex.: var lBoolean = false ou var lTeste = true</p>
-			<p>Não existe definição do tipo da variável. Não se faz nada do tipo "Dim cVariavel as String". O javascript reconhece o tipo da variável pelo conteúdo que está sendo atribuído. </p>
-			<p>Atribuir 'true' para uma variável é diferente de true. Na primeira é um texto, na segunda é um valor lógico.</p>
-			<p>Ao abrir as ferramentas de desenvolvedor consigo enxergar a atribuição das variáveis.</p>
-			<p>Função alert() serve para apresentação de informações em tela, por exemplo recuperar o conteúdo de uma variável.</p>
-			<p>Método document.write() força a exibição de informações diretamente no corpo da página. Permite o acesso direto ao DOM da página para recuperar ou gravar conteúdos dos scripts</p>
-			<p>Aplicar escritas diretamente no console log da página, que pode ser consultado diretamente nas ferramentas de desenvolvedor que o navegador oferece.</p>
-			<p>Concatenar strings também é possível, como em outras linguagens. O operador de concatenção é o +. Quando concatenar um número a um texto, o javascript faz o parser automaticamente.</p>
-			<p><strong>Ponto de atenção:</strong>  variáveis podem ser nativamente null ou undefined. Uma variável definida null indica que intencionalmente ela não tem valor atribuído. Uma variável undefined significa que ainda não tem atribuição alguma. São valores diferentes. Então sempre testar se a variável é null e undefined. </p>
+			<h4>Exercício 02 - Arrays</h4>
+			<p>1) Crie uma aplicação web contendo um campo para entrada de texto (input text) e dois botões (buttons), sendo um botão com a descrição "Adicionar" e outro com a descrição "Ordenar". Após criar os elementos de interação com o usuário acima, crie um Array de nome objetos contendo os seguintes valores:</p>
+			<p>var objetos = Array('Cadeira', 'Impressora', 'Garfo')</p>
+			<p>Os próximos passos são:</p>
+			<ul>
+				<li>A) Ao clicar no botão "Adicionar" disparar função que irá:</li>
+				<ul>
+					<li>Recuperar o valor contido no campo de texto.</li>
+					<li>Verificar se o valor está vazio ou preenchido.</li>
+					<li>Se vazio, exibir alert com a mensagem "Informe um valor válido".</li>
+					<li>Se preenchido:</li>
+					<ul>
+						<li>Verificar se o valor informado já existe dentro do Array objetos.</li>
+						<li>Se existir, exibir alert com a mensagem "Objeto já foi adicionado".</li>
+						<li>Se não existir:</li>
+						<li>Incluir o valor preenchido no campo dentro do Array.</li>
+						<li>Efetuar um console.log do Array para debug (checar se está funcionado).</li>
+						<li>Limpar o valor contido no campo de entrada de texto.</li>
+					</ul>
+				</ul>
+
+				<li>B) Ao clicar no botão "Ordenar" disparar função que irá:</li>
+				<ul>
+					<li>Ordenar de forma alfabética os valores do Array de objetos.</li>
+					<li>Efetuar um console.log do Array para debug (checar se está funcionado).</li>
+				</ul>
+			</ul>
+			<hr>
+
+			<h5>Solução</h5>
+			<input type="text" id="entrada" placeholder="Digite o texto">
+			<button onclick="Adicionar()">Adicionar</button>
+			<button onclick="Ordenar()">Ordenar</button>
 		</div>
-		
+
 		<!-- JavaScript (Opcional) -->
 		<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
