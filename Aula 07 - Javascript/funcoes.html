@@ -87,6 +87,32 @@
 			}
 			//agora realizo a chamada á função de exibição do artigo cujo id é 2 (qualquer um, pois id não está sendo tratado)
 			ExibirArtigo(2, vTrataSucesso, vTrataErro)
+
+
+			/* Parâmetros variávies
+			-----------------------*/
+			function soma() {
+				var nResultado = 0
+				console.log(arguments)
+
+				for( var i in arguments) {
+					nResultado += arguments[i]
+				}
+
+				return nResultado
+			}
+
+			console.log('Início Teste de Parãmetros Variáveis')
+			// exemplo da chamada de função sem parâmetros
+			console.log( 'Resultado: ' + soma() )
+
+			// chamada da função com parâmetros
+			console.log( 'Resultado: ' + soma(1, 54, 7.3, -2) )
+
+			// chamada de função com parâmetros mal definidos
+			console.log( 'Resultado: ' + soma(1, 54, 7.3, -2, 'teste', 5) )
+
+
 		</script>
 	</head>
 	<body>
@@ -105,6 +131,8 @@
 				<li class="nav-item"><a class="nav-link" href="array.html">Arrays</a></li>
 				<li class="nav-item"><a class="nav-link" href="exercicio2-array.html">Exercício Arrays</a></li>
 				<li class="nav-item"><a class="nav-link" href="repeticoes.html">Estruturas de Repetição</a></li>
+                <li class="nav-item"><a class="nav-link" href="try-catch.html">Tratamento de Erros</a></li>
+				<li class="nav-item"><a class="nav-link" href="bom.html">BOM - Browser Object Model</a></li>
  			</ul>
 		</div>
 
@@ -151,6 +179,13 @@
 			<h4>Callback</h4>
 			<p>Na prática o Callback é como o bloco de código em outras linguagens. É uma função com retorno void, que pode ser utilizada dentro de outras funções desde que seja encapsulada por uma variável.</p>
 			<p>Olhar os exemplos de scriptm, contidos no código.</p>
+		</div>
+		<hr>
+
+		<div class="conteudo">
+			<h4>Parâmetros Variáveis</h4>
+			<p>A partir da definição de assinatura da função, esta poderá ser utilizada, sem qualquer restrição no que se refere á obrigatoriedade da presença de parâmetros. A aplicação não sofrerá erros de chamada. Logicamente erros podem acontecer, tanto em lógica quanto em problemas de execução, mas na chamada não existirá erro.</p>
+			<p>A fim de evitar tais erros é possível realizar na própria função um pré-tratamento dos parâmetros antes que a execução se inicie. Em qualquer função fica disponível o objeto arguments que contém a relação dos parâmetros passados para uma função.</p>
 		</div>
 
 		<!-- JavaScript (Opcional) -->

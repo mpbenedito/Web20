@@ -14,24 +14,18 @@
 		<title>JavaScript</title>
 
 		<script>
-			function MudaCor(cCor) {
-				document.getElementById('entrada').style.background = cCor
-			}
 
-			function AvaliaTexto() {
-				var cConteudo = document.getElementById('entrada').value 
+            var janela
+            /* Exemplo do objeto window
+            ----------------------------*/
+            function AbrirPopUp() {
+                janela = window.open("http://www.google.com", "PopUp_Marcelo", "width=800,height=400")
+            }
 
-				if (cConteudo.length >= 3 ) { 
-					MudaCor('#00FF00')
-				}	
-				else { 
-					MudaCor('#FF0000')
-				}
-			}
-
-
+            function FecharPopUp() {
+                janela.close()
+            }
 		</script>
-
 	</head>
 	<body>
 		
@@ -49,25 +43,28 @@
 				<li class="nav-item"><a class="nav-link" href="array.html">Arrays</a></li>
 				<li class="nav-item"><a class="nav-link" href="exercicio2-array.html">Exercício Arrays</a></li>
 				<li class="nav-item"><a class="nav-link" href="repeticoes.html">Estruturas de Repetição</a></li>
-                <li class="nav-item"><a class="nav-link" href="try-catch.html">Tratamento de Erros</a></li>
+				<li class="nav-item"><a class="nav-link" href="try-catch.html">Tratamento de Erros</a></li>
 				<li class="nav-item"><a class="nav-link" href="bom.html">BOM - Browser Object Model</a></li>
  			</ul>
 		</div>
 
 		<div class="conteudo">
-			<h4>Exercício 01 - DOM</h4>
-			<p>Crie um campo &lt;input type="text"&gt; e aplique os seguintes controles com base nos eventos abaixo:</p>
-			<ul>
-				<li>No evento de foco modifique o background do input para amarelo.</li>
-				<li>Quando o campo perder o foco, recupere o seu respectivo valor</li>
-			</ul>
-			<p>Caso o conteúdo contido no campo tenha menos de 3 caracteres o mesmo deve ter seu background alterado para vermelho.</p>
-			<p>Caso o conteúdo contido no campo tenha 3 caracteres ou mais o background deve ser alterado para verde.</p>
-			<hr>
-			<h5>Solução: </h5>
-			<input type="text" id="entrada" onfocus="MudaCor('#FFFF00')" onblur="AvaliaTexto()" placeholder="Digite o texto">
+            <h4>BOM - Browser Object Model</h4>
+            <p>É uma API que viabiliza a interface do javascript com o browser, por exemplo, acessar o histórico de navegação, salvar e recuperar cookies, redirecionar uma página. Entenda-se que não se está acessando recursos de objetos html e sim recursos do browser em que a página está sendo executada.</p>
+            <p>O BOM possui alguns componentes que podem ser acessados nativamente pelo javascript, pois estes componentes são criados como elementos acessíveis ao fluxo de execução.</p>
+            <p>Se o DOM é a árvore que relaciona os elementos que foram criados na execução das instruções da página, o BOM é o conjunto de recursos que podem ser acessados e manipulados para que estes objetos sejam exibidos.</p>
+        </div>
+        <hr>    
 
-		</div>
+        <div class="conteudo">
+            <h4>Objeto Window</h4>
+            <p>O objeto Window é uma representação da janela do browser onde todo o conteúdo será renderizado. O objeto Window é formado pelo browser e que incorpora o DOM, ou seja o objeto "document" já visto, é um componente do Window, portanto, Window.document.</p>
+            <h5>Exemplo de interação com o objeto Window: </h5>
+            <button onclick="AbrirPopUp()">Abrir Janela</button>
+            <button onclick="FecharPopUp()">Fechar Janela</button>
+            <button onclick="Window.print()">Imprimir Janela</button>
+        </div>
+
 
 		<!-- JavaScript (Opcional) -->
 		<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
