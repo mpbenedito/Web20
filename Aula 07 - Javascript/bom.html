@@ -25,6 +25,14 @@
             function FecharPopUp() {
                 janela.close()
             }
+
+            /* Exemplo do objeto window
+            ----------------------------*/
+			var altura = window.screen.availHeight 
+			var largura = window.screen.availWidth
+			console.log('altura da tela: ' + altura)
+			console.log('largura da tela: ' + largura)
+
 		</script>
 	</head>
 	<body>
@@ -64,6 +72,30 @@
             <button onclick="FecharPopUp()">Fechar Janela</button>
             <button onclick="Window.print()">Imprimir Janela</button>
         </div>
+		<hr>	
+
+        <div class="conteudo">
+			<h4>Objeto Screen</h4>
+			<p>Referem-se á parte externa da tela do navegador, considerando, barra de ferramentas e barra de status.</p>
+			<p>AvailHeight e AvailWidth são as dimensões máximas do browser, é o espaço em potencial que pode ser utilizada</p>
+		</div>
+		<hr>
+
+		<div class="conteudo">
+			<h4>Objeto Location</h4>
+			<p>Fornece acesso a atributos e métodos para a URL atual, por exemplo, alterar o destino, fazer um reload, redirecionar página, setup de page landing.</p>
+			<p></p>
+		</div>
+		<hr>
+
+		<div class="conteudo">
+			<h4>Timing</h4>
+			<p>No objeto window existem 2 métodos bem específicos para tratamento de tempos: setTimeout e setInterval.</p>
+			<p>setTimeout: executa uma ação após um intervalo de tempo especificado. Esta ação será executada uma única vez. Por exemplo, um logoff automático.</p>
+			<p>setInterval: executa uma ação a cada intervalo de tempo especificado. Este método é repetitivo. Por exemplo, um reload de tela a cada intervalo.</p>
+			<p>Ambos métodos possuem métodos de desativação: clearTimeout() e clearInterval()</p>
+		</div>
+
 
 
 		<!-- JavaScript (Opcional) -->
