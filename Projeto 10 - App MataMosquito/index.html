@@ -22,7 +22,12 @@
 		<title>Mata-Mosquito</title>
 	</head>
 
-	<body onload="iniciaAplicacao()" onresize="ajustaTamanhoPalcoJogo()">
+	<body onresize="ajustaTamanhoPalcoJogo()">
+		
+		<script>
+			setInterval(function() {
+				criaNovoMosquito() }, 100000)
+		</script>
 
 
         <!-- JavaScript (Opcional) -->
