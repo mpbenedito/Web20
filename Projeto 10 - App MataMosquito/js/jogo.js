@@ -1,12 +1,27 @@
 // variáveis de dimensões máximas da tela, para que os objetos apresentados aleatoriamente não saiam da área visível do usuário
 var nAlturaMaxima = 0
 var nLarguraMaxima = 0
+var nVidaAtual = 1
+var nTempoDeJogo = 5
+var oMosquitoNaTela
+var oCronometro = setInterval( function() {	
+	
+	--nTempoDeJogo
+	if ( nTempoDeJogo < 0) {
+		clearInterval(oCronometro)
+		clearInterval(oMosquitoNaTela)
+		alert('vitoria')
+	} else {
+		document.getElementById('cronometro').innerHTML = nTempoDeJogo
+	} }, 	1000)
+
 
 // inicialização da aplicação
 function iniciaAplicacao() {
 	ajustaTamanhoPalcoJogo()
 	criaNovoMosquito()
 }
+
 
 // ler tamanhos da tela visível
 function ajustaTamanhoPalcoJogo() {
@@ -47,6 +62,18 @@ function ladoMosquito () {
 
 // cria um mosquito na tela, em posição randômica
 function criaNovoMosquito() {
+
+	// remover o mosquito anterior, caso exista
+	if (document.getElementById('mosquito') ) {	
+		document.getElementById('mosquito').remove()
+
+		if ( nVidaAtual > 3) {
+			window.location.href = 'fim-de-jogo.html'
+		} else {
+			document.getElementById('v' + nVidaAtual++).src = "imagens/coracao_vazio.png"
+		}
+	}
+
 	var nPosicaoX = Math.floor(Math.random() * ( nLarguraMaxima - 90 ) )
 	var nPosicaoY = Math.floor(Math.random() * ( nAlturaMaxima - 90 ) )
 
@@ -56,6 +83,10 @@ function criaNovoMosquito() {
 	novoMosquito.style.top = nPosicaoY + 'px'
 	novoMosquito.style.position = 'absolute'
 	novoMosquito.className = tamanhoMosquito() + ' ' + ladoMosquito()
+	novoMosquito.id = 'mosquito'
+	novoMosquito.onclick = function() {
+							this.remove()
+							}
 
 	document.body.appendChild(novoMosquito)
 }

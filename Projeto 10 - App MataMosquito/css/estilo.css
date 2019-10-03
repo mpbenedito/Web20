@@ -1,3 +1,7 @@
+body {
+    background-image: url(../imagens/bg.jpg);
+    background-size: cover;
+}
 .mosquito1 {
     width: 50px;
     height: 50px;
@@ -19,4 +23,24 @@
 
 .ladob {
     transform: scaleX(-1);
+}
+
+.painel {
+    position: absolute;
+    width: 200px;
+    padding: 10px;
+    bottom: 0px;
+    border-top: 1px solid #FFFFFF;
+    background-color: #FFFFFF;
+    opacity: 0.7;
+}
+
+.vidas {
+    float: left;
+}
+
+.cronometro {
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
 }
