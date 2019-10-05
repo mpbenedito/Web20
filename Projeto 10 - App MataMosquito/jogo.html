@@ -12,62 +12,37 @@
     		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     	<![endif]-->
 
+		<!-- script JS personalizado -->
+		<script src="js/jogo.js"></script>
+
 		<!-- CSS personalizado -->
 		<link rel="stylesheet" href="css/estilo.css">
 		<link rel="icon" href="imagens/mata_mosca.png">			<!-- ícone da guia do navegador -->
 
-		<script>
-			function iniciaJogo() {
-				var cNivelSelecionado = document.getElementById('nivel').value
-
-				if ( cNivelSelecionado === "0" ) {
-					alert('Selecione um nivel antes de iniciar')
-					return false
-				} else {
-					window.location.href = "jogo.html?" + cNivelSelecionado
-
-				}
-
-			}
-
-		</script>
-
-        <title>Mata-Mosquito</title>
+		<title>Mata-Mosquito</title>
 	</head>
 
-	<body">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="d-flex justify-content-center">
-                        <img src="imagens/game.png" alt="">
-                    </div>
-                </div>
-			</div>
-			
-			<div class="row">
-				<div class="col">
-					<div class="d-flex justify-content-center">
-						<div class="mb-4">
-							<select class="form-control" name="" id="nivel">
-								<option value="0">-- Selecione o Nível --</option>
-								<option value="1">Normal</option>
-								<option value="2">Difícil</option>
-								<option value="3">Chuck Norris</option>
-							</select>
-						</div>
-					</div>
-				</div>
+	<body onresize="ajustaTamanhoPalcoJogo()">
+
+		<div class="painel">
+			<div class="vidas">
+				<img id="v1" src="imagens/coracao_cheio.png" alt="">
+				<img id="v2" src="imagens/coracao_cheio.png" alt="">
+				<img id="v3" src="imagens/coracao_cheio.png" alt="">
+
 			</div>
 
-            <div class="row">
-                <div class="col">
-                    <div class="d-flex justify-content-center">
-                        <button type="button" class="btn btn-danger btn-lg" onclick="iniciaJogo()">Iniciar o Jogo</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+			<div class="cronometro">
+				Tempo restante: <span id="cronometro"></span>
+
+			</div>
+
+		</div>
+		
+		<script>
+			document.getElementById('cronometro').innerHTML = nTempoDeJogo
+			//oMosquitoNaTela = setInterval(function() { criaNovoMosquito() }, 1500)
+		</script>
 
 
         <!-- JavaScript (Opcional) -->

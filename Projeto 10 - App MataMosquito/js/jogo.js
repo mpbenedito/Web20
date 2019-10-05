@@ -2,24 +2,37 @@
 var nAlturaMaxima = 0
 var nLarguraMaxima = 0
 var nVidaAtual = 1
-var nTempoDeJogo = 5
+var nTempoDeJogo = 15
 var oMosquitoNaTela
-var oCronometro = setInterval( function() {	
-	
-	--nTempoDeJogo
-	if ( nTempoDeJogo < 0) {
-		clearInterval(oCronometro)
-		clearInterval(oMosquitoNaTela)
-		alert('vitoria')
-	} else {
-		document.getElementById('cronometro').innerHTML = nTempoDeJogo
-	} }, 	1000)
-
+var oNivelJogo = window.location.search
+var	oCronometro = setInterval( function() {	
+				--nTempoDeJogo
+				if ( nTempoDeJogo < 0) {
+					clearInterval(oCronometro)
+					clearInterval(oMosquitoNaTela)
+					window.location.href = 'vitoria.html'
+				} else {
+					document.getElementById('cronometro').innerHTML = nTempoDeJogo
+				} }, 	1000)
 
 // inicialização da aplicação
 function iniciaAplicacao() {
-	ajustaTamanhoPalcoJogo()
-	criaNovoMosquito()
+	var cTempo = oNivelJogo.replace('?', '')
+	var nTempoMosquitoNaTela = 1500
+
+// define o nível de dificuldade
+	if ( cTempo === '1') {
+		nTempoMosquitoNaTela = 1500
+
+	} else if (cTempo === '2') {
+		nTempoMosquitoNaTela = 1000
+
+	} else if (cTempo === '3') {
+		nTempoMosquitoNaTela = 750
+	}
+	
+		ajustaTamanhoPalcoJogo()
+		oMosquitoNaTela = setInterval(function() { criaNovoMosquito() }, nTempoMosquitoNaTela)
 }
 
 
