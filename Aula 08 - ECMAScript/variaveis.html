@@ -16,6 +16,52 @@
 		<!-- carrega o BABELjs -->
 		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
+		<script type="text/babel">
+			function x() {
+				var cNomeDoEscopoVar = "função"
+				console.log("variável chamada na função: " + cNomeDoEscopoVar)
+
+				if (true) {
+					var cNomeDoEscopoVar = "bloco-função"
+					console.log("variável chamada dentro do bloco na função: " + cNomeDoEscopoVar)
+				}
+				console.log("variável chamada fora do bloco na função: " + cNomeDoEscopoVar)
+			}
+
+			function Y() {
+				let cNomeDoEscopoLet = "função"
+				console.log("variável chamada na função: " + cNomeDoEscopoLet)
+
+				if (true) {
+					let cNomeDoEscopoLet = "bloco-função"
+					console.log("variável chamada dentro do bloco na função: " + cNomeDoEscopoLet)
+				}
+				console.log("variável chamada fora do bloco na função: " + cNomeDoEscopoLet)
+			}
+
+
+			console.log("TESTES COM VARIÁVEIS UTILIZANDO DECLARAÇÃO VAR")
+			console.log("==============================================")
+			x()
+			if (true) {
+				var cNomeDoEscopoVar = "bloco-global"
+				console.log("variável chamada no bloco global: " + cNomeDoEscopoVar)
+			}
+
+			console.log("TESTES COM VARIÁVEIS UTILIZANDO DECLARAÇÃO LET")
+			console.log("==============================================")
+			Y()
+			if (true) {
+				let cNomeDoEscopoLet = "bloco-global"
+				console.log("variável chamada no bloco global: " + cNomeDoEscopoLet)
+			}
+
+			console.log("TESTES COM DECLARAÇÃO CONST")
+			console.log("==============================================")
+			const PI = 3.1415
+
+		</script>
+
 	</head>
 	<body>
 		
@@ -24,14 +70,46 @@
 			<ul class="nav nav-pills">
 				<li class="nav-item"><a class="nav-link" href="introducao.html">Introdução</a></li>
 				<li class="nav-item"><a class="nav-link" href="variaveis.html">Declarações Var e Let</a></li>
+				<li class="nav-item"><a class="nav-link" href="template-string.html">Template Strings</a></li>
  			</ul>
 		</div>
 
-		<div class="conteudo">
+		<div class="conteudo" style="width: 100%; height: 440px;">
 			<h4>Operadores de Declaração Var e Let</h4>
+			<p>Relembrando escoços de variáveis</p>
+			<div class="conteudo" style="border:2px solid green; width: 300px; height:300px; float:left;">
+				<p style="color: green;">window (global)</p>
+				<div style="border:2px solid red; width: 200px; height:150px; padding: 10px; margin: 10px;">
+					<p style="color: red;">function</p>
+					<div style="border:2px solid blue; width: 150px; height:80px; padding: 10px; margin: 10px;">
+						<p  style="color: blue;">if {...}</p>
+					</div>
+				</div>
+				<div style="border:2px solid blue; width: 150px; height:80px; padding: 10px; margin: 10px;">
+					<p  style="color: blue;">if {...}</p>
+				</div>
+			</div>
+			<div class="conteudo" style="float: left;">
+				<h4>Declaração VAR</h4>
+				<p>As variáveis globais estão no nível window e são acessíveis em toda a aplicação (área em verde).</p>
+				<p>As variáveis que são utilizadas em funções e visíveis em qualquer bloco dentro da mesma função (área em vermelho).</p>
+				<p>As variáveis de bloco de código (área em azul)) sofrem elevação de escopo, podendo ser recuperadas dentro do objeto em que o bloco de código foi declarado (window ou funcition), ou seja a variável é promovida.</p>
+				<p>Lembrando, se uma variável for declarada em escopo de bloco de código, porém dentro da windows, ela será elevada a uma categoria global podendo ser enxergada por todas as outras funções </p>
+			</div>
+			<div class="conteudo" style="float: left;">
+					<h4>Declaração LET</h4>
+					<p>Declarar uma variável com LET preservará o seu escopo de forma bem rígida, assim as variáveis não são promovidas.</p>
+			</div>
+			<div style="float: clear;"></div>
 		</div>
+		<hr>
 
-
+		<div class="conteudo">
+			<h4>Declaração CONST</h4>
+			<P>Uma variável declarada como const possui sua característica fundamental a atribuição inicial do valor não poder ser alterada..</P>
+			<p>Por padrão uma variável declarada como CONST já deve ter seu valor atribuído. Se isso não for feito, ocorrerá erro na interpretação do script. Após a CONST ter sido inicializada, uma alteração em seu valor causará erro na execução.</p>
+			<p>Uma declaração CONST possui uma visibilidade semelhante ás variávels declaradas com let, ou seja, o escopo da criação da CONST é rígido e não sofre promoção (roisting).</p>
+		</div>
 
 
 		<!-- JavaScript (Opcional) -->
