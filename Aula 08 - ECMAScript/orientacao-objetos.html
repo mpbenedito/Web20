@@ -16,24 +16,11 @@
 		<!-- carrega o BABELjs -->
 		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
+
 		<script type="text/babel">
-			let cNome = "Marcelo"
-			console.log("Oi " + cNome + ", utilizando concatenação")
-			console.log(`Oi ${cNome}, utilizando template strings`)
-
-			// exemplo de aplicação de cálculoa
-			console.log(`Aplicando um cálculo: 7 * 7 = ${7 * 7}`)
-
-			// exemplo de aplicação de fórmula
-			function soma(x, y) {
-				return x + y
-			}
-			console.log(`Exemplo de fórmula: 8 + 8 = ${ soma(8, 8)}`)
 		</script>
-
 	</head>
 	<body>
-		
 		<div id="menu-aula" class="sticky-top">
 			<h4>ECMAScript</h4>
 			<ul class="nav nav-pills">
@@ -46,17 +33,6 @@
 		</div>
 
 		<div class="conteudo"">
-			<h4>Template Strings</h4>
-			<p>É uma feature do ES6. Basicamente, template strings pode ser entendido como um recurso que habilita "janelas" ou "lacunas" no texto que será apresentado e, com a interpretação e execução do script, estas lacunas possam ser preenchidas.</p>
-			<p>Até o momento toda concatenação de textos ocorre de forma bem simples: utiliza-se o sinal de + e o HTML5 interpreta isso como uma concatençaão. Ex.: "Oi " + cNome + ", tudo bem?". Isto produz um texto, e quando a variável cNome for preenchida, o texto passará a ter algum sentido dentro da lógica do script. </p>
-			<p>Usando um template string, o mesmo exemplo acima deve ser escrito da seguinte forma: `Oi ${cNome}, tudo bem?`. Da mesma forma, quando cNome for preenchido, o texto será completado e a frase terá um sentido dentro da aplicação.</p>
-			<p>Partindo do exemplo acima, observar as seguintes quetões:</p>
-			<ul>
-				<li>o texto deve ser preenchido dentro de crases ` (não utilizar aspas duplas ou simples);</li>
-				<li>a variável que será a lacuna do template string deve estar dentro da estrugura ${};</li>
-				<li>pular linha no texto do javascript causa uma quebra de linha também no texto apresentado, ou seja, as formatações são replicadas entre o que está entre as crases e o que é apresentado no retorno;</li>
-			</ul>
-			<p>Uma forma de entender os template strings é entender que é utilizá-lo é abrir para o intepretador uma possibilidade de atuação diretamente no texto, desta forma, o texto a ser apresentado pode ser resultado de cálculos ou fórmulas.</p>
 		</div>
 
 
