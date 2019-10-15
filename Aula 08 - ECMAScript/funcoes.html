@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<!-- Meta tags Obrigatórias -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+		<!-- Estilo personalizado -->
+		<link rel="stylesheet" type="text/css" href="css/menu-aula.css">
+
+		<title>ECMAScript</title>
+
+		<!-- carrega o BABELjs -->
+		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+		<script type="text/babel">
+			// função sem default no sparâmetros
+			function UmaFraseQualquer(NomeDoCachorro, AtividadePreferida, NomeDoDono) {
+				return `O cachorro chamado ${NomeDoCachorro} adora ${AtividadePreferida} enquanto passeia com seu dono, ${NomeDoDono}`
+			}
+
+			// função com valores default nos parâmetros
+			function UmaFraseQualquer2(NomeDoCachorro = 'Fubá', AtividadePreferida = 'correr', NomeDoDono = 'João') {
+				return `O cachorro chamado ${NomeDoCachorro} adora ${AtividadePreferida} enquanto passeia com seu dono, ${NomeDoDono}`
+			}
+
+			// função tradicional
+			let soma1 =  function somaTradicional(x=0, y=0) {
+				return x+y
+			}
+			console.log('Soma Tradicional: ' + soma1(3, 4))
+
+			// função com arrow
+			let soma2 = (x, y) => { return x+y}
+			console.log('Soma com Arrow Function: ' + soma2(3, 4))
+		</script>
+	</head>
+	<body>
+		<div id="menu-aula" class="sticky-top">
+			<h4>ECMAScript</h4>
+			<ul class="nav nav-pills">
+				<li class="nav-item"><a class="nav-link" href="introducao.html">Introdução</a></li>
+				<li class="nav-item"><a class="nav-link" href="variaveis.html">Declarações Var e Let</a></li>
+				<li class="nav-item"><a class="nav-link" href="template-string.html">Template Strings</a></li>
+				<li class="nav-item"><a class="nav-link" href="funcoes.html">Funções - Default e Arrow Function</a></li>
+ 			</ul>
+		</div>
+
+		<div class="conteudo"">
+			<h4>Default</h4>
+			<p>A iniciativa de se utilizar valores default em funções é para tornar o fluxo de processamento mais robusto e tolerante a falhas. Neste caso, é necessário lembrar que quando a assinatura da função é construída pode-se construir uma função com um número indefinido de parâmetros, porém para o javascript não existe o concieto de parâmetro obrigatório.</p>
+			<p>Desta forma, uma função com N parâmetros pode ser chamada sem que todos sejam informados. Neste caso, na definição da função podem ser adotados tratamentos de valores default, assim, uma função com N parãmetros pode ser chamada utilizando-se todos os seus parâmetros ou apenas alguns.</p>
+			<p>Exemplo1: a função UmaFraseQualquer(), sem nenhum parâmetro, e sem um default associado cria resultados inusitados na tela.</p>
+			<script type="text/babel">
+				console.log('UmaFraseQualquer(): ' + UmaFraseQualquer())
+			</script>
+			<p>Exemplo2: a função UmaFraseQualquer2(), sem parãmetros e com tratamento default, cria outro resultado completamente diferente.</p>
+			<script type="text/babel">
+				console.log('UmaFraseQualquer2(): ' + UmaFraseQualquer2())
+			</script>
+			<p>Exemplo3: a função UmaFraseQualquer2(, 'caçar gatos', ), com apenas alguns parâmetros definidos</p>
+			<script type="text/babel">
+				console.log("UmaFraseQualquer2(, 'caçar gatos', ): " + UmaFraseQualquer2(undefined, 'caçar gatos', undefined))
+			</script>
+			<p><strong>Importante: </strong>um parãmetro não passado de formaa intencional para uma função deve ser substituído pela palavra reservada <em>undefined.</em></p>
+		</div>
+		<hr>
+
+		<div class="conteudo">
+			<h4>Arrow Function</h4>
+			<p>É uma notação permitida pelo ECMAScript que possibilita a escrita da função com economia de codificação, ganhando otimização na escrita</p>
+			<p>Uma função tradicional pode ser definida em uma variável, atribuindo a esta um código a ser executado. A sintaxe padrão já foi estudada</p>
+			<p><strong>let NomeVar = function( p1, p2, p3) {...} </strong>. Exemplo: let quadrado = function(x) { return x*x }</p>
+			<p>A sintaxe básica de arrow functions utiliza-se intrinicamente do conceito de callback, assum uma variável é definida com um bloco de código a ser executdo.</p>
+			<p><strong>let NomeVar = (p1, p2, p3) => {...}</strong>. Exemplo: let quadrado = (x) => { return x*x }</p>
+			<p>Se a função a ser criada possui apenas um parâmetro a sintaxe pode ser otimizada, com a omissão dos sinais ( e )</p>
+			<p><strong>let NomeVar = p1 => {...}</strong>. Exemplo: let quadrado = x => { return x*x }</p>
+			<p>Como última otimização se a função possui apenas uma única instrução, esta também já pode ser informada diretamente no lugar do bloco de código</p>
+			<p><strong>let NomeVar = p1 => InstruçãoÙnica</strong>. Exemplo: let quadrado = x => return x*x</p>
+		</div>
+
+
+		<!-- JavaScript (Opcional) -->
+		<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	</body>
+</html>
