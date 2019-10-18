@@ -16,11 +16,236 @@
 		<!-- carrega o BABELjs -->
 		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-
+		<!-- MODELAMENTO DA CONTA BANCÁRIA - ABSTRAÇÃO -->
 		<script type="text/babel">
+			//modelo de um objeto que representa uma conta bancária
+			class ContaBancaria {
+
+				constructor() {
+					// atributos
+					this.agencia = '0202'
+					this.nroConta = '252525'
+					this.saldo = 10.52
+					this.limite = 500.00
+				}
+
+				//métodos
+				depositar(valorDeposito) {
+					//comandos e instruções de depósitar
+					this.saldo += valorDeposito
+				}
+
+				sacar(valorSaque) {
+					//comandos e instruções de sacar
+					this.saldo -= valorSaque
+				}
+
+				consultarSaldo() {
+					//comandos e instruções de consutar saldo
+					return	this.saldo
+				}
+			}
+			console.log('MODELAMENTO DA CONTA BANCÁRIA')
+			console.log('=============================')
+			let contaBanco1 = new ContaBancaria()
+			let contaBanco2 = new ContaBancaria()
+			console.log('Saldo conta1 = ' + contaBanco1.consultarSaldo())
+			contaBanco1.depositar(200)
+			console.log('Saldo conta1 = ' + contaBanco1.consultarSaldo())
+			console.log('Saldo conta2 = ' + contaBanco2.consultarSaldo())
+			contaBanco2.depositar(150)
+			console.log('Saldo conta2 = ' + contaBanco2.consultarSaldo())
+			contaBanco1.sacar(100)
+			console.log('Saldo conta1 = ' + contaBanco1.consultarSaldo())
 		</script>
+
+		<!-- MODELAMENTO DO APARELHO DE TV - ENCAPSULAMENTO -->
+		<script type="text/babel">
+			class TV {
+				constructor() {
+					this._relacaoDeCanais = Array(2, 4, 5, 7, 10)
+					this._canalAtivo = 5
+					this._volume = 5
+				}
+
+				// getters e setters
+				get canalAtivo() {
+					return this._canalAtivo
+				}
+
+				set canalAtivo(novoCanal) {
+					let posCanal = this._relacaoDeCanais.indexOf(novoCanal)
+					if (posCanal !== -1) {
+						this._canalAtivo = novoCanal
+					} else {
+						console.log('Canal Indisponível: ' + novoCanal)
+					}
+				}
+			}
+
+			console.log('MODELAMENTO DO APARELHO DE TV')
+			console.log('=============================')
+			let novaTV = new TV()
+			console.log('Canal Ativo: ' + novaTV.canalAtivo)
+			novaTV.canalAtivo = 10
+			console.log('Mudou o canal ativo. Canal Ativo atual: ' + novaTV.canalAtivo)
+			novaTV.canalAtivo = 13
+			console.log('Nova tentativa de mudança de canal. Canal Ativo atual: ' + novaTV.canalAtivo)
+		</script>
+
+		<!-- MODELAMENTO DOS ANIMAIS - HERANÇA -->
+		<script type="text/babel">
+			class Animal {
+				constructor() {
+					this.cor = ''
+					this.tamanho = null
+				}
+
+				dormir() {
+					console.log('Dormir')
+				}
+			}
+
+			class Cachorro extends Animal {
+				constructor() {
+					super()
+					this.orelhas = ''
+				}
+
+				correr() {
+					console.log('Correr')
+				}
+
+				rosnar() {
+					console.log('Rosnar')
+				}
+			}
+
+			class Passaro extends Animal {
+				constructor() {
+					super()
+					this.bico = 'Curto'
+				}
+
+				voar() {
+					console.log('Voar')
+				}
+			}
+
+			class Papagaio extends Passaro {
+				constructor() {
+					super()
+					this.sabeFalar = true
+				}
+				falar() {
+					console.log('falar')
+				}
+			}
+
+			console.log('MODELAMENTO DOS ANIMAIS')
+			console.log('=======================')
+			let fuba = new Cachorro() 
+			let piupiu = new Passaro()
+			let chico = new Papagaio()
+			console.log(fuba)
+			console.log(piupiu)
+			console.log(chico)
+			
+			fuba.dormir()
+			piupiu.voar()
+			fuba.correr()
+			piupiu.dormir()
+			chico.dormir()
+			chico.voar()
+			chico.falar()
+
+		</script>
+
+		<!-- MODELAMENTO DOS ANIMAIS - PARAMETROS E OPERADOR SUPER() -->
+		<script type="text/babel">
+			class Animal2 {
+				constructor(cCor, nTamanho) {
+					this.cor = cCor
+					this.tamanho = nTamanho
+				}
+
+				dormir() {
+					console.log('Dormir')
+				}
+			}
+
+			class Passaro2 extends Animal2 {
+				constructor(cCor, nTamanho, cFormatoDoBico) {
+					super(cCor, nTamanho)
+					this.bico = cFormatoDoBico
+				}
+				voar() {
+					console.log('Voar')
+				}
+			}
+
+			class Papagaio2 extends Passaro2 {
+				constructor(cCor, nTamanho, cFormatoDoBico, lJaSabeFalar) {
+					super(cCor, nTamanho, cFormatoDoBico)
+					this.sabeFalar = lJaSabeFalar
+				}
+				falar() {
+					console.log('Falar')
+				}
+			}
+
+		
+			console.log('TRATAMENTO DE ATRIBUTOS E CLASSE SUPER')
+			console.log('======================================')
+			let teco = new Papagaio2('verde', 20, 'médio e curvo', true)
+			console.log(teco)
+
+
+		</script>
+
+
+		<!-- MODELAMENTO DOS ANIMAIS - POLIMORFISMO -->
+		<script type="text/babel">
+			class Animal3 {
+				constructor(cCor, nTamanho) {
+					this.cor = cCor
+					this.tamanho = nTamanho
+				}
+
+				dormir() {
+					console.log('Dormir')
+				}
+			}
+
+			class Passaro3 extends Animal3 {
+				constructor(cCor, nTamanho, cFormatoDoBico) {
+					super(cCor, nTamanho)
+					this.bico = cFormatoDoBico
+				}
+				voar() {
+					console.log('Voar')
+				}
+			}
+
+			class Avestruz extends Passaro3 {
+				constructor(cCor, nTamanho, CFormatoDoBico) {
+					super(cCor, nTamanho, CFormatoDoBico)
+				}
+
+				enterrarCabeca() {
+					console.log("Enterrar a cabeça")
+				}
+
+				voar() {
+					console.log('Avestruz não voa')
+				}
+			}
+		</script>
+
+
 	</head>
 	<body>
+		<!-- Menu Principal-->
 		<div id="menu-aula" class="sticky-top">
 			<h4>ECMAScript</h4>
 			<ul class="nav nav-pills">
@@ -32,10 +257,218 @@
  			</ul>
 		</div>
 
-		<div class="conteudo"">
+		<!-- Introdução ao Paradigma -->
+		<div class="conteudo">
+			<h4>Paradigmas</h4>
+			<p>O javascript tem a premissa de atender 3 paradigmas distintos, no que se refere a características de programação. O primeiro é o das linguagens estruturais, o segundo é o de Orientação a Objetos e o terceiro é de programação reativa. Ou seja, o javascript, como linguagem de programação, pode ser utilizado utilizando-se qualquer um destes 3 conceitos.</p>
+			<p>Os estudos executados são específicos para o paradigma da Programação Orientação a Objetos, pois o de linguagem procedural é o que já foi estudado até o momento.</p>
+			<p>Na Orientação a Objetos as soluções devem ser pensadas de forma que privilegie-se as estruturas de dados é que devem possuir os comportamentos e para que a solução implementada funcione atender estes comportamentos é o item primordial.</p>
+			<p>Para que uma solução seja considerada orientada a objetos, sua execução deve ser sustentada por 4 pilares básicos: Abstração, Encapsulamento, Herança e Polimorfismo. Estes pilares são caracteristicas, e os códigos desenvolvidos que são a base da solução desenvolvida deve atender estas 4 características.</p>
 		</div>
+		<hr>
 
+		<!-- Pilares da Orientação a Objetos-->
+		<div class="conteudo">
+			<h4>Pilares da Orientação a Objetos</h4>
+			<ul class="nav nav-tabs">
+				<li class="nav-item active"> <a data-toggle="tab" class="font-weight-bold nav-link active" href="#pilar1">Abstração</a></li>
+				<li class="nav-item"> <a data-toggle="tab" class="font-weight-bold nav-link" href="#pilar2">Encapsulamento</a></li>
+				<li class="nav-item"> <a data-toggle="tab" class="font-weight-bold nav-link" href="#pilar3">Herança</a></li>
+				<li class="nav-item"> <a data-toggle="tab" class="font-weight-bold nav-link" href="#pilar4">Polimorfismo</a></li>
+			</ul>
 
+			<div class="tab-content">
+
+				<!-- Pilar da Abstração -->
+				<div id="pilar1" class="conteudo tab-pane fade show active">
+					<p>Abstração não é totalmente uma característica de programação e sim cognitiva, pois esta característica está ligada á forma como um objeto ou entidade consegue ser representado em uma linguagem de programação.</p>
+					<p>Para que a característica de Abstração seja considerada satisfatória na solução, ela deve possuir 4 elementos básicos: Entidade, Identidade, Propriedades (características/atributos), Métodos (ações). </p>
+					<table class="table table-info table-sm table-striped table-bordered">
+						<thead class="thead-dark">
+							<tr>
+								<th>Entidade</th>
+								<th>Identidade</th>
+								<th>Características</th>
+								<th>Ações</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Carro</td>
+								<td>x = <span class="text-danger">New</span> Carro()</td>
+								<td>marca, modelo, cor, portas</td>
+								<td>ligar, acelerar, freiar, desligar</td>
+							</tr>
+							<tr>
+								<td>Sonho</td>
+								<td>y = <span class="text-danger">New</span> Sonho()</td>
+								<td>tipo, historia, deseja_repetir</td>
+								<td>relatar_sonho</td>
+							</tr>
+							<tr>
+								<td>ContaBancaria</td>
+								<td>z = <span class="text-danger">New</span> ContaBancaria()</td>
+								<td>agencia, nro_conta, saldo, limite</td>
+								<td>depositar, sacar, consultar_saldo</td>
+							</tr>
+						</tbody>
+					</table>
+					<p><strong>Entidade: </strong> é o elemento que deve ser modelado na solução</p>
+					<p><strong>Identidade: </strong> é a instância da entidade, quando o modelo desenvolvido é criado. Cada instância é única e alterar o atributo de uma não deve alterar o atributo de outra.</p>
+					<p><strong>Características: </strong>(propriedade) são os atributos que a entidade possui</p>
+					<p><strong>Ações: </strong>(métodos) são as ações que o objeto pode executar ou sofrer.</p>
+					<p>Sintaxe básica:</p>
+					<p><em class="text-warning">class </em><strong class="text-success">nomeDaClasse</strong> {</p>
+					<p>&emsp;<em class="text-warning">constructor()</em> {</p>
+					<p>&emsp;&emsp;<em class="text-warning">this.</em><span  class="text-primary"> atributo1 = valor1</span></p>
+					<p>&emsp;&emsp;<em class="text-warning">this.</em><span  class="text-primary"> atributo1 = valor1</span></p>
+					<p>&emsp;}</p>
+					<p>&emsp;<strong class="text-primary">Método1</strong>() {   ...    }</p>
+					<p>&emsp;<strong class="text-primary">Método2</strong>() {   ...    }</p>
+					<p>}</p>
+				</div>
+
+				<!-- Pilar do Encapsulamento -->
+				<div id="pilar2" class="conteudo tab-pane fade">
+					<p>O conceito de encapsulamento refere-se á capacidade do modelo de ser seguro e reutilizável, permitindo que os recursos possam ser utilizados sem se perderem. A instância do objeto deve nascer, ser utilizada, acessada, alterada e deixar de existir, sem que durante este ciclo, seus atributos se percam e seus métodos deixem de funcionar.</p>
+					<p>Esta caracteristica é alcançada basicamente com a proteção dos atributos utilizando-se o conceito de atributos globais e privados, sendo que um atributo global pode ser acessado por qualquer método e um privado só é visível para alguns métodos.</p>
+					<p><strong>Importante: </strong>O javascript, em sua versão ES6, <span class="font-weight-bold text-danger">NÃO</span> possui os operadores private, protect e public, comuns em outras linguagens, porém, para suportar esta característica, existe uma convenção de escrita de código em relação ao controle de visibilidade dos atributos. Esta convenção de escrita dos códigos é a adoção do sinal _ (underline) no início dos atributos, indicaando que são atributos acessados por métodos getters e setters.</p>
+					<h5><span class="font-italic">Getters e Setters</span></h5>
+					<p>São métodos criados para obter e alterar os valores dos métodos. Um getter recupera o valor da atributo e um setter altera este atributo.</p>
+					<p>São criados com as declarações <span class="font-weight-bold text-info">get</span> e <span class="font-weight-bold text-info">set</span> seguidos do próprio nome do atributo, sem o _ (underline), transformando os métodos em pseudo-variáveis.</p>
+					<p>Obedecidas estas padronizações de escrita o interpretador reconhecereá as pseudo-variáveis e se encarregará de procurar os métodos getters e setters durante a execução dos códigos de forma transparente.</p>
+
+				</div>
+
+				<!-- Pilar da Herança -->
+				<div id="pilar3" class="conteudo tab-pane fade">
+					<p>Herança pode ser entendida como a capacidade que os objetos modelados distintos (p.e. 1 objeto cachorro e 1 objeto pássaro, 1 objeto carro e 1 objeto moto, 1 objeto contaBancaria e 1 objeto contaAplicacao) possuem de ter atributos e métodos iguais, de forma que a implementação de ambos os objetos compartilhem a mesma codificação durante para suas características comuns, trazendo duas vantagens intrínsecas para os códigos: a capacidade de reutilização de códigos, e a segunda que deriva da primeira, facilidade de manutenção.</p>
+					<h5>Sem HERANÇA</h5>
+					<table class="table table-info table-sm table-striped table-bordered">
+						<thead class="thead-dark">
+							<tr>
+								<th>Entidade</th>
+								<th>Atributos</th>
+								<th>Métodos</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Cachorro</td>
+								<td><span class="text-success">cor, tamanho</span><span class="text-secondary">, orelhas</span></td>
+								<td><span class="text-success">dormir</span><span class="text-secondary">, correr, rosnar</span></td>
+							</tr>
+							<tr>
+								<td>Pássaro</td>
+								<td><span class="text-success">cor, tamanho</span><span class="text-secondary">, bico</span></td>
+								<td><span class="text-success">dormir</span><span class="text-secondary">, voar</span></td>
+							</tr>
+							<tr>
+								<td>Papagaio</td>
+								<td><span class="text-success">cor, tamanho</span><span class="text-secondary">, bico</span><span class="text-danger">, sabeFalar</span></td>
+								<td><span class="text-success">dormir</span><span class="text-secondary">, voar</span><span class="text-danger">, falar</span></td>
+								</tr>
+							</tbody>
+					</table>
+					<p>No exemplo acima, os dois modelos de objetos representam animais e porisso compartilham atributos e ações, mesmo mantendo sua individualidade com outros atributos e ações inerentes ás suas espécies. De forma simples seria necessário criar um método dormir() para cada modelo de objeto e codificar os atributos textualmente os semelhantes. Tudo isso aumentaria a quantidade de linhas e a codificação seria maior.</p>
+					<p>Porém, com herança é possível criar uma terceira classe, por exemplo, Animal() já com os atributos e métodos comuns, dizer que as classes cachorro e passaro são herdeiros de animais e nestas codificar apenas o que é variável. Por exemplo, na hora de dar manutenção no método dormir, só seria necessário alterar o código do método animal.</p>
+					<p>Os objetos herdeiros terão todos os métodos e atributos herdados de seu método superior, e mais o atributos proprios de suas características particulares.</p>
+					<h5>Com HERANÇA</h5>
+					<table class="table table-info table-sm table-striped table-bordered">
+						<thead class="thead-dark">
+							<tr>
+								<th>Entidade</th>
+								<th>Atributos</th>
+								<th>Métodos</th>
+								<th>Tipo</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Animal</td>
+								<td><span class="text-success">cor, tamanho</span></td>
+								<td><span class="text-success">dormir</span></td>
+								<td>SuperClasse</td>
+							</tr>
+		
+							<tr>
+								<td>Cachorro</td>
+								<td><span class="text-secondary">orelhas</span></td>
+								<td><span class="text-secondary"></span>correr, rosnar</span></td>
+								<td>SubClasse (extende Animal)</td>
+							</tr>
+							<tr>
+								<td>Pássaro</td>
+								<td><span class="text-secondary">bico</span></td>
+								<td><span class="text-secondary">voar</span></td>
+								<td>SubClasse (extende Animal)</td>
+							</tr>
+							<tr>
+								<td>Papagaio</td>
+								<td><span class="text-secondary">sabeFalar (?)</span></td>
+								<td><span class="text-dark">falar</span></td>
+								<td>SubClasse (extende Pássaro)</td>
+							</tr>
+	
+						</tbody>
+					</table>
+					<p>É comum dizer que as classes cachorro e/ou pássaro <strong>EXTENDEM</strong> a classe Animal. A classe Animak, que será extendida pelas classes cachorro e pássaro passa a ser denominada uma SuperClasse enquanto as outras duas são denominadas SubClasses.</p>
+					<p>Por isso, na criação dos modelos utiliza-se a declaração <span class="text-danger font-weight-bols">extends</span> para realizar a declaração EXPLÍCITA que uma subclasse está herdando os atributos da Superclasse:</p>
+					<p>class <span class="font-italic">NomeDaSubClasse</span> <span class="text-danger font-weight-bols">extends</span><span class="font-italic"> NomeDaSuperClasse</span> {...}</p>
+					<p>Considerar que não existe um limite para utilização de herança, sendo que um novo objeto pode ser criado extendendo uma subclasse, recebendo assim os atributos e métodos da SuperClasse, da SubClasse que ela está extendendo e por último suas características próprias.</p>
+					<p>Do ponto de vista de manutenção de código isso tudo facilita o processo, pois se a codificação do modelo de uma caracteristica existente ou nova precisa ser refatorada, serão menos pontos a serem avaliados. Por exemplo, para adicionar a característica peso aos objetos modelados é só incluir esta propriedade associada ao objeto Animal.</p>
+					<h5>Operador super()</h5>
+					<p>O operador super(), sempre colocado nas subclasses, fornece o acesso ao construtor da classe imediatamente superior extendida. Ele deve ser colocado sempre antes de qualquer declaração this. Se esta regra não for obedecida a solução apresentará um erro.</p>
+					<p>É possível passar parâmetros na criação dos objetos. Estes parâmetros devem ser definidos no operador constructor(), dentro dos parênteses na ordem em que serão utilizados.</p>
+					<p>Como o operador super() fornece o acesso para o construtor da classe pai, é por meio dele que é possível fazer subir os parâmetros de atribuição dos objetos filhos extendidos aos pais..</p>
+				</div>
+
+				<!-- Pilar do Polimorfismo -->
+				<div id="pilar4" class="conteudo tab-pane fade">
+					<P>Polimorfismo, em uma abordagem bem simplista, é a possibilidade de sobrescrita de métodos herdados de uma classe pai para adáptá-los ao funcionamento é á identidade da classe herdeira.</P>
+					<p>Utilizando-se o exemplo de pássaros, visto em herança, suponha-se a necessidade de abstrair uma nova classe que identifique um Avestruz extendendo a classe Pássaro. </p>
+					<table class="table table-info table-sm table-striped table-bordered">
+						<thead class="thead-dark">
+							<tr>
+								<th>Entidade</th>
+								<th>Atributos</th>
+								<th>Métodos</th>
+								<th>Tipo</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Animal</td>
+								<td><span class="text-success">cor, tamanho</span></td>
+								<td><span class="text-success">dormir</span></td>
+								<td>SuperClasse</td>
+							</tr>
+							<tr>
+								<td>Pássaro</td>
+								<td><span class="text-secondary">bico</span></td>
+								<td><span class="text-secondary">voar</span></td>
+								<td>SubClasse (extende Animal)</td>
+							</tr>
+							<tr>
+								<td>Papagaio</td>
+								<td><span class="text-secondary">sabeFalar (?)</span></td>
+								<td><span class="text-dark">falar</span></td>
+								<td>SubClasse (extende Pássaro)</td>
+							</tr>
+							<tr>
+								<td>Avestruz</td>
+								<td><span class="text-secondary"></span></td>
+								<td><span style="text-decoration:line-through;"class="text-danger">voar</span><span class="text-dark">, enterrarCabeça</span></td>
+								<td>SubClasse (extende Pássaro)</td>
+							</tr>
+						</tbody>
+					</table>
+					Seguindo o exemplo, a classe voar() não deve existir para o objeto Avestruz, visto que este objeto é um modelo abstraído de um animal que não executa esta ação, portanto será sobrescrito. Em contrapartida, uma nova ação deve ser implementada.
+				</div>
+				
+			</div>
+		</div>
+				
 		<!-- JavaScript (Opcional) -->
 		<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
