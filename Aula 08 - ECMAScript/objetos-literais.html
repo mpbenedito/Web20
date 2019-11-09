@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<!-- Meta tags Obrigatórias -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+		<!-- Estilo personalizado -->
+		<link rel="stylesheet" type="text/css" href="css/menu-aula.css">
+
+		<title>ECMAScript</title>
+
+		<!-- carrega o BABELjs -->
+		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+		<!-- MODELAMENTO DE OBJETO POR CLASSE  -->
+		<script type="text/babel">
+			class ClasseProduto {
+				constructor( cDescricao, nPreco) {
+					this.descricao = cDescricao
+					this.preco = nPreco
+				}
+
+				verDescricao() {
+					console.log(`OO - ${this.descricao} por apenas ${this.preco}`)
+				}
+			}
+
+			console.log('Modelo de objeto por OO')
+			console.log('=======================')
+			let Produto1 = new ClasseProduto('Notebook', 1200.00)
+			Produto1.verDescricao()
+		</script>
+
+		<!-- MODELAMENTO DE OBJETO POR CLASSE  -->
+		<script type="text/babel">
+			let ProdutoEstatico = {
+				descricao: 'Geladeira', 
+				preco: 1800.00,
+				verDescricao: function () {
+					console.log(`OE - ${this.descricao} por apenas ${this.preco}`)
+				}
+			}
+
+			console.log('Modelo de objeto estático')
+			console.log('=========================')
+			ProdutoEstatico.verDescricao()
+		</script>
+
+		<!-- MELHORIAS DE NOTAÇÃO E SINTAXE-->
+		<script type="text/babel"> 
+			let nome = 'Marcelo'
+			let idade = 47
+			let sexo = 'M'
+			let profissao = 'Programador'
+			
+			/* SINTAXE DO ES5 */
+			let usuarioES5 = {
+				nome: nome, 
+				idade: idade, 
+				sexo: sexo, 
+				profissao: profissao, 
+				exibirResumo: function() {
+					console.log(`ES5: ${this.nome}, ${this.idade} anos, sexo ${this.sexo ==='M'? 'Masculino':'Feminino'} trabalha como ${this.profissao}.`)
+				}
+			}
+			console.log('Definição objeto estático no ES5')
+			console.log('=========================')
+			console.log(usuarioES5)
+			usuarioES5.exibirResumo()
+
+
+			/* SINTAXE DO ES5 */
+			let usuarioES6 = {
+				nome, 
+				idade, 
+				sexo, 
+				profissao, 
+				exibirResumo() {
+					console.log(`ES6: ${this.nome}, ${this.idade} anos, sexo ${this.sexo ==='M'? 'Masculino':'Feminino'} trabalha como ${this.profissao}.`)
+				}
+			}
+			console.log('Definição objeto estático no ES5')
+			console.log('=========================')
+			console.log(usuarioES6)
+			usuarioES6.exibirResumo()
+		</script>
+
+		<!-- INCLUSÃO DINÂMICA DE PARES ATRIBUTO:VALOR -->
+		<script type="text/babel">
+			let	pessoa = {
+				nome: 'Maria',
+				idade: 25,
+				buscaNome: function() {
+					console.log(`O nome da pessoa é ${this.nome}.`)
+				}
+			}
+			console.log('Definição Dinãmica de Pares Atributo:Valor')
+			console.log('==========================================')
+			console.log(pessoa)
+			pessoa.sexo = 'Feminino'
+			console.log('Atributo sexo criado:')
+			console.log(pessoa)
+			pessoa.buscaNome()
+			pessoa.digaOi = () => console.log(`Dizer 'Oi'.`)
+			console.log('Método digaOi implementado:')
+			pessoa.digaOi()
+		</script>
+
+		<!-- OBJETOS ÚNICOS -->
+		<script type="text/babel">
+			let	assinatura = {
+				idCliente: 1000,
+				descricao: 'Acesso a internet',
+				status() {
+					console.log('Assinatura Ativa')
+				}
+			}
+
+			console.log('Testes com objetos literais')
+			console.log('===========================')
+			console.log('Objeto Assinatura criado')
+			console.log('Descrição: ' + assinatura.descricao)
+
+			console.log('Assinatura atribuída a variável y')
+			let y = assinatura
+			y.status()
+			console.log('Variável y alterada')
+			y.descricao = 'Combo TV e internet'
+			console.log('Assinatura.descricao: ' + assinatura.descricao)
+			console.log('y.descricao: ' + y.descricao)
+		</script>
+	</head>
+	<body>
+		<!-- Menu Principal-->
+		<div id="menu-aula" class="sticky-top">
+			<h4>ECMAScript</h4>
+			<ul class="nav nav-pills">
+				<li class="nav-item"><a class="nav-link" href="introducao.html">Introdução</a></li>
+				<li class="nav-item"><a class="nav-link" href="variaveis.html">Declarações Var e Let</a></li>
+				<li class="nav-item"><a class="nav-link" href="template-string.html">Template Strings</a></li>
+				<li class="nav-item"><a class="nav-link" href="funcoes.html">Funções - Default e Arrow Function</a></li>
+				<li class="nav-item"><a class="nav-link" href="orientacao-objetos.html">Orientação a Objetos</a></li>
+				<li class="nav-item"><a class="nav-link" href="objetos-literais.html">Objetos Literais</a></li>
+				<li class="nav-item"><a class="nav-link" href="funcoes-construtoras.html">Funções Construtoras</a></li>
+ 			</ul>
+		</div>
+
+		<!-- Introdução ao Paradigma -->
+		<div class="conteudo">
+			<h4>Objetos Literias</h4>
+			<p>Também conhecidos como Objetos Estáticos, os Objetos Literais são na prática objetos descritos diretamente no código.</p>
+			<p>Podem ser utilizados para o desenvolvimento de objetos únicos, por exemplo, para encapsular dados de um formulário no browse, aí passar esse objeto como um parâmetro para outra função que irá tratar os valores.</p>
+			<p>A notação básica é instanciar uma variável com um bloco de código, tal que, nele estejam definidas os pares "atributos:valores," separados por : e finalizados por ,</p>
+			<p>Os métodos são feitos de forma semelhante:"atributo: function() {...}", onde a declaração function é obrigatória.</p>
+			<p>A forma de acessar tanto atributos quanto métodos é semelhante ao acesso de de métodos e propriedades de objetos modelados em classes.</p>
+		</div>
+		<hr>
+
+		<div class="conteudo">
+			<h4>Melhorias de Notação</h4>
+			<p>Embora os objetos literais tenham surgido na publicação do ES5, tornaram-se elementos de programação muito úteis no nos projetos de programação, e na publicação do ES6 foram divulgadas melhorias na forma de codificação que facilitou o processo de escrita das solução e, consequentemente tornando os códigos mais enxutos.</p>
+			<p>Na atribuição dos pares "atributo:valor," se ambos possuírem o mesmo nome (identificador), a sintaxe pode ser resumida para apenas "atributo,". Se os identificadores forem diferentes, a sintaxe original deve ser mantida.</p>
+			<p>Os metodos também podem ser resumidos. No lugar do par "nomeMetodo: function() {...}", esta sintaxe pode ser escrita como "nomeMetodo() {...}"</p>
+		</div>
+		<hr>
+
+		<div class="conteudo">
+			<h4>Modificando Valores</h4>
+			<p>Objetos literais, assim como objetos criados por instâncias de classes, podem ter a qualquer momento o valor de seus atributos alterado e manipulado, conforme a aplicação necessite.</p>
+			<p>Base realizar o acesso ao atributo da mesma forma que num objeto instanciado: nomeDaInstância.atributo = novoValor</p>
+		</div>
+		<hr>	
+
+		<div class="conteudo">
+			<h4>Criação Dinâmica Pares Atributo:Valor</h4>
+			<p>Qualquer objeto literal pode ter atributos criados dinamicamente durante a execução da aplicação. A sintaxe é instanciar o objeto, com o . e identificar o nome do novo atributo igualando-o a seu valor. Exemplo: objetoLiteral.novoAtributo = valor</p>
+			<p>Esta característica também vale para métodos novos. Durante a execução do código novos métodos podem ser criados. Só aplicar as sintaxes já avaliadas.</p>
+		</div>
+		<hr>
+
+		<div class="conteudo">
+			<h4>Objetos Únicos</h4>
+			<p>Por definição um objeto literal é um objeto único, pois são acessados não por valor e sim por referência. Isso significa que se um objeto criado for associado a uma variável x, depois esta variável for associada a outra variável y, alterar os atributos de y implica na alteração do próprio objeto atribuído inicialmente a x.</p>
+			<p>Possível aplicação disso (?): tratamento de conteúdo de formulários.</p>
+		</div>
+
+				
+		<!-- JavaScript (Opcional) -->
+		<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	</body>
+</html>

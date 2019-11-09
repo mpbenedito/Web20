@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<!-- Meta tags Obrigatórias -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+		<!-- Estilo personalizado -->
+		<link rel="stylesheet" type="text/css" href="css/menu-aula.css">
+
+		<title>ECMAScript</title>
+
+		<!-- carrega o BABELjs -->
+		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+		<script type="text/babel">
+			// modelamento por funções construtoras
+			let Carro = function() {
+				this.cor = 'amarelo'
+				this.modelo = 'Uno'
+				this.velocidadeAtual = 0
+				this.velocidadeMaxima = 180
+
+				this.acelerar = function() {
+					let nVel = this.getVelocidadeAtual() + 50
+					if (nVel > this.velocidadeMaxima) {
+						nVel = this.velocidadeMaxima
+					}
+					this.setVelocidadeAtual( nVel )
+				}
+
+				this.getVelocidadeAtual = function() {
+					return this.velocidadeAtual
+				}
+
+				this.setVelocidadeAtual = function(nVelocidade) {
+					this.velocidadeAtual = nVelocidade
+				}
+			}
+
+			let carroAtual = new Carro()
+			console.log(`A velocidade atual é ${carroAtual.getVelocidadeAtual()}`)
+
+			carroAtual.acelerar()
+			console.log(`A velocidade atual é ${carroAtual.getVelocidadeAtual()}`)
+
+			carroAtual.acelerar()
+			console.log(`A velocidade atual é ${carroAtual.getVelocidadeAtual()}`)
+
+			carroAtual.acelerar()
+			console.log(`A velocidade atual é ${carroAtual.getVelocidadeAtual()}`)
+
+			carroAtual.acelerar()
+			console.log(`A velocidade atual é ${carroAtual.getVelocidadeAtual()}`)
+			
+			carroAtual.acelerar()
+			console.log(`A velocidade atual é ${carroAtual.getVelocidadeAtual()}`)
+		</script>
+	</head>
+	<body>
+		<div id="menu-aula" class="sticky-top">
+			<h4>ECMAScript</h4>
+			<ul class="nav nav-pills">
+				<li class="nav-item"><a class="nav-link" href="introducao.html">Introdução</a></li>
+				<li class="nav-item"><a class="nav-link" href="variaveis.html">Declarações Var e Let</a></li>
+				<li class="nav-item"><a class="nav-link" href="template-string.html">Template Strings</a></li>
+				<li class="nav-item"><a class="nav-link" href="funcoes.html">Funções - Default e Arrow Function</a></li>
+				<li class="nav-item"><a class="nav-link" href="orientacao-objetos.html">Orientação a Objetos</a></li>
+				<li class="nav-item"><a class="nav-link" href="objetos-literais.html">Objetos Literais</a></li>
+				<li class="nav-item"><a class="nav-link" href="funcoes-construtoras.html">Funções Construtoras</a></li>
+ 			</ul>
+		</div>
+
+		<div class="conteudo">
+			<h4>Funções Construtoras</h4>
+			<p>A primeira forma é por classes, utilizando o operador constructor(). Esta é dispónível á partir da ES6.</p>
+			<P>A segunda são as classes estáticas ou literais. Criada na ES5 e cuja implementação teve a sintaxe aprimorada na ES6.</P>
+			<p>A terceira forma de modelamento de objetos é por funções construtoras, criadas na ES5 e mantidas na ES6. São a base de criação dos modelamentos de objetos. Esta, embora seja a forma mais primitiva de construção de modelamentos, é parte da essência do javascript. Além da necessidade de compatibilização com o passado, as funções construtoras conseguem resolver de forma mais adequadamente o pilar do encapsulamento.</p>
+		</div>
+		<hr>
+
+		<div class="conteudo">
+			<h4>Encapsulamento</h4>
+			<p>Lembrando, na orientação por classes, não existe a característica de escopo de atributos. Todos eles quando criados são de acesso público, podendo ser alterados dentro da aplicação.</p>
+			<p>Num exercício mental simples: imaginar na abstração de uma classe de modelamento de carro. Um dos atributos desta classe pode ser a velocidade máxima que o objeto instanciado pode atinger e dentro deste raciocínio este atributo deve ser considerado apenas dentro do próprio escopo da classe, sem acesso global, para que não seja manipulado e evitando que a instância se desestabilize com velocidades absurdas incompatíveis com o objeto instanciado.</p>
+			<p></p>
+
+		</div>
+
+
+		<!-- JavaScript (Opcional) -->
+		<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	</body>
+</html>
