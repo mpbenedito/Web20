@@ -19,7 +19,7 @@
 
 		<script type="text/babel">
 			// modelamento por funções construtoras
-			let Carro = function() {
+			let Carro1 = function() {
 				this.cor = 'amarelo'
 				this.modelo = 'Uno'
 				this.velocidadeAtual = 0
@@ -30,6 +30,7 @@
 					if (nVel > this.velocidadeMaxima) {
 						nVel = this.velocidadeMaxima
 					}
+					console.log('Acelerando +50!!!')
 					this.setVelocidadeAtual( nVel )
 				}
 
@@ -42,7 +43,11 @@
 				}
 			}
 
-			let carroAtual = new Carro()
+			console.log('--------------------------------------')
+			console.log('Carro1 - objeto sem proteção de código')
+			console.log('--------------------------------------')
+
+			let carroAtual = new Carro1()
 			console.log(`A velocidade atual é ${carroAtual.getVelocidadeAtual()}`)
 
 			carroAtual.acelerar()
@@ -59,7 +64,93 @@
 			
 			carroAtual.acelerar()
 			console.log(`A velocidade atual é ${carroAtual.getVelocidadeAtual()}`)
+
+			console.log("Quebrando a segurança do código e acessando o atributo velocidadeMaxima para alterá-lo")
+			carroAtual.velocidadeMaxima = 280
+			carroAtual.acelerar()
+			console.log(`A velocidade atual é ${carroAtual.getVelocidadeAtual()}`)
 		</script>
+
+		<script type="text/babel">
+			// modelamento por funções construtoras com atributos e métodos privados
+			let Carro2 = function() {
+				var velocidadeMaxima = 180
+				var distanciaPercorrida = 0
+
+				this.cor = 'prata'
+				this.modelo = 'Siena'
+				this.velocidadeAtual = 0
+
+				this.acelerar = function() {
+					let nVel = this.getVelocidadeAtual() + 50
+					if (nVel > velocidadeMaxima) {
+						nVel = velocidadeMaxima
+					}
+					console.log('Acelerando + 50!!!')
+					this.setVelocidadeAtual( nVel )
+
+					setDistanciaPercorrida(0.7)
+//					console.log('Distância Percorrida: ' + this.getDistanciaPercorrida())
+				}
+
+				this.getVelocidadeAtual = function() {
+					return this.velocidadeAtual
+				}
+
+				this.setVelocidadeAtual = function(nVelocidade) {
+					this.velocidadeAtual = nVelocidade
+				}
+
+				var setDistanciaPercorrida = function(nDistancia) {
+					distanciaPercorrida += nDistancia
+				}
+
+				this.getDistanciaPercorrida = function() {
+					console.log('Distância percorrida: ' + distanciaPercorrida)
+				}
+			}
+
+			let carroAtual2 = new Carro2()
+
+			console.log('--------------------------------------')
+			console.log('Carro2 - objeto com proteção de código')
+			console.log('--------------------------------------')
+			console.log(`A velocidade atual é ${carroAtual2.getVelocidadeAtual()}`)
+			carroAtual2.acelerar()
+			console.log(`A velocidade atual é ${carroAtual2.getVelocidadeAtual()}`)
+
+			carroAtual2.acelerar()
+			console.log(`A velocidade atual é ${carroAtual2.getVelocidadeAtual()}`)
+
+			carroAtual2.acelerar()
+			console.log(`A velocidade atual é ${carroAtual2.getVelocidadeAtual()}`)
+
+			carroAtual2.acelerar()
+			console.log(`A velocidade atual é ${carroAtual2.getVelocidadeAtual()}`)
+			
+			carroAtual2.acelerar()
+			console.log(`A velocidade atual ainda é ${carroAtual2.getVelocidadeAtual()}`)
+
+			console.log(`Qeubrando a segurança do objeto e acessando o atributo velocidadeMaxima para aumentá-lo`)
+			carroAtual2.velocidadeMaxima = 300
+			carroAtual2.acelerar()
+			console.log(`A velocidade atual é ${carroAtual2.getVelocidadeAtual()}`)
+
+			console.log('-----------------------------')
+			console.log('Exposição dos objetos criados')
+			console.log('-----------------------------')
+			console.log(carroAtual)
+			console.log(carroAtual2)
+
+			carroAtual2.getDistanciaPercorrida()
+			console.log('Tentativa de alterar o odômetro do carro.')
+			carroAtual2.setVelocidadeAtual( -4 )
+			carroAtual2.acelerar()
+			carroAtual2.getDistanciaPercorrida()
+
+			
+		</script>
+
 	</head>
 	<body>
 		<div id="menu-aula" class="sticky-top">
@@ -72,6 +163,8 @@
 				<li class="nav-item"><a class="nav-link" href="orientacao-objetos.html">Orientação a Objetos</a></li>
 				<li class="nav-item"><a class="nav-link" href="objetos-literais.html">Objetos Literais</a></li>
 				<li class="nav-item"><a class="nav-link" href="funcoes-construtoras.html">Funções Construtoras</a></li>
+				<li class="nav-item"><a class="nav-link" href="funcoes-factory.html">Funções Factory</a></li>
+				<li class="nav-item"><a class="nav-link" href="prototype.html">Prototype</a></li>
  			</ul>
 		</div>
 
@@ -79,16 +172,18 @@
 			<h4>Funções Construtoras</h4>
 			<p>A primeira forma é por classes, utilizando o operador constructor(). Esta é dispónível á partir da ES6.</p>
 			<P>A segunda são as classes estáticas ou literais. Criada na ES5 e cuja implementação teve a sintaxe aprimorada na ES6.</P>
-			<p>A terceira forma de modelamento de objetos é por funções construtoras, criadas na ES5 e mantidas na ES6. São a base de criação dos modelamentos de objetos. Esta, embora seja a forma mais primitiva de construção de modelamentos, é parte da essência do javascript. Além da necessidade de compatibilização com o passado, as funções construtoras conseguem resolver de forma mais adequadamente o pilar do encapsulamento.</p>
+			<p>A terceira forma de modelamento de objetos é por funções construtoras, criadas na ES5 e mantidas na ES6. São a base de criação dos modelamentos de objetos. Esta, embora seja a forma mais primitiva de construção de modelamentos, é parte da essência do javascript. Além da necessidade de compatibilização com o passado, as funções construtoras conseguem resolver de forma mais adequada o pilar do encapsulamento, que como visto, tem algumas limitações em relação ao escopo dos atributos dos objetos.</p>
 		</div>
 		<hr>
 
 		<div class="conteudo">
 			<h4>Encapsulamento</h4>
 			<p>Lembrando, na orientação por classes, não existe a característica de escopo de atributos. Todos eles quando criados são de acesso público, podendo ser alterados dentro da aplicação.</p>
-			<p>Num exercício mental simples: imaginar na abstração de uma classe de modelamento de carro. Um dos atributos desta classe pode ser a velocidade máxima que o objeto instanciado pode atinger e dentro deste raciocínio este atributo deve ser considerado apenas dentro do próprio escopo da classe, sem acesso global, para que não seja manipulado e evitando que a instância se desestabilize com velocidades absurdas incompatíveis com o objeto instanciado.</p>
-			<p></p>
-
+			<p>Num exercício mental simples: imaginar na abstração de uma classe de modelamento de carro. Um dos atributos desta classe pode ser a velocidade máxima que o objeto instanciado pode atinger e dentro deste raciocínio este atributo deve ser considerado apenas dentro do próprio escopo da classe, sem acesso global, para que não seja manipulado e evitando que a instância se desestabilize com velocidades absurdas incompatíveis com o objeto instanciado. Se a velocidade máxima for um atributo privado, não poderá ser alterado durante o instanciamento do objeto.</p>
+			<p>A forma de executar o encapsulamento e proteção dos atributos e métodos privados da classe é não utilizar a diretiva this, adotando-se em seu lugar a declaração var tanto para os atributos quanto para os métodos que podem ser callbacks de funções atribuídos a variáveis.</p>
+			<p>No exemplo construído, Carro1, o atributo velocidadeMaxima, apesar de protegido na programação ainda poderá ser acessado mesmo que indiretamente, inclusive podendo ser manipulado, se for acessado diretamente na instância.</p>
+			<p>Já o objeto Carro2 possui o atributo velocidadeMaxima protegido e não fica exposto para ser manipulado pela aplicação. Isso é comprovado quando os objetos são apresentados em tela. O objeto carroAtual tem o atributo velocidadeMaxima exposto em tela,enquanto o objeto carroAtual2 não expõe o mesmo atributo, embora posusa-o e o trate internamente.</p>
+			<p>Outro atributo é o odômetro do carro. Este é um componente que deve ser protegido, alterado apenas pela construção do objeto e nunca externamente. Desta forma, pode-se criar uma função genérica setDistanciaPercorrida que seja interna e que não possa ser acessada externamente. </p>
 		</div>
 
 

@@ -15,16 +15,53 @@
 
 		<!-- carrega o BABELjs -->
 		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-		<!-- Your custom script here -->
-		<script type="text/babel">
-			const getMessage = () => "Hello World";
-			document.getElementById('output').innerHTML = getMessage();
-		</script>
 
+
+		<script type="text/babel">
+			// modelamento por funções literal 
+			console.log('----------------------------------------')
+			console.log('Objetos literais Bicicleta1 e Bicicleta2')
+			console.log('----------------------------------------')
+			let Bicicleta1 = {
+				cor: 'Branca',
+				marcha: 'Única',
+				aro: 12,
+				pedalar() { console.log('pedalando') }
+			}
+			let Bicicleta2 = {
+				cor: 'Vermelha',
+				marcha: '18',
+				aro: 26,
+				pedalar() { console.log('pedalando') }
+			}
+			console.log(Bicicleta1)
+			console.log(Bicicleta2)
+
+
+			// modelamento por funções factory
+			console.log('---------------------------------------')
+			console.log('Objetos resultantes de funções factory ')
+			console.log('---------------------------------------')
+			let BicicletaFactory = function(cCor, cMarcha, cAro) {
+				//lógica
+				//requisição http
+				//resposta http
+				return {
+					cor: cCor,
+					marcha: cMarcha,
+					aro: cAro,
+					pedalar() { console.log('pedalando') }
+				}
+			}
+			let Bicicleta3 = BicicletaFactory('Azul', '21', 26)
+			let Bicicleta4 = BicicletaFactory('Branca', '18', 18)
+			console.log(Bicicleta3 )
+			console.log(Bicicleta4 )
+
+		</script>
 
 	</head>
 	<body>
-		
 		<div id="menu-aula" class="sticky-top">
 			<h4>ECMAScript</h4>
 			<ul class="nav nav-pills">
@@ -41,30 +78,11 @@
 		</div>
 
 		<div class="conteudo">
-			<h4>Introdução</h4>
-			<p>ECMAScript (ES) é uma especificação de implementação da linguagem para padronização entre os vários navegadores e suas versões, pois no começo da linguagem, cada fabricante de browser desenvolveu sua própria "interpretação" da linguagem. Rapidamente a linguagem javascript deixaria de ser útil, pois se cada navegador desenvolvesse suas particularidades na interpretação dos códigos, não seria possível adotá-la como linguagem padrão para desenvolvimento.</p>
-			<p>Em 1997 o javascript foi entregue para o ECMA (European Computer Manufactoring Association), um órgão terceiro e independente, para que uma padronização pudesse ser implementada e divulgada, á qual os navegadores deveriam processar e interpretar, de forma análoga.</p>
-			<p>Após a padronização das sintaxes e semântica o js ganhou a robustez de uma linguagem mais industrial, ou seja, de uso generalizado. Isso aumentou a compatibilidade de aplicações rodando em browsers diferentes.</p>
+			<h4>Funções Factory</h4>
+			<p>Por meio do padrão de projetos denominado "Factory" é possível implementar uma "fábrica" para criação de objetos em tempo de execução, ou seja, são a combinação a chamada de funçõs com retorno de objetos literais dependendo de parâmetros passados. Em resumo, funções factory retornam objetos literais com personalizações distintas dependendo de parametrização.</P>
+			<p>No exemplo avaliado os objetos Bicicleta1 e Bicicleta2 são instâncias de um mesmo tipo de classe, porém são hard code, ou seja, construídos com programação pura. Se mais objetos destes devem ser criados, da forma como estão sendo criados, cada instância dependerá de programação específica que define exclusivamente aquele objeto.</p>
+			<p>Bicicleta3 e Bicicleta4 são objetos criados por uma função factory, que recebe parâmetros, pode manipulá-los ou não, e retorna a classe instanciado com propriedades específicas dependendo da lógica de manipulação dos parâmetros recebidos.</p>
 		</div>
-		<hr>
-
-		<div class="conteudo">
-			<h4>ES6 x ES5</h4>
-			<P>Embora a versão mais atual do ECMAScript seja a versão 6 (ES6) os fabricantes de browsers não implementaram totalmente suas funcionalidades, semânticas e sintaxes. Com isso surgiram no mercado vários interpretadores de código (transpirers) que convertem um fonte coidificado em ES6 e faz um parser, transformando a codificação para o padrão ES5.</P>
-			<P>Todos estes estudos foram desenvolvidos e testados utilizando o ES6 porém com o compilador BABELjs, que é um compilador de mercado e é bastante utilizado.</P>
-			<p>Quando os navegadores rodarem nativamente o ES6, provavelmente a ES7 já terá sido homologada, quando o babel deverá ser atualizado.</p>
-			<p>Para configurar o BABELjs, deve-se procurar o prototype que está no link: <a href="https://babeljs.io/setup#installation">BABELjs</a> para em seguida copiá-lo para dentro das aplicações, na tag script.</p>
-			<p><strong>Importante: </strong>só serão convertidos os códigos que estiverem em blocos script identificados com type="text/babel"</p>
-		</div>
-		<hr>
-
-		<div class="conteudo">
-			<h4 id="output"></h4>
-			<p>Este foi  um teste do ES6 já utilizando o BABELjs</p>
-
-		</div>
-
-
 
 
 		<!-- JavaScript (Opcional) -->

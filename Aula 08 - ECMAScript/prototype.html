@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<!-- Meta tags Obrigatórias -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+		<!-- Estilo personalizado -->
+		<link rel="stylesheet" type="text/css" href="css/menu-aula.css">
+
+		<title>ECMAScript</title>
+
+		<!-- carrega o BABELjs -->
+		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+		<script type="text/babel">
+			// objeto literal
+			let a1 = {
+				cor: 'Branco', 
+				modelo: 'Airbus A380', 
+				voar: function() {
+					console.log('voando')
+				}
+			}
+
+			// objeto criado por função construtora
+			let AviaoF = function() {
+				this.cor = 'Azul',
+				this.modelo = 'Boeing 787',
+				this.voar = function() {
+					console.log('voando')
+				}
+			}
+			let a2 = new AviaoF()
+
+			// objeto criado por uma classe
+			class AviaoC {
+				constructor() {
+					this.cor = 'Vermelho'
+					this.modelo = "Embraer E190"
+				}
+				voar() {
+					console.log('voando')
+				}
+			}
+			let a3 = new AviaoC()
+
+// APRESENTAÇÃO DOS OBJETOS CRIADOS
+			console.log('--------------------------------')
+			console.log('Apresentação das Classes Criadas')
+			console.log('--------------------------------')
+			console.log(a1)
+			console.log(a2)
+			console.log(a3)
+
+
+		</script>
+
+		<script type="text/babel">
+			// tratamento de HERANÇA
+			console.log('---------------------')
+			console.log('Tratamento de Herança')
+			console.log('---------------------')
+			let animal = {atributo1: 'a'}
+			let vertebrado = {__proto__: animal, atributo2: 'b'}
+			let ave = {__proto__: vertebrado, atributo3: 'c'}
+
+			console.log(animal)
+			console.log(vertebrado)
+			console.log(ave)
+			console.log(ave.atributo1, ave.atributo2, ave.atributo3)
+			ave.atributo1 = 'x'
+			console.log(ave.atributo1, ave.atributo2, ave.atributo3)
+		</script>
+
+	</head>
+	<body>
+		<div id="menu-aula" class="sticky-top">
+			<h4>ECMAScript</h4>
+			<ul class="nav nav-pills">
+				<li class="nav-item"><a class="nav-link" href="introducao.html">Introdução</a></li>
+				<li class="nav-item"><a class="nav-link" href="variaveis.html">Declarações Var e Let</a></li>
+				<li class="nav-item"><a class="nav-link" href="template-string.html">Template Strings</a></li>
+				<li class="nav-item"><a class="nav-link" href="funcoes.html">Funções - Default e Arrow Function</a></li>
+				<li class="nav-item"><a class="nav-link" href="orientacao-objetos.html">Orientação a Objetos</a></li>
+				<li class="nav-item"><a class="nav-link" href="objetos-literais.html">Objetos Literais</a></li>
+				<li class="nav-item"><a class="nav-link" href="funcoes-construtoras.html">Funções Construtoras</a></li>
+				<li class="nav-item"><a class="nav-link" href="funcoes-factory.html">Funções Factory</a></li>
+				<li class="nav-item"><a class="nav-link" href="prototype.html">Prototype</a></li>
+ 			</ul>
+		</div>
+
+		<div class="conteudo">
+			<h4>Prototype</h4>
+			<p>A necessidade de se estudar a prototipação de objetos no javascript vem da necessidade de esmiuçar o pilar da Herança.</p>
+			<p>Herança é um dos pilares da Orientação a Objetos, já visto, implementado e testado em outras aulas, porém como em outras linguagens qualquer objeto criado também é herdado de classes maiores e mais genéricos.</p>
+			<p>No js todo objeto é herdado da classe Objects e por trás destas heranças existe a implementação de PROTOTYPES, que é específico e intrínseco ao próprio javascript.</p>
+			<p>Como exemplo de estudo será criado um objeto para modelar um avião, de forma rústica e simplificada, terá poucos atributos e apenas um método.</p>
+			<p>Este mesmo objeto será instanciado 3 vezes, ou seja, serão criados 3 objetos aviões, criados de forma distinta: a1 criado de forma literal, a2 por uma função construtora e a3 criado a ártir de uma classe definida. </p>
+			<img src="imagens/prototype.png" alt="">
+			<p>Primeira observação: todos os objetos criados, independente da forma como isso ocorreu, possuem um atributo comum, chamado <span class="font-weight-bold">__proto__</span> cujo conteúdo é um objeto, não criado por classe, mas por uma função, chamada Object. </p>
+			<p><span class="font-weight-bold">__proto__</span>, por sua vez, possui atributos e métodos específicos que podem ser acessados quando necessário.</p> 
+		</div>
+		<hr>
+
+		<div class="conteudo">
+			<h4>Prototype - Herança</h4>
+			<P>Tratamento de herança significa que o atributo __proto__ de um objeto pode ser redefinido, de forma que o primitivo de uma instância criada seja outro objeto. Na essência, como todos os ojbetos são heranças de outros, dentro da "prototype chain", mesmo um objeto num nível mais acima, herdado de outro, terá os atributos herdados de Object.</P>
+			<p>No exemplo da herança, 3 classes (ave, vertebrado e animal) são criadas, uma sendo protótipo da outra, portanto herdando e carregando á frente seus atributos. Como essa herança ocorre de forma explícita o conteúdo destes atributos também pode ser acessado e alterado.</p>
+		</div>
+		<hr>
+
+		<div class="conteudo">
+			<h4>Operador ... - Spread Rest</h4>
+
+		</div>
+
+
+
+		<!-- JavaScript (Opcional) -->
+		<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	</body>
+</html>
